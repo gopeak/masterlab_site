@@ -35,7 +35,7 @@
                     <a  href="./index.php"><span>首页</span></a>
                 </li>-->
                 <li class="ant-menu-item <? if($page=='product') echo 'ant-menu-item-selected'; ?> " role="menuitem">
-                    <a   href="./product.php"><span>产品介绍</span></a>
+                    <a   href="./index.php"><span>首页</span></a>
                 </li>
                 <li class="ant-menu-item  <? if($page=='help') echo 'ant-menu-item-selected'; ?>" role="menuitem">
                     <a href="./help.php"><span>用户手册</span></a>
