@@ -143,6 +143,31 @@ $page = 'about';
             padding: 0;
         }
     }
+    .info-items{
+        margin: 40px 0 0;
+    }
+    .info-items li {
+        line-height: normal;
+        padding: 20px;
+        margin: 0 0 20px;
+        display: flex;
+    }
+    .info-items li:hover{
+        background-color: #f5f5f5;
+    }
+    .info-items li > .face {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .info-items li > .person {
+        flex: 1;
+        margin: 0 0 0 20px;
+    }
+    .info-items li > .person h4{
+        padding: 10px 0;
+    }
 </style>
 <section class="intro">
     <div class="container">
@@ -164,13 +189,49 @@ $page = 'about';
 <section class="description container text-center"><h2 id="关于团队">关于团队</h2><span class="separator"></span>
     <div class="info-content">
         <p class="main-info">我们一支富有激情充满活力的技术团队，也是一群可爱的人，一起快乐做一件有意义的事情。</p>
-        <ul>
-            <li >Sven,自称IT狂人, 角色定位产品经理但大部分在coding,做过SNS、网游、页游、O2O、B2B, 最大特点是追求极限,业余爱好有攀登，穿越，自驾，摩旅</li>
-            <li  >Lyman,江湖人称健哥, 技术大拿</li>
-            <li  >Mo,资深前端工程师, 美食家 吃货</li>
-            <li  >Jelly,资深前端工程师, 程序员中花木兰</li>
-            <li  >FangMin,全能战士</li>
-            <li  >Sandy,资深UI设计师，美女</li>
+        <ul class="text-left info-items">
+            <li>
+                <img src="./about_files/intro-landscape.svg" class="face">
+                <div class="person">
+                    <h4>Sven</h4>
+                    <p>自称IT狂人, 角色定位产品经理但大部分在coding,做过SNS、网游、页游、O2O、B2B, 最大特点是追求极限,业余爱好有攀登，穿越，自驾，摩旅</p>
+                </div>
+            </li>
+            <li>
+                <img src="./about_files/intro-landscape.svg" class="face">
+                <div class="person">
+                    <h4>Lyman</h4>
+                    <p>江湖人称健哥, 技术大拿</p>
+                </div>
+            </li>
+            <li>
+                <img src="./about_files/intro-landscape.svg" class="face">
+                <div class="person">
+                    <h4>Mo</h4>
+                    <p>资深前端工程师, 美食家 吃货</p>
+                </div>
+            </li>
+            <li>
+                <img src="./about_files/intro-landscape.svg" class="face">
+                <div class="person">
+                    <h4>Jelly</h4>
+                    <p>资深前端工程师, 程序员中花木兰</p>
+                </div>
+            </li>
+            <li>
+                <img src="./about_files/intro-landscape.svg" class="face">
+                <div class="person">
+                    <h4>FangMin</h4>
+                    <p>全能战士</p>
+                </div>
+            </li>
+            <li>
+                <img src="./about_files/intro-landscape.svg" class="face">
+                <div class="person">
+                    <h4>Sandy</h4>
+                    <p>资深UI设计师，美女</p>
+                </div>
+            </li>
         </ul>
     </div>
 </section>
