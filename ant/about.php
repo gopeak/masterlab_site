@@ -31,211 +31,214 @@ $page = 'about';
 <div style="display: none"><img src="./about_files/logo-with-text.svg" alt=""> <img
             src="./about_files/bpKcpwimYnZMTarUxCEd.png" alt=""></div>
 
+<div id="react-content">
+    <div data-reactroot="" class="page-wrapper">
+        <? include 'header.php'?>
 
-<? include 'header.php'?>
+        <style>
+            .align-right {
+                text-align: right;
+                margin-bottom: -32px;
+                margin-right: 16px;
+            }
 
-<style>
-    .align-right {
-        text-align: right;
-        margin-bottom: -32px;
-        margin-right: 16px;
-    }
+            .img-landscape {
+                margin: -64px -16px 0 0;
+                max-width: 654px;
+            }
 
-    .img-landscape {
-        margin: -64px -16px 0 0;
-        max-width: 654px;
-    }
+            .main-info {
+                /*line-height: 48px;*/
+            }
 
-    .main-info {
-        /*line-height: 48px;*/
-    }
+            .intro {
+                padding-bottom: 40px;
+            }
 
-    .intro {
-        padding-bottom: 40px;
-    }
+            .features {
+                padding: 128px 0;
+            }
 
-    .features {
-        padding: 128px 0;
-    }
+            .features h4 {
+                font-size: 20px;
+            }
 
-    .features h4 {
-        font-size: 20px;
-    }
+            .blogs {
+                min-height: 625px;
+                padding: 112px 0 152px 0;
+            }
 
-    .blogs {
-        min-height: 625px;
-        padding: 112px 0 152px 0;
-    }
+            .card-body .description {
+                font-weight: 300;
+                padding: 0;
+            }
 
-    .card-body .description {
-        font-weight: 300;
-        padding: 0;
-    }
+            .blogs {
+                padding: 112px 0 152px 0;
+            }
 
-    .blogs {
-        padding: 112px 0 152px 0;
-    }
+            .blogs .col-md-6 {
+                margin-top: 50px;
+                padding: 0 32px;
+            }
 
-    .blogs .col-md-6 {
-        margin-top: 50px;
-        padding: 0 32px;
-    }
+            .blogs .blog {
+                border-radius: 4px;
+                /*max-width: 100%;*/
+                /*width: 100%;*/
+                display: inline-block;
+                height: 246px;
+                /*color: #868e96;*/
+                text-decoration: none;
+                border: none;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, .09);
+                margin: 0 auto;
+                -webkit-transition: all .5s;
+                -moz-transition: all .5s;
+                transition: all .5s;
+            }
 
-    .blogs .blog {
-        border-radius: 4px;
-        /*max-width: 100%;*/
-        /*width: 100%;*/
-        display: inline-block;
-        height: 246px;
-        /*color: #868e96;*/
-        text-decoration: none;
-        border: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, .09);
-        margin: 0 auto;
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        transition: all .5s;
-    }
+            .blog:hover {
+                text-decoration: none;
+                -webkit-transform: translateY(-12px);
+                -ms-transform: translateY(-12px);
+                transform: translateY(-12px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, .09);
+            }
 
-    .blog:hover {
-        text-decoration: none;
-        -webkit-transform: translateY(-12px);
-        -ms-transform: translateY(-12px);
-        transform: translateY(-12px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, .09);
-    }
+            .card-body {
+                padding: 16px 24px;
+            }
 
-    .card-body {
-        padding: 16px 24px;
-    }
+            .title {
+                display: block;
+                font-size: 16px;
+                color: rgba(0, 0, 0, .85);
+                margin-bottom: 4px;
+            }
 
-    .title {
-        display: block;
-        font-size: 16px;
-        color: rgba(0, 0, 0, .85);
-        margin-bottom: 4px;
-    }
+            .author {
+                color: rgba(0, 0, 0, .45);
+            }
 
-    .author {
-        color: rgba(0, 0, 0, .45);
-    }
+            .avatar {
+                border-radius: 10px;
+                margin-right: 8px;
+            }
 
-    .avatar {
-        border-radius: 10px;
-        margin-right: 8px;
-    }
+            @media only screen and (max-width: 768px) {
+                .img-landscape {
+                    margin: 64px 0 32px 0;
+                    max-width: 100%;
+                }
 
-    @media only screen and (max-width: 768px) {
-        .img-landscape {
-            margin: 64px 0 32px 0;
-            max-width: 100%;
-        }
+                .card {
+                    margin: 16px auto;
+                }
 
-        .card {
-            margin: 16px auto;
-        }
+                .main-info {
+                    padding: 0 24px;
+                }
 
-        .main-info {
-            padding: 0 24px;
-        }
-
-        .header .main-info {
-            padding: 0;
-        }
-    }
-    .info-items{
-        margin: 40px 0 0;
-    }
-    .info-items li {
-        line-height: normal;
-        padding: 20px;
-        margin: 0 0 20px;
-        display: flex;
-    }
-    .info-items li:hover{
-        background-color: #f5f5f5;
-    }
-    .info-items li > .face {
-        display: block;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
-    .info-items li > .person {
-        flex: 1;
-        margin: 0 0 0 20px;
-    }
-    .info-items li > .person h4{
-        padding: 10px 0;
-    }
-</style>
-<section class="intro">
-    <div class="container">
-        <div class="header row">
-            <div class="col-md-5"><h1  >关于我们</h1>
-                <p class="main-info">
-                    高效的软件研发流程是一个复杂体系，建立这套体系，需要专业的先进的管理思维和管理工具。我们希望基于强大数据、技术、设计的力量，
-                    为领域提供更强大的项目数据可视化能力、产品及行业解决方案。
-                    MasterLab 基因于开源和分享互联网精神，充分利用来自开源的其他力量；全面拥抱开源文化，积极融入开源社区，发扬开源协作创新精神，合理应用开源技术成果为互联网企业服务！</p>
-                <br>
-                <p class="main-info">才启程，不停步，愿与君同行。</p>
+                .header .main-info {
+                    padding: 0;
+                }
+            }
+            .info-items{
+                margin: 40px 0 0;
+            }
+            .info-items li {
+                line-height: normal;
+                padding: 20px;
+                margin: 0 0 20px;
+                display: flex;
+            }
+            .info-items li:hover{
+                background-color: #f5f5f5;
+            }
+            .info-items li > .face {
+                display: block;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+            .info-items li > .person {
+                flex: 1;
+                margin: 0 0 0 20px;
+            }
+            .info-items li > .person h4{
+                padding: 10px 0;
+            }
+        </style>
+        <section class="intro">
+            <div class="container">
+                <div class="header row">
+                    <div class="col-md-5"><h1  >关于我们</h1>
+                        <p class="main-info">
+                            高效的软件研发流程是一个复杂体系，建立这套体系，需要专业的先进的管理思维和管理工具。我们希望基于强大数据、技术、设计的力量，
+                            为领域提供更强大的项目数据可视化能力、产品及行业解决方案。
+                            MasterLab 基因于开源和分享互联网精神，充分利用来自开源的其他力量；全面拥抱开源文化，积极融入开源社区，发扬开源协作创新精神，合理应用开源技术成果为互联网企业服务！</p>
+                        <br>
+                        <p class="main-info">才启程，不停步，愿与君同行。</p>
+                    </div>
+                    <div class="col-md-7">
+                        <img class="img-landscape" width="654px" src="./about_files/intro-landscape.svg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="col-md-7">
-                <img class="img-landscape" width="654px" src="./about_files/intro-landscape.svg" alt="">
+        </section>
+        <section class="description container text-center"><h2 id="关于团队">关于团队</h2><span class="separator"></span>
+            <div class="info-content">
+                <p class="main-info">我们一支富有激情充满活力的技术团队，也是一群可爱的人，一起快乐做一件有意义的事情。</p>
+                <ul class="text-left info-items">
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>Sven</h4>
+                            <p>自称IT狂人, 角色定位产品经理但大部分在coding,做过SNS、网游、页游、O2O、B2B, 最大特点是追求极限,业余爱好有攀登，穿越，自驾，摩旅</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>Lyman</h4>
+                            <p>江湖人称健哥, 技术大拿</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>Mo</h4>
+                            <p>资深前端工程师, 美食家 吃货</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>Jelly</h4>
+                            <p>资深前端工程师, 程序员中花木兰</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>FangMin</h4>
+                            <p>全能战士</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>Sandy</h4>
+                            <p>资深UI设计师，美女</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </section>
+        <? include 'footer.php'?>
     </div>
-</section>
-<section class="description container text-center"><h2 id="关于团队">关于团队</h2><span class="separator"></span>
-    <div class="info-content">
-        <p class="main-info">我们一支富有激情充满活力的技术团队，也是一群可爱的人，一起快乐做一件有意义的事情。</p>
-        <ul class="text-left info-items">
-            <li>
-                <img src="./about_files/intro-landscape.svg" class="face">
-                <div class="person">
-                    <h4>Sven</h4>
-                    <p>自称IT狂人, 角色定位产品经理但大部分在coding,做过SNS、网游、页游、O2O、B2B, 最大特点是追求极限,业余爱好有攀登，穿越，自驾，摩旅</p>
-                </div>
-            </li>
-            <li>
-                <img src="./about_files/intro-landscape.svg" class="face">
-                <div class="person">
-                    <h4>Lyman</h4>
-                    <p>江湖人称健哥, 技术大拿</p>
-                </div>
-            </li>
-            <li>
-                <img src="./about_files/intro-landscape.svg" class="face">
-                <div class="person">
-                    <h4>Mo</h4>
-                    <p>资深前端工程师, 美食家 吃货</p>
-                </div>
-            </li>
-            <li>
-                <img src="./about_files/intro-landscape.svg" class="face">
-                <div class="person">
-                    <h4>Jelly</h4>
-                    <p>资深前端工程师, 程序员中花木兰</p>
-                </div>
-            </li>
-            <li>
-                <img src="./about_files/intro-landscape.svg" class="face">
-                <div class="person">
-                    <h4>FangMin</h4>
-                    <p>全能战士</p>
-                </div>
-            </li>
-            <li>
-                <img src="./about_files/intro-landscape.svg" class="face">
-                <div class="person">
-                    <h4>Sandy</h4>
-                    <p>资深UI设计师，美女</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-
+</div>
 <script type="text/javascript">
     /* eslint-disable */
     window.__meta = {
