@@ -144,8 +144,8 @@ $page = 'about';
                     padding: 0;
                 }
             }
-            .info-items{
-                margin: 40px 0 0;
+            .join-us{
+                padding-bottom:120px;
             }
             .info-items li {
                 line-height: normal;
@@ -169,6 +169,7 @@ $page = 'about';
             .info-items li > .person h4{
                 padding: 0 0 10px 0;
             }
+            .description h2:before,
             .info-items li > .person h4:before{
                 display: none;
             }
@@ -177,7 +178,7 @@ $page = 'about';
             <div class="container">
                 <div class="header row">
                     <div class="col-md-5">
-                        <h1  >关于我们</h1>
+                        <h1>关于我们</h1>
                         <p class="main-info">
                             高效的软件研发流程是一个复杂体系，建立这套体系，需要专业的先进的管理思维和管理工具。我们希望基于强大数据、技术、设计的力量，
                             为领域提供更强大的项目数据可视化能力、产品及行业解决方案。
@@ -198,7 +199,14 @@ $page = 'about';
             <div class="info-content">
                 <p class="main-info">我们一支富有激情充满活力的技术团队，也是一群可爱的人，一起快乐做一件有意义的事情。</p>
 
-                <h3>团队成员</h3>
+                
+            </div>
+        </section>
+
+        <section class="description container text-center">
+            <h2 id="关于团队">团队成员</h2>
+            <span class="separator"></span>
+            <div class="info-content">
                 <ul class="text-left info-items">
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
@@ -256,7 +264,6 @@ $page = 'about';
                     <li>沟通 -文档完整规范清晰;团队氛围良好，及早沟通，自组织团队</li>
                     <li>反馈 -沟通后需要再次反馈；快速将产品投入市场，收到反馈，再次迭代</li>
                 </ul>
-
             </div>
         </section>
 
@@ -285,11 +292,12 @@ $page = 'about';
         </section>
 
         <section class="join-us get-started description text-center">
-            <div class="container"><a href="javascript:;" name="team"><h2 id="_加入我们">加入我们</h2></a><span
-                        class="separator"></span>
-                <div class="info-content"><p class="main-info">我们一支富有激情充满活力的互联网产业团队， 我们也是一群有爱的人，在一起快乐做一件有意义的事情。如果你对编程、
-                        数据分析、交互设计充满激情，无论你是工程师，还是设计师，请联系我们，期待你的加入。weichaoduo@163.com</p></div>
-                <a href="mailto:weichaoduo@163.com" class="btn btn-round-link more-tutorial btn-primary btn-lg">立即加入</a>
+            <h2 id="">加入我们</h2>
+            <span class="separator"></span>
+            <div class="info-content">
+                <p class="main-info">我们一支富有激情充满活力的互联网产业团队， 我们也是一群有爱的人，在一起快乐做一件有意义的事情。如果你对编程、
+                    数据分析、交互设计充满激情，无论你是工程师，还是设计师，请联系我们，期待你的加入。weichaoduo@163.com</p>
+                    <a href="mailto:weichaoduo@163.com" class="btn btn-round-link more-tutorial btn-primary btn-lg">立即加入</a>
             </div>
         </section>
 

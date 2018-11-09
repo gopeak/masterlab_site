@@ -252,7 +252,7 @@ section {
   box-shadow: 0 12px 24px rgba(84, 48, 132, 0.06);
 }
 .description {
-  padding: 112px 0 146px;
+  padding: 90px 0 0;
 }
 .description .info-content {
   max-width: 900px;
@@ -266,7 +266,7 @@ section h2 {
   margin-bottom: 30px;
 }
 section .separator {
-  margin-bottom: 65px;
+  margin-bottom: 15px;
   display: inline-block;
   width: 30px;
   height: 5px;
