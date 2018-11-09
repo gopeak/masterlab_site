@@ -43,7 +43,7 @@ $page = 'about';
             }
 
             .img-landscape {
-                margin: -64px -16px 0 0;
+                margin: 0;
                 max-width: 654px;
             }
 
@@ -182,7 +182,7 @@ $page = 'about';
                         <p class="main-info">才启程，不停步，愿与君同行。</p>
                     </div>
                     <div class="col-md-7">
-                        <img class="img-landscape" width="654px" src="./about_files/intro-landscape.svg" alt="">
+                        <img class="img-landscape" src="./about_files/word.png" alt="">
                     </div>
                 </div>
             </div>
