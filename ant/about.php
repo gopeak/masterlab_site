@@ -149,15 +149,15 @@ $page = 'about';
             }
             .info-items li {
                 line-height: normal;
-                padding: 20px;
-                margin: 0 0 20px;
+                padding: 14px 20px;
                 display: flex;
+                border-radius: 50px;
             }
             .info-items li:hover{
                 background-color: #f5f5f5;
             }
             .info-items li > .face {
-                display: block;
+                display: none;
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
@@ -167,7 +167,10 @@ $page = 'about';
                 margin: 0 0 0 20px;
             }
             .info-items li > .person h4{
-                padding: 10px 0;
+                padding: 0 0 10px 0;
+            }
+            .info-items li > .person h4:before{
+                display: none;
             }
         </style>
         <section class="intro">
