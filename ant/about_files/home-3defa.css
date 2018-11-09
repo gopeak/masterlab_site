@@ -69,7 +69,7 @@ section {
 .comments,
 .blogs {
   background: #F8FAFE;
-  min-height: 525px;
+  min-height: 425px;
   overflow: hidden;
 }
 .slick-track:focus {

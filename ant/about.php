@@ -176,7 +176,8 @@ $page = 'about';
         <section class="intro">
             <div class="container">
                 <div class="header row">
-                    <div class="col-md-5"><h1  >关于我们</h1>
+                    <div class="col-md-5">
+                        <h1  >关于我们</h1>
                         <p class="main-info">
                             高效的软件研发流程是一个复杂体系，建立这套体系，需要专业的先进的管理思维和管理工具。我们希望基于强大数据、技术、设计的力量，
                             为领域提供更强大的项目数据可视化能力、产品及行业解决方案。
@@ -190,9 +191,14 @@ $page = 'about';
                 </div>
             </div>
         </section>
-        <section class="description container text-center"><h2 id="关于团队">关于团队</h2><span class="separator"></span>
+
+        <section class="description container text-center">
+            <h2 id="关于团队">关于团队</h2>
+            <span class="separator"></span>
             <div class="info-content">
                 <p class="main-info">我们一支富有激情充满活力的技术团队，也是一群可爱的人，一起快乐做一件有意义的事情。</p>
+
+                <h3>团队成员</h3>
                 <ul class="text-left info-items">
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
@@ -239,6 +245,54 @@ $page = 'about';
                 </ul>
             </div>
         </section>
+
+        <section class="description container text-center">
+            <h2 id="">开发理念</h2>
+            <span class="separator"></span>
+            <div class="info-content">
+                <ul  class="text-left info-items" >
+                    <li>简单 -因为迭代和渐进开发，不需要一次到位简单可读性</li>
+                    <li>勇气 -勇于承担任务，授权，完成任务，赢得尊重</li>
+                    <li>沟通 -文档完整规范清晰;团队氛围良好，及早沟通，自组织团队</li>
+                    <li>反馈 -沟通后需要再次反馈；快速将产品投入市场，收到反馈，再次迭代</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="description container text-center">
+            <h2 id="">团队价值观:敏捷武士+大师精神</h2>
+            <span class="separator"></span>
+            <div class="info-content">
+                <p  class="main-info">开发人员的能力体现在于两个方面:技能和修养。如同武侠小说的侠士，古代日本武士和欧洲圆桌骑士般,他们不仅拥有高超的武艺，也要具备良好的品格修养。
+                    开发人员既要注重技能的学习和研究，同时也会加强内在的修养，如谦虚好学的态度,正能量影响他人的精神。
+                    积极向大师学习新知识并结合到实际中，久而久之有一天自己也成为大师人物。</p>
+            </div>
+        </section>
+
+        <section class="description container text-center">
+            <h2 id="">开发实践</h2>
+            <span class="separator"></span>
+            <div class="info-content">
+                <ul  class="text-left info-items" >
+                    <li>单元测试  及时反馈极大降低回归测试成本极大减少调试时间部署起来信心十足</li>
+                    <li>持续集成  提早集成，不烦集成，自动化部署
+                    </li>
+                    <li>重构  收放自如 偿还技术债务</li>
+                    <li>代码规范  用代码进行沟通，清晰表达意图 动态评估取舍 保持简单</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="join-us get-started description text-center">
+            <div class="container"><a href="javascript:;" name="team"><h2 id="_加入我们">加入我们</h2></a><span
+                        class="separator"></span>
+                <div class="info-content"><p class="main-info">我们一支富有激情充满活力的互联网产业团队， 我们也是一群有爱的人，在一起快乐做一件有意义的事情。如果你对编程、
+                        数据分析、交互设计充满激情，无论你是工程师，还是设计师，请联系我们，期待你的加入。weichaoduo@163.com</p></div>
+                <a href="mailto:weichaoduo@163.com" class="btn btn-round-link more-tutorial btn-primary btn-lg">立即加入</a>
+            </div>
+        </section>
+
         <? include 'footer.php'?>
     </div>
 </div>
