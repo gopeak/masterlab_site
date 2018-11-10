@@ -212,7 +212,7 @@ $page = 'about';
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Sven</h4>
-                            <p>自称IT狂人, 角色定位产品经理但大部分在coding,做过SNS、网游、页游、O2O、B2B, 最大特点是追求极限,业余爱好有攀登，穿越，自驾，摩旅</p>
+                            <p>自称IT狂人, 产品经理兼码农, 做事喜欢追求极限，业余爱好有攀登、穿越、摩旅</p>
                         </div>
                     </li>
                     <li>

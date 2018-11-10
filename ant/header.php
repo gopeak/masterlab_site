@@ -35,25 +35,23 @@
                     <a  href="./index.php"><span>首页</span></a>
                 </li>-->
                 <li class="ant-menu-item <? if($page=='product') echo 'ant-menu-item-selected'; ?> " role="menuitem">
-                    <a   href="./index.php"><span>首页</span></a>
+                    <a   href="./index.php"><span>首 页</span></a>
                 </li>
                 <li class="ant-menu-item  <? if($page=='help') echo 'ant-menu-item-selected'; ?>" role="menuitem">
-                    <a href="./help.php"><span>用户手册</span></a>
+                    <a href="./help.php"><span>文 档</span></a>
                 </li>
                 <li class="ant-menu-item  <? if($page=='milestone') echo 'ant-menu-item-selected'; ?>" role="menuitem">
                     <a  href="./milestone.php"><span>时间轴</span></a>
                 </li>
-                <li class="ant-menu-item  <? if($page=='demo') echo 'ant-menu-item-selected'; ?>" role="menuitem">
-                    <a  href="http://demo.masterlab.vip/" target="_blank"><span>Demo</span></a>
-                </li>
                 <li class="ant-menu-item  <? if($page=='donate') echo 'ant-menu-item-selected'; ?>" role="menuitem">
-                    <a  href="./donate.php"><span>捐献</span></a>
-                </li>
-                <li class="ant-menu-item " role="menuitem" style="display: none">
-                    <a  href="https://github.com/gopeak/masterlab" target="_blank"><span>Github代码</span></a>
+                    <a  href="./donate.php"><span>捐 献</span></a>
                 </li>
                 <li class="ant-menu-item  <? if($page=='about') echo 'ant-menu-item-selected'; ?>" role="menuitem"><a href="./about.php"><span>关于我们</span></a>
                 </li>
+                <li class="ant-menu-item " role="menuitem" >
+                    <a  href="https://github.com/gopeak/masterlab" target="_blank"><span>Github</span></a>
+                </li>
+
             </ul>
         </div>
     </div>

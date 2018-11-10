@@ -1,5 +1,13 @@
 <?php
 $page = 'help';
+
+$mdFile = 'introduce';
+if (isset($_GET['md'])) {
+    $mdFile = str_replace(['/', '\\'], ['', ''], $_GET['md']);
+}
+
+require_once './lib/parsedown/Parsedown.php';
+
 ?>
 <!DOCTYPE html>
 <!-- saved from url=(0058)https://antv.alipay.com/zh-cn/g2/3.x/tutorial/history.html -->
@@ -9,7 +17,7 @@ $page = 'help';
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>MasterLab - 互联网项目、产品管理解决方案--UX设计原则</title>
+    <title>MasterLab - 互联网项目、产品管理解决方案</title>
     <link rel="icon" href="https://gw.alipayobjects.com/os/antv/assets/favoricon.png" type="image/x-icon">
     <link rel="stylesheet" href="./history_files/bootstrap.min.css">
     <link rel="stylesheet" href="./history_files/bootstrap-grid.min.css">
@@ -19,18 +27,15 @@ $page = 'help';
     <link rel="stylesheet" href="./history_files/tocbot.css">
     <link rel="stylesheet" href="./history_files/doc-dda30.css">
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
-
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
     <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
     <link rel="stylesheet" type="text/css" href="./product_files/featrue.css">
 
+
 </head>
 <body class="template-doc">
-<div style="display: none">
-    <img src="./history_files/logo-with-text.svg" alt=""> <img
-            src="./history_files/bpKcpwimYnZMTarUxCEd.png" alt="">
-</div>
+
 <? include 'header.php' ?>
 
 <div class="drawer-toggle"><span class="iconfont icon-menu-fold"></span></div>
@@ -42,16 +47,22 @@ $page = 'help';
             <div class="inner">
                 <div class="filter-container"></div>
                 <ul class="list-group">
-                    <li class="list-group-item active"><a href="#">快速上手</a></li>
-                    <li class="list-group-item "><a href="#">创建项目</a></li>
-                    <li class="list-group-item"><a href="#">配置项目</a></li>
-                    <li class="list-group-item"><a href="#">邀请成员</a></li>
-                    <li class="list-group-item"><a href="#">创建事项</a></li>
-                    <li class="list-group-item"><a href="#">敏捷开发</a></li>
-                    <li class="list-group-item"><a href="#">待办事项</a></li>
-                    <li class="list-group-item"><a href="#">迭代冲刺</a></li>
-                    <li class="list-group-item"><a href="#">看板视图</a></li>
-                    <li class="list-group-item"><a href="#">统计报表</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'introduce') echo 'active'; ?>"><a
+                                href="./help.php">介绍</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'install') echo 'active'; ?>"><a
+                                href="?md=install">安装</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'explain_word') echo 'active'; ?>"><a
+                                href="?md=explain_word">名词解释</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'quickstart') echo 'active'; ?>"><a
+                                href="?md=quickstart">快速上手</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'advanced') echo 'active'; ?>"><a href="?md=advanced">进阶</a>
+                    </li>
+                    <li class="list-group-item <? if ($mdFile == 'faq') echo 'active'; ?>"><a href="?md=faq">常见问题</a>
+                    </li>
+                    <li class="list-group-item <? if ($mdFile == 'key') echo 'active'; ?>"><a href="?md=key">快捷键</a>
+                    </li>
+                    <li class="list-group-item <? if ($mdFile == 'developer_guide') echo 'active'; ?>"><a
+                                href="?md=developer_guide">开发指南</a></li>
                 </ul>
             </div>
         </div>
@@ -61,31 +72,19 @@ $page = 'help';
 
                 </div>
             </div>
-            <article>
-                <h1  >敬请期待 该内容还在建设中..</h1>
-
+            <article id="description-view" class="markdown">
+                <?php
+                $markdown = file_get_contents('./docs/' . $mdFile . '.md');
+                echo Parsedown::instance()->text($markdown);
+                ?>
             </article>
         </div>
     </div>
 </div>
 
-<footer class="navbar navbar-expand-lg bg-dark" style="display: none">
-    <div class="container">
-        <div class="navbar-collapse" id="navbarFooter">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a class="declaration" href="https://weibo.com/antv2017"><span
-                                class="iconfont icon-sinaweibo"></span></a></li>
-                <li class="nav-item"><a class="declaration" href="https://github.com/antvis/"><span
-                                class="iconfont icon-github"></span></a></li>
-                <li class="nav-item"><a class="declaration" href="https://antv.alipay.com/zh-cn/about.html">关于我们</a>
-                </li>
-            </ul>
-            <a class="declaration" href="https://docs.alipay.com/policies/privacy/antfin">隐私权政策</a> <span>|</span> <a
-                    class="declaration" href="https://render.alipay.com/p/f/fd-izto3cem/index.html">权益保障承诺书</a> <span>ICP 证浙 B2-2-100257 Copyright © 蚂蚁金融服务集团</span>
-        </div>
-    </div>
-</footer>
-<script type="text/javascript">/* eslint-disable */
+<? include 'footer.php' ?>
+<script type="text/javascript">
+
     window.__meta = {
         "currentProduct": "g2",
         "assets": "/assets",
@@ -93,7 +92,8 @@ $page = 'help';
         "href": "/zh-cn/g2/3.x/tutorial/history.html",
         "locale": "zh-cn",
         "version": "3.0.0"
-    };</script>
+    };
+</script>
 <script src="./history_files/lodash-4.17.4.min.js"></script>
 <script src="./history_files/jquery-3.2.1.min.js"></script>
 <script src="./history_files/jquery.autocomplete-1.4.3.min.js"></script>
@@ -112,6 +112,9 @@ $page = 'help';
 <div class="autocomplete-suggestions"
      style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
 <div class="autocomplete-suggestions"
-     style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+     style="position: absolute; display: none; max-height: 300px; z-index: 9999;">
+
+</div>
+
 </body>
 </html>

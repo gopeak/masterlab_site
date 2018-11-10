@@ -145,9 +145,7 @@ $page = 'donate';
     }
 </style>
 
-<section class="description container text-center">
-    <h2 id="">您的捐助和鼓励，我们会更努力!</h2>
-</section>
+
 <section class="features">
     <div class="container">
         <div class="row text-center">
@@ -155,7 +153,7 @@ $page = 'donate';
                 <a class="card" href="#" data-toggle="modal" data-target="#modal-pay20">
                     <h4>20 元</h4>
                     <div class="card-body">
-                        <span class="description text-secondary">    请QA买包烟            </span>
+                        <strong >    请QA买包烟吧 , 软件测试太乏味了，他想辞职了</strong>
                     </div>
                 </a>
             </div>
@@ -163,7 +161,7 @@ $page = 'donate';
                 <a class="card" href="#" data-toggle="modal" data-target="#modal-pay60">
                     <h4>60 元</h4>
                     <div class="card-body">
-                        <span class="description text-secondary">    请UI设计师吃下午茶            </span>
+                        <strong >    请UI设计师吃下午茶，他的脑子要干了            </strong>
                     </div>
                 </a>
             </div>
@@ -171,7 +169,7 @@ $page = 'donate';
                 <a class="card" href="#" data-toggle="modal" data-target="#modal-pay168">
                     <h4>168 元</h4>
                     <div class="card-body">
-                        <span class="description text-secondary">    请码农做个SPA            </span>
+                        <strong >    请码农做个SPA ，他的颈椎病又犯了           </strong>
                     </div>
                 </a>
             </div>
@@ -179,14 +177,17 @@ $page = 'donate';
                 <a class="card" href="#" data-toggle="modal" data-target="#modal-payany">
                     <h4>任意金额</h4>
                     <div class="card-body">
-                        <span class="description text-secondary">    随便打发一下产品经理吧，把锅背到底           </span>
+                        <strong >    我们的产品要疯了，可怜可怜吧           </strong>
                     </div>
                 </a>
             </div>
         </div>
+
     </div>
 </section>
-
+<section class="description container text-center">
+    <h2 id="">您的捐助和鼓励，我们会更努力!</h2>
+</section>
     <div class="modal" id="modal-pay20">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -251,6 +252,8 @@ $page = 'donate';
             </div>
         </div>
     </div>
+
+
     <script type="text/javascript">/* eslint-disable */
         window.__meta = {
             "currentProduct": "vis",
@@ -267,9 +270,7 @@ $page = 'donate';
     <script src="./about_files/popper.min.js"></script>
     <script src="./about_files/bootstrap.min.js"></script>
     <script src="./about_files/lazyload-2.0.0-beta.2.min.js"></script>
-    <div id="___tracers" style="display:none">
 
-    </div>
     <script type="text/javascript" src="./about_files/g2.min.js"></script>
     <script type="text/javascript" src="./about_files/data-set.min.js"></script>
     <script src="./about_files/jquery.headroom-0.9.4.min.js"></script>
@@ -279,5 +280,6 @@ $page = 'donate';
     <script src="./about_files/common-729ed.js"></script>
     <div class="autocomplete-suggestions"
          style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+
 </body>
 </html>
