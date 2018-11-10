@@ -264,7 +264,7 @@ $page = 'about';
             </div>
         </section>
 
-        <section class="description container text-center">
+<!--        <section class="description container text-center">
             <h2 id="">团队价值观:敏捷武士+大师精神</h2>
             <span class="separator"></span>
             <div class="info-content">
@@ -273,7 +273,7 @@ $page = 'about';
                     积极向大师学习新知识并结合到实际中，久而久之有一天自己也成为大师人物。</p>
             </div>
         </section>
-
+-->
         <section class="description container text-center">
             <h2 id="">开发实践</h2>
             <span class="separator"></span>
