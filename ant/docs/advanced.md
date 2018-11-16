@@ -37,7 +37,7 @@ Masterlab的系统菜单提供了丰富的系统设置功能，系统管理员�
 - 全局权限可以使用项目角色来将用户或用户组关联，如下图所示：
 ![](http://www.masterlab.vip/docs/images/setting_06.png)
 
-- 密码策略可以设置用户密码强度
+- 密码策略可以设置用户密码强度，如下图所示：
 ![](http://www.masterlab.vip/docs/images/setting_07.png)
 
 ### 邮件设置
@@ -83,39 +83,39 @@ Masterlab的系统菜单提供了丰富的系统设置功能，系统管理员�
 - Masterlab系统默认了8种事项状态，如有需要可以添加事项状态，点击新增事项状态，如下图所示
 ![](http://www.masterlab.vip/docs/images/issue_08.png)
 
-- Masterlab系统默认使用`默认工作流`，如有需要可以添加工作流，点击新增工作流，`输入工作流名称，并配置流程状态、流程节点、流程走向`等，如下图所示
+- Masterlab系统默认使用`默认工作流`，如有需要可以添加工作流，点击新增工作流，`输入工作流名称，并配置流程状态、流程节点、流程走向`等，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_09.png)
 
 ![](http://www.masterlab.vip/docs/images/issue_20.png)
 
-- Masterlab系统默认使用`默认工作流方案`，如有需要可以添加工作流方案，点击新增工作流方案，如下图所示
+- Masterlab系统默认使用`默认工作流方案`，如有需要可以添加工作流方案，点击新增工作流方案，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_11.png)
 
-- Masterlab系统默认了8种解决结果，如有需要可以添加解决结果，点击新增解决结果，如下图所示
+- Masterlab系统默认了8种解决结果，如有需要可以添加解决结果，点击新增解决结果，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_12.png)
 
-- Masterlab系统默认了5种优先级，如有需要可以添加优先级，点击新增优先级，如下图所示
+- Masterlab系统默认了5种优先级，如有需要可以添加优先级，点击新增优先级，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_13.png)
 
 ### 界面
 `界面`包括了`字段、事项类型界面方案`
 
-- 可以自定义各个不同类型的事项界面需要显示的字段，点击新增字段，如下图所示
+- 可以自定义各个不同类型的事项界面需要显示的字段，点击新增字段，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_14.png)
 
 
-- 可以自定义各个不同类型的事项界面，点击”创建界面配置“或”编辑界面配置“，增加、编辑、删除要显示到该事项的字段，如下图所示
+- 可以自定义各个不同类型的事项界面，点击”创建界面配置“或”编辑界面配置“，增加、编辑、删除要显示到该事项的字段，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_15.png)
 ![](http://www.masterlab.vip/docs/images/issue_18.png)
 
 ## 项目管理 
-`项目管理`可以`新增、编辑、删除项目`，如下图所示
+`项目管理`可以`新增、编辑、删除项目`，如下图所示：
 ![](http://www.masterlab.vip/docs/images/setting_16.png)
 
 ## 用户管理
    > **目前Masterlab 系统的用户组是一个标签的概念**，用户组可以理解为一个权限相同的用户组织，通过给用户组的授权，达到管理用户的目的。
 
--  在安装完 Masterlab 系统后，系统中只有一个系统管理员帐号；创建完项目后，通常需要在 Masterlab 系统中添加其他的用户，在管理界面上点击 用户管理菜单，在用户界面上再点击创建用户就可以添加新用户了。
+-  在安装完 Masterlab 系统后，系统中只有一个系统管理员帐号；创建完项目后，通常需要在 Masterlab 系统中添加其他的用户，在管理界面上点击 用户管理菜单，在用户界面上再点击创建用户就可以添加新用户，如下图所示：
 ![](http://www.masterlab.vip/docs/images/users_02.png)
 
 
