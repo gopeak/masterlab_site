@@ -1,5 +1,3 @@
- 
-
 
 
 ### 环境要求
@@ -15,45 +13,29 @@
 
 ```
 
-
 ### 安装步骤
 
- 1.下载代码，可前往官方网站 http://www.masterlab.vip/download.php 下载最新的完整包.
+ 1. 下载代码，可前往官方网站 http://www.masterlab.vip/download.php 下载最新的完整包.
 或者从 github上克隆代码
-```bash
-   # 下载开发框架
-   git clone https://github.com/gopeak/hornet-framework.git
-   # 从master分支克隆代码或release直接下载
-   git clone https://github.com/gopeak/masterlab.git
-   # 安装依赖类库
-   cd masterlab
-   composer update
-```
-
  2. 在web服务器添加虚拟主机并绑定到 app/public 目录
-
- 3. 将根目录下的 env.ini-example 重命名为 env.ini
-
- 4. 在Mysql中创建一个数据库,字符集为 utf8mb4 ,然后将根目录的 masterlab.sql 导入到数据库中
-
- 4. 修改 app/config/deploy/app.cfg.php 文件中的 ROOT_URL 常量
-
- 5. 修改 app/config/deploy/database.cfg.php 文件中的数据库配置
-
- 6. 重启web服务器
-
+ 3. 在Mysql中创建一个数据库,字符集为 utf8mb4 ,然后将根目录的 masterlab.sql 导入到数据库中
+ 4. 配置全文搜索
+ 5. 将根目录下的 env.ini-example 重命名为 env.ini
+ 6. 修改php配置文件,
+ 7. 重启web服务器
+ 8. 启用redis缓存
+ 9. 执行定时任务
 
 ### Windows安装示例
 
-1.首先搭建Masterlab的运行环境，这里为简便安装，直接使用已经打包集成好的Xampp，下载地址:
+1.首先搭建Masterlab的运行环境，这里为简便安装，直接使用已经集成好的 `Xampp`，下载地址:
 ```
 https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-installer.exe
 ```
 下载好后将xampp安装在硬盘的根目录，如 D:/xampp
 
 
-2.下载Masterlab最新版本的完整代码包，将masterlab解压到 c 盘的 www 目录下
-
+2.下载最新版本的完整代码包，解压到 c 盘的 www 目录下
 
 3.修改xampp中的Apache配置文件
 
@@ -74,7 +56,7 @@ https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-insta
   ```
 <br>
 
-+ 打开 xampp\apache\conf\extra\httpd-vhosts.conf文件,添加以下代码(为你自己的域名):
++ 打开 `xampp\apache\conf\extra\httpd-vhosts.conf`文件，添加以下代码(为你自己的域名):
 
    ```apache
    <VirtualHost *:80>
@@ -102,37 +84,120 @@ https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-insta
 	</Directory>  
   </VirtualHost>
   ```
+重启 Apache 服务器
 
-
-4. 打使用xampp自带的phpMyAdmin http://localhost/phpmyadmin/ 创建数据库 masterlab
+4.打使用xampp自带的phpMyAdmin `http://localhost/phpmyadmin/` 创建数据库 `masterlab`
  
 ```sql
-create database masterlabdefault character set utf8mb4 collate utf8mb4_unicode_ci;
+create database masterlab character set utf8mb4 collate utf8mb4_unicode_ci;
 ```
 
-创建好后，将masterlab根目录下的masterlab.sql导入到数据库中
+创建好数据库后，将根目录下的 `masterlab.sql` 导入到数据库中
 
-
-5. 将根目录下的 env.ini-example 重命名为 env.ini
-
-
-6. 将 masterlab/app/config/deploy/app.cfg.php 文件中的 ROOT_URL 常量值修改为
+Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下载地址 `http://www.masterlab.vip/sphinx-zh.zip`,解压至
+`C:\www/sphinx`，修改配置文件 `C:/www/sphinx-for-chinese/bin/sphinx.conf`,
 ```
-http://www.yoursite.com/
+    source masterlab_issue
+    {
+            type                    = mysql
+            sql_host                = 127.0.0.1
+            sql_user                = root
+            sql_pass                =
+            sql_db                  = masterlab
+            sql_port                = 3306
+    
+            sql_query_pre		= SET NAMES utf8
+            sql_query               = select * from issue_main
+            #sql_attr_uint          = id
+            #sql_attr_timestamp     = date_added
+            sql_attr_string        = id
+    }
+    
+    index issue
+    {
+        source			= masterlab_issue
+        path			= C:/www/masterlab/bin/sphinx-for-chinese/var/data/issue
+        docinfo			= extern
+        charset_type = utf-8
+        chinese_dictionary = C:/www/masterlab/bin/sphinx-for-chinese/etc/xdict
+    }
+    
+    indexer
+    {
+        mem_limit		= 256M
+    }
+    
+    searchd
+    {
+        listen			= 9312
+        listen			= 9306:mysql41
+        log				= C:/www/masterlab/bin/sphinx-for-chinese/var/log/searchd.log
+        query_log		= C:/www/masterlab/bin/sphinx-for-chinese/var/log/query.log
+        read_timeout	= 5
+        max_children	= 30
+        pid_file		= C:/www/masterlab/bin/sphinx-for-chinese/var/log/searchd.pid
+        max_matches		= 1000
+        seamless_rotate	= 1
+        preopen_indexes	= 1
+        unlink_old		= 1
+        workers			= threads # for RT to work
+        binlog_path		= C:/www/masterlab/bin/sphinx-for-chinese/var/data
+    }
+
 ```
 
-7. 修改 masterlab/app/config/deploy/database.cfg.php 文件中的数据库连接配置
+在 `C:/www/masterlab/bin/sphinx-for-chinese/` 下执行索引构建和启动服务命令
+```
+  C:/www/masterlab/bin/sphinx-for-chinese/bin/indexer.exe --all
+  C:/www/masterlab/bin/sphinx-for-chinese/bin/searchd.exe
+``` 
 
-8.重启Apache，在浏览器中访问`www.yoursite.com`即可。
+5.将根目录下的 `env.ini-example` 重命名为 `env.ini`
 
+6.修改php配置文件
+
+ ```
+   app/config/deploy/app.cfg.php`     # 主配置文件,将 ROOT_URL 修改为 http://www.yoursite.com/ , 后面的斜杠不能少!
+   app/config/deploy/database.cfg.php # 数据库的连接配置
+   
+```
+
+8.重启Apache，在浏览器中访问`www.yoursite.com`即可
+
+9.配置Redis,如果启用了Redis缓存功能将显著提高Masterlab的访问性能，下载Redis的windows版本,下载地址 
+`https://github.com/MicrosoftArchive/redis/releases`，下载最新的 zip 文件，解压至于 `C:/www/redis`,
+直接运行 `redis-server.exe` 启动redis，默认配置是
+```text
+ host 127.0..0.1
+ port 6379
+```
+启用缓存 还需要修改php的以下配置文件
+ ```
+   app/config/deploy/app.cfg.php`     # 主配置文件,将 ENABLE_CACHE 修改为 true
+   app/config/deploy/cache.cfg.php    # Redis的连接配置,$_config['enable'] 为设置为 true
+```
+10. 定时任务，Masterlab中的图表功能需要定时执行脚本
+ ```
+ #  每一个小时计算冗余的项目数据
+ C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/project.php
+ 
+ #  每天晚上 23.55 计算每个项目的冗余数据
+ C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/projectDayReport.php
+
+ #  每天晚上 23.50 计算每个迭代的冗余数据
+ C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/sprintDayReport.php
+ 
+```
 
 
 ### Linux 安装步骤
 
 * 环境准备
-  安装过程使用 git 和 composer ,同时还要搭建Nginx+Mysql5.7+Php7.2+Redis的运行环境，安装过程可参考下面文档，如果已经有则忽略
-```
-http://www.yoursite.com/
+  安装过程使用 git 和 composer ,同时还要搭建Nginx+Mysql5.7+Php7.2+Redis的运行环境，安装过程可参考下面文档，如果已经安装过则忽略
+```text
+    Centos6 http://www.masterlab.vip/help.php?md=setup_centos6
+    Centos7 http://www.masterlab.vip/help.php?md=setup_centos7
+    Ubuntu http://www.masterlab.vip/help.php?md=setup_ubuntu
 ```
 
 * 环境搭建好后下载Masterlab代码
@@ -144,14 +209,24 @@ git clone git@github.com:gopeak/masterlab.git
 cd masterlab
 composer update
 ```
+如果 composer 命令执行很慢，则可以修改为国内镜像，参考 https://pkg.phpcomposer.com/
+
 * 创建数据库，数据库创建命令
 ```sql
-create database masterlabdefault character set utf8mb4 collate utf8mb4_unicode_ci;
+create database masterlab character set utf8mb4 collate utf8mb4_unicode_ci;
 ```
 导入数据库
 ```sql
 source /data/www/masterlab/masterlab.sql
 ```
+Mysql5.7以上版本,使用Ngram插件启用内置的全文索引
+   ```mysql
+        ALTER table issue_main add fulltext index fulltext_summary( `summary`) with parser ngram;
+        ALTER table issue_main add fulltext index fulltext_summary_description( `summary`, `description`) with parser ngram;
+        ALTER table project_main add fulltext index fulltext_name_description( `name`, `description`) with parser ngram;
+        ALTER table project_main add fulltext index fulltext_name( `name`) with parser ngram;
+```
+
 * nginx 配置虚拟主机映射至 `/data/www/masterlab/app/public`
 
 ```nginx
@@ -217,7 +292,6 @@ server {
 
 }
 
-
 ```
 
  * 将根目录下的 env.ini-example 重命名为 env.ini  
@@ -228,75 +302,17 @@ server {
 
  * 修改配置文件
 
-修改 app/config/deploy/app.cfg.php 文件中的 ROOT_URL 常量  
-
-```php 
-
-    // 修改为你自己的域名，特别注意不能少了后面的 / 
-    define('ROOT_URL', 'http://www.yoursitecom/');
-
+ ```
+  # 主配置文件,将 ROOT_URL 修改为 http://www.yoursite.com/ , 注:后面的斜杠不能少;ENABLE_CACHE 设置为true
+  app/config/deploy/app.cfg.php`    
+   
+  # 数据库的连接配置
+  app/config/deploy/database.cfg.php 
+  
+  # Redis的连接配置，$_config['enable'] 设置为true
+  app/config/deploy/cache.cfg.php    
+   
 ```
 
-修改 app/config/deploy/database.cfg.php 文件中的数据库配置  
-
-```php 
-$_config = array(
-    'database' =>
-        array(
-            'default' =>
-                array(
-                    'driver' => 'mysql',
-                    'host' => '127.0.0.1',
-                    'port' => '3306',
-                    'user' => 'hornet', //hornet
-                    'password' => 'hornet2017@.@', // hornet2017@.@
-                    'db_name' => 'masterlab_pm',
-                    'charset' => 'utf8',
-                    'timeout' => 10,
-                    'show_field_info' => false,
-                ),
-            'framework_db' =>
-                array(
-                    'driver' => 'mysql',
-                    'host' => '127.0.0.1',
-                    'port' => '3306',
-                    'user' => 'hornet',
-                    'password' => 'hornet2017@.@',
-                    'db_name' => 'xphp_test',
-                    'charset' => 'utf8',
-                    'timeout' => 10,
-                    'show_field_info' => false,
-                ),
-            'log_db' =>
-                array(
-                    'driver' => 'mysql',
-                    'host' => '127.0.0.1',
-                    'port' => '3306',
-                    'user' => 'hornet',
-                    'password' => 'hornet2017@.@',
-                    'db_name' => 'masterlab_pm',
-                    'charset' => 'utf8',
-                    'timeout' => 10,
-                    'show_field_info' => false,
-                ),
-        ),
-    'config_map_class' =>
-        array(
-            'default' =>
-                array(),
-            'framework_db' =>
-                array(
-                    0 => 'FrameworkUserModel',
-                    1 => 'FrameworkCacheKeyModel',
-                ),
-            'log_db' =>
-                array(
-                    0 => 'UnitTestUnitModel'
-                ),
-        ),
-);
-
-```
-
- * 重启web服务器,访问你刚才设置的域名即可,管理员初始账号 master 密码 MasterLab520
+ * 重启web服务器,访问你刚才设置的域名即可,管理员初始账号 master 密码 testtest
 
