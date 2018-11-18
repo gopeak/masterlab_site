@@ -28,8 +28,9 @@ script:
   - cat /tmp/error.log
 after_success:
   - export SSHPASS=$DEPLOY_PASS
-  #- sshpass -e scp  -o stricthostkeychecking=no ./deploy.sh root@47.244.62.11:/data/www/masterlab_site/
-  - sshpass -e ssh  -o stricthostkeychecking=no $DEPLOY_USER@47.244.62.11 "sh ./deploy.sh"
+  #- sshpass -e scp  -o stricthostkeychecking=no ./deploy.sh $DEPLOY_USER@47.244.62.11:/data/www/masterlab_site/
+  - sshpass -p $DEPLOY_PASS ssh -o StrictHostKeyChecking=no$DEPLOY_USER@47.244.62.11 'sh /data/www/masterlab_site/deploy.sh'
+  #- sshpass -e ssh  -o stricthostkeychecking=no $DEPLOY_USER@47.244.62.11 "sh /data/www/masterlab_site/deploy.sh"
 notifications:
   email:
     - 121642038@qq.com
