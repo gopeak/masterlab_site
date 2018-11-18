@@ -8,7 +8,6 @@ env:
   - secure: RbNAI1vjysv71yYfZ0G+7Nn92M57fnS5HwoYtcAfB3TtxanXpXxpKchqxEx4XtodA1+Vtt3qBGK5a9nu5PHZRioxJKgycnxpXu6zW0vTAc6qP8l9zbik6dIVHUFKB2wU8y0AE8KiLgz2TcDgMAghxw2t9MFzovVgTrjJV2mtmdBkRbg8uET++kTVQXpo510hExNq/bcpFDzF2feFnyYjH/mslhFJggo7vz1IvqJxswzE/hO4+zxFfwVNqU90H6bLysx4Sv4su1z3JftjOZzMGwyuIUh43vWdwZVv5EOAt3bsAYjmdgDEcVrFFHddll3EoI6t7lae8P8ld7NOOFuHgxoGuhSe76gKXjKanYsAxXfZkp1fwyeh2Q5H1p6bgGCxn8rJiG0P8cBKz+SiWHyfnBrss8oiYhdyaCSihfSU+1ZrJ9uIRoh3T1YkbR/h2bVYczlu3MPLL0msBPaPCD3BLgVxQBacVusIoCXJsEyss2IU+WAdT6jSPR6iwkl9u7ByOiQ1rqwToD9FyyDhRLhc5/H9WZnIeA24/LOS7sB8+b02sVadNMKmPEkUm7vdKRyFXvTe8B1c5YvrSvp82wHzXh5Q7wvFXwjbnkqc82DLaN3BrGNp8X/LQ49xpZefkip/SwMquNXWa3PTNhNoFXnF15o1G/gS/mUf8RyDdQPSyBQ=
   - secure: d/vy805ALBMKu/0UWZ8MwB8UXjB6NlpNMwDPI6w6GvhhXOqi712A3smCxhsrfVtcFMXwZWOhJe8efdtfQXF3QywB6QNTkKp0ZbYEDREcQ4Br7eCPwnb9N7RFEwndcnJECTasUs55BKv1jo9Y0sUVX8vrRKtwpp3bx+hoXO8NBTJqcei90M7L0dTgLerqlMZzWwljZ35BNem8tzmPaG8+XVztLl5KPXNWXC2in+vBYllrYSCBGmQU6dF3Lw0eM/2aqSBJsgIuYPGi/toxf6o7Ylg9WHZyZkqluMZZSEtg+MzL6uwFEP6y875YwFCX5npelAZ/fKsYY7uX7StuwN42Y2cQEDaxIQwuNuzy1DUgJujYwEKUDS6f4i0YBi0o7KFcmWuBuYLR5BkUjMiiiidmNROeUrDIblF6k0WzYkoXEyyzxgtgpL1cbwiaHGxB0B+aLIttroK9yomx3MJY9MKHJWO86TcvhhtLF5VXKBETRciYOkD4zlvqIL3w0uMC1HvPNM+ZztY33lMIyxmKBj8XtVwcI0d8BmF5MdsEhHmWmNQ8ZKb2GDmEu6neo87dAJPqtEiyoBBNi0//cfyZje+GOBK1q3jMgZ7wu4nZO1K+iZj1jQoF2MKpn5uydAM+9ExjOAMNFYSvUW+wWQQJvdlxAM7GSl0z0L9RRsWQsvxRd3M=
 services:
-  - mysql
   - nginx
 branches:
   only:
@@ -30,7 +29,7 @@ script:
 after_success:
   - export SSHPASS=$DEPLOY_PASS
   #- sshpass -e scp  -o stricthostkeychecking=no ./deploy.sh root@47.244.62.11:/data/www/masterlab_site/
-  - sshpass -e ssh  -o stricthostkeychecking=no $DEPLOY_USER@47.244.62.11 "sh ./deploy.sh"
+  - sshpass -e ssh  -o stricthostkeychecking=no $DEPLOY_USER@47.244.62.11:/data/www/masterlab_site/ "sh ./deploy.sh"
 notifications:
   email:
     - 121642038@qq.com
