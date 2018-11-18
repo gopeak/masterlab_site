@@ -42,3 +42,4 @@ addons:
     packages:
       - nginx
       - realpath
+      - sshpass
