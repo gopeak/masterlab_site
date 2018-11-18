@@ -178,13 +178,13 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
 ```
 10. 定时任务，Masterlab中的图表功能需要定时执行脚本
  ```
- #  每一个小时计算冗余的项目数据
+ 每一个小时计算冗余的项目数据
  C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/project.php
  
- #  每天晚上 23.55 计算每个项目的冗余数据
+ 每天晚上 23.55 计算每个项目的冗余数据
  C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/projectDayReport.php
 
- #  每天晚上 23.50 计算每个迭代的冗余数据
+ 每天晚上 23.50 计算每个迭代的冗余数据
  C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/sprintDayReport.php
  
 ```
@@ -314,5 +314,15 @@ server {
    
 ```
 
- * 重启web服务器,访问你刚才设置的域名即可,管理员初始账号 master 密码 testtest
+ * 设置定时任务
+```
+0,30 22-23 * * * /usr/bin/php /data/www/masterlab/app/server/timer/project.php
+55 23 * * * /usr/bin/php /data/www/masterlab/app/server/timer/projectDayReport.php
+56 23 * * * /usr/bin/php /data/www/masterlab/app/server/timer/sprintDayReport.php
+
+```
+
+ * 重启web服务器,访问你刚才设置的域名,初始管理员账号 master 密码 testtest
+ 
+ 
 
