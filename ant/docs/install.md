@@ -6,7 +6,7 @@
 - Php
   - 版本 >= 5.6 
   - 扩展 ：curl,mysqlnd,pdo,opcache,mbstring,redis
-  - php.ini ： 
+  - php.ini ： short_open_tag = On
 - Mysql
   - 版本 >= 5.5
   - 其他 ： 启用 innodb引擎 和 ngram全文索引，禁用严格模式

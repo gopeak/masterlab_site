@@ -24,7 +24,7 @@ script:
   - ls
   - chmod +x $TRAVIS_BUILD_DIR/travis/install-nginx.sh
   - "$TRAVIS_BUILD_DIR/travis/install-nginx.sh"
-  - curl "http://masterlab-site.ci:8888/"
+  #- curl "http://masterlab-site.ci:8888/"
   - cat /tmp/error.log
 after_success:
   - export SSHPASS=$DEPLOY_PASS
