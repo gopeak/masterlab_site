@@ -202,7 +202,7 @@ if (isset($_GET['file'])) {
             <h2>下 载</h2>
             <span class="separator"></span>
             <div class="info-content">
-                <p class="main-info">Masterlab-full-last.zip为完整的代码包，无需安装Git和Composer命令行工具</p>
+                <p class="main-info">Masterlab-full-last.zip为完整的代码包，无需安装Git和Composer命令行工具，安装过程详见<a href="http://aaa.ink/ant/help.php?md=install">http://aaa.ink/ant/help.php?md=install</a> </p>
             </div>
         </section>
 
