@@ -1,17 +1,24 @@
 <?php
 $page = 'download';
 
-if (isset($_GET['file']) && $_GET['file'] == 'last') {
+if (isset($_GET['file'])) {
     require_once "lib/comm_function.php";
-    clientlog();
-    header("Content-Type: application/octet-stream");
-    header("Accept-Ranges: bytes");
-    header("Accept-Length: " . filesize('文件地址'));
-    header("Content-Disposition: attachment; filename=文件名称");
-    $file = fopen('downloads/masterlab-full-last.zip', "r");
-    echo fread($file, filesize('文件地址'));
-    fclose($file);
-    die;
+    $file = $_GET['file'];
+    //var_dump('downloads/' . $file);die;
+    if (file_exists('downloads/' . $file)) {
+        clientlog();
+        header("Content-Type: application/octet-stream");
+        header("Accept-Ranges: bytes");
+        header("Accept-Length: " . filesize('downloads/' . $file));
+        header("Content-Disposition: attachment; filename=" . $file);
+
+        header('location:downloads/' . $file);
+        die;
+        /*        $file = fopen('downloads/' . $file, "rb");
+        echo fread($file, filesize('downloads/' . $file));
+        fclose($file);
+        die;*/
+    }
 }
 
 ?>
@@ -192,7 +199,7 @@ if (isset($_GET['file']) && $_GET['file'] == 'last') {
 
 
         <section class="description container text-center">
-            <h2  >下 载</h2>
+            <h2>下 载</h2>
             <span class="separator"></span>
             <div class="info-content">
                 <p class="main-info">Masterlab-full-last.zip为完整的代码包，无需安装Git和Composer命令行工具</p>
@@ -205,14 +212,15 @@ if (isset($_GET['file']) && $_GET['file'] == 'last') {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4><a href="?file=/masterlab-full-last.zip">Masterlab-full-last.zip</a></h4> v1.0 78.6M
+                            <h4><a href="?file=masterlab-full-last.zip">Masterlab-full-last.zip</a></h4> v1.0 78.6M
                             <p>Masterlab完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
                         </div>
                     </li>
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4><a href="?file=sphinx-for-chinese-windows.zip">Sphinx-for-chinese-windows.zip</a></h4> 78.6M
+                            <h4><a href="?file=sphinx-for-chinese-windows.zip">Sphinx-for-chinese-windows.zip</a></h4>
+                            78.6M
                             <p>全文检索引擎Sphinx的中文分词支持版本,Mysql5.6以下作为全站搜索服务，官方网站 https://sphinxsearchcn.github.io/ </p>
                         </div>
                     </li>
@@ -229,7 +237,7 @@ if (isset($_GET['file']) && $_GET['file'] == 'last') {
         </section>
 
         <section class="join-us get-started description text-center">
-            <h2 ></h2>
+            <h2></h2>
             <div class="info-content">
                 <p class="main-info"></p>
             </div>
