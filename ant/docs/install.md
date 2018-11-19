@@ -175,8 +175,8 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
    app/config/deploy/app.cfg.php`     # 主配置文件,将 ENABLE_CACHE 修改为 true
    app/config/deploy/cache.cfg.php    # Redis的连接配置,$_config['enable'] 为设置为 true
 ```
-10. 定时任务，Masterlab中的图表功能需要定时执行脚本
- ```
+10.定时任务，Masterlab中的图表功能需要定时执行脚本
+ ```text
  每一个小时计算冗余的项目数据
  C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/project.php
  
@@ -185,11 +185,10 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
 
  每天晚上 23.50 计算每个迭代的冗余数据
  C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/sprintDayReport.php
- 
 ```
 
 
-### Linux 安装步骤
+###Linux 安装步骤
 
 * 环境准备
   安装过程使用 git 和 composer ,同时还要搭建Nginx+Mysql5.7+Php7.2+Redis的运行环境，安装过程可参考下面文档，如果已经安装过则忽略
