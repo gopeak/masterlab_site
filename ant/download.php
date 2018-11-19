@@ -1,8 +1,21 @@
 <?php
-$page = 'about';
+$page = 'download';
+
+if (isset($_GET['file']) && $_GET['file'] == 'last') {
+    require_once "lib/comm_function.php";
+    clientlog();
+    header("Content-Type: application/octet-stream");
+    header("Accept-Ranges: bytes");
+    header("Accept-Length: " . filesize('文件地址'));
+    header("Content-Disposition: attachment; filename=文件名称");
+    $file = fopen('downloads/masterlab-full-last.zip', "r");
+    echo fread($file, filesize('文件地址'));
+    fclose($file);
+    die;
+}
+
 ?>
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://antv.alipay.com/zh-cn/vis/index.html -->
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,7 +34,6 @@ $page = 'about';
     <link rel="stylesheet" href="./about_files/home-3defa.css">
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
 
-    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
     <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
     <link rel="stylesheet" type="text/css" href="./product_files/featrue.css">
@@ -134,33 +146,40 @@ $page = 'about';
                 padding: 0;
             }
         }
-        .join-us{
-            padding-bottom:120px;
+
+        .join-us {
+            padding-bottom: 120px;
         }
+
         .info-items li {
             line-height: normal;
             padding: 14px 20px;
             display: flex;
             border-radius: 50px;
         }
-        .info-items li:hover{
+
+        .info-items li:hover {
             background-color: #f5f5f5;
         }
+
         .info-items li > .face {
             display: none;
             width: 100px;
             height: 100px;
             border-radius: 50%;
         }
+
         .info-items li > .person {
             flex: 1;
             margin: 0 0 0 20px;
         }
-        .info-items li > .person h4{
+
+        .info-items li > .person h4 {
             padding: 0 0 10px 0;
         }
+
         .description h2:before,
-        .info-items li > .person h4:before{
+        .info-items li > .person h4:before {
             display: none;
         }
     </style>
@@ -169,136 +188,53 @@ $page = 'about';
 
 <div id="react-content">
     <div data-reactroot="" class="page-wrapper">
-        <? include 'header.php'?>
+        <? include 'header.php' ?>
 
-
-        <section class="intro">
-            <div class="container">
-                <div class="header row">
-                    <div class="col-md-5">
-                        <h1>关于我们</h1>
-                        <p class="main-info">
-
-                            MasterLab 发扬开源和分享互联网精神，充分利用来自开源的其他力量，积极融入开源社区，发扬开源协作创新精神，合理应用开源技术为互联网企业服务！</p>
-                        <br>
-                        <p class="main-info">才启程，不停步，愿与君同行。</p>
-                    </div>
-                    <div class="col-md-7">
-                        <img class="img-landscape" src="./about_files/word.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="description container text-center">
-            <h2 id="关于团队">关于团队</h2>
+            <h2  >下 载</h2>
             <span class="separator"></span>
             <div class="info-content">
-                <p class="main-info">我们一支富有激情充满活力的技术团队，也是一群可爱的人，一起快乐做一件有意义的事情。</p>
-
-                
+                <p class="main-info">Masterlab-full-last.zip为完整的代码包，无需安装Git和Composer命令行工具</p>
             </div>
         </section>
 
         <section class="description container text-center">
-            <h2 id="关于团队">团队成员</h2>
-            <span class="separator"></span>
             <div class="info-content">
                 <ul class="text-left info-items">
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4>Sven</h4>
-                            <p>自称IT狂人, 产品经理兼码农, 做事喜欢追求极限，业余爱好有攀登、穿越、摩旅</p>
+                            <h4><a href="?file=/masterlab-full-last.zip">Masterlab-full-last.zip</a></h4> v1.0 78.6M
+                            <p>Masterlab完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
                         </div>
                     </li>
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4>Lyman</h4>
-                            <p>江湖人称健哥, 技术大拿</p>
+                            <h4><a href="?file=sphinx-for-chinese-windows.zip">Sphinx-for-chinese-windows.zip</a></h4> 78.6M
+                            <p>全文检索引擎Sphinx的中文分词支持版本,Mysql5.6以下作为全站搜索服务，官方网站 https://sphinxsearchcn.github.io/ </p>
                         </div>
                     </li>
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4>Mo</h4>
-                            <p>资深前端工程师, 美食家 吃货</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4>Jelly</h4>
-                            <p>资深前端工程师, 程序员中花木兰</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4>FangMin</h4>
-                            <p>全能战士</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4>Sandy</h4>
-                            <p>资深UI设计师，美女</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
 
-        <section class="description container text-center">
-            <h2 id="">开发理念</h2>
-            <span class="separator"></span>
-            <div class="info-content">
-                <ul  class="text-left info-items" >
-                    <li>简单 -因为迭代和渐进开发，不需要一次到位简单可读性</li>
-                    <li>勇气 -勇于承担任务，授权，完成任务，赢得尊重</li>
-                    <li>沟通 -文档完整规范清晰;团队氛围良好，及早沟通，自组织团队</li>
-                    <li>反馈 -沟通后需要再次反馈；快速将产品投入市场，收到反馈，再次迭代</li>
-                </ul>
-            </div>
-        </section>
-
-<!--        <section class="description container text-center">
-            <h2 id="">团队价值观:敏捷武士+大师精神</h2>
-            <span class="separator"></span>
-            <div class="info-content">
-                <p  class="main-info">开发人员的能力体现在于两个方面:技能和修养。如同武侠小说的侠士，古代日本武士和欧洲圆桌骑士般,他们不仅拥有高超的武艺，也要具备良好的品格修养。
-                    开发人员既要注重技能的学习和研究，同时也会加强内在的修养，如谦虚好学的态度,正能量影响他人的精神。
-                    积极向大师学习新知识并结合到实际中，久而久之有一天自己也成为大师人物。</p>
-            </div>
-        </section>
--->
-        <section class="description container text-center">
-            <h2 id="">开发实践</h2>
-            <span class="separator"></span>
-            <div class="info-content">
-                <ul  class="text-left info-items" >
-                    <li>单元测试  及时反馈极大降低回归测试成本极大减少调试时间部署起来信心十足</li>
-                    <li>持续集成  提早集成，自动化部署
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4><a href="?file=Redis-x64-3.0.501.zip">Redis-x64-3.0.501.zip</a></h4> 5.7M
+                            <p>Redis3.0 的Windows版本</p>
+                        </div>
                     </li>
-                    <li>重构  收放自如 偿还技术债务</li>
-                    <li>代码规范  用代码进行沟通，清晰表达意图 动态评估取舍 保持简单</li>
                 </ul>
             </div>
         </section>
 
         <section class="join-us get-started description text-center">
-            <h2 id="">加入我们</h2>
-            <span class="separator"></span>
+            <h2 ></h2>
             <div class="info-content">
-                <p class="main-info">我们一支富有激情充满活力的互联网产业团队， 我们也是一群有爱的人，在一起快乐做一件有意义的事情。如果你对编程、
-                    数据分析、交互设计充满激情，无论你是工程师，还是设计师，请联系我们，期待你的加入。weichaoduo@163.com</p>
-                    <a href="mailto:weichaoduo@163.com" class="btn btn-round-link more-tutorial btn-primary btn-lg">立即加入</a>
+                <p class="main-info"></p>
             </div>
         </section>
-
-        <? include 'footer.php'?>
+        <? include 'footer.php' ?>
     </div>
 </div>
 <script type="text/javascript">
@@ -321,13 +257,6 @@ $page = 'about';
 <div id="___tracers" style="display:none">
 
 </div>
-<script type="text/javascript" src="./about_files/g2.min.js"></script>
-<script type="text/javascript" src="./about_files/data-set.min.js"></script>
-<script src="./about_files/jquery.headroom-0.9.4.min.js"></script>
-<script src="./about_files/slick.min.js"></script>
-<script src="./about_files/clipboard-1.7.1.min.js"></script>
-<script src="./about_files/home-049f8.js"></script>
-<script src="./about_files/common-729ed.js"></script>
 <div class="autocomplete-suggestions"
      style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
 </body>
