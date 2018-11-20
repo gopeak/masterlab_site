@@ -49,7 +49,7 @@ $page = 'milestone';
         <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-19">
             <article class="markdown">
                 <h1><!-- react-text: 7590 -->里程碑<!-- /react-text --></h1>
-                <h2>1.0 版本发布</h2>
+                <h2>v1.0-pre 体验版发布</h2>
                 <p>2018.11.6,修复了大部分bug,正式推出</p>
                 <ol>
                     <li>logo设计</li>
@@ -69,7 +69,7 @@ $page = 'milestone';
                     <li>...</li>
                 <p></p>
 
-                <h2> alpha版本发布</h2>
+                <h2> v0.9-alpha 版本发布</h2>
                 <p>2018.7.28,实现了完整功能且流程通畅</p>
                 <ol>
                     <li>事项列表的复制，删除 </li>
@@ -110,11 +110,11 @@ $page = 'milestone';
                                 class="iconfont icon-sinaweibo"></span></a></li>
                 <li class="nav-item"><a class="declaration" href="https://github.com/antvis/"><span
                                 class="iconfont icon-github"></span></a></li>
-                <li class="nav-item"><a class="declaration" href="https://antv.alipay.com/zh-cn/about.html">关于我们</a>
+                <li class="nav-item"><a class="declaration" href="#">关于我们</a>
                 </li>
             </ul>
-            <a class="declaration" href="https://docs.alipay.com/policies/privacy/antfin">隐私权政策</a> <span>|</span> <a
-                    class="declaration" href="https://render.alipay.com/p/f/fd-izto3cem/index.html">权益保障承诺书</a> <span>ICP 证浙 B2-2-100257 Copyright © 蚂蚁金融服务集团</span>
+            <a class="declaration" href="#">隐私权政策</a> <span>|</span> <a
+                    class="declaration" href="#">权益保障承诺书</a> <span>ICP </span>
         </div>
     </div>
 </footer>
