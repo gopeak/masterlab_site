@@ -27,14 +27,47 @@
 
 ### Windows安装示例
 
-1.首先搭建Masterlab的运行环境，这里为简便安装，直接使用已经集成好的 `Xampp`，下载地址:
-```
-https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-installer.exe
-```
-下载好后将xampp安装在硬盘的根目录，如 D:/xampp
+1.首先搭建Masterlab的运行环境，这里为简便安装，直接使用已经集成好的 `Xampp`，最新版下载地址:
+  https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-installer.exe
+  下载好后将xampp安装在硬盘的根目录，如 C:/xampp
+  
+  修改 C:/xampp/php/php.ini 配置项
+  ```
+   short_open_tag = On
+   upload_max_filesize = 8M
+   post_max_size = 8M
+   memory_limit = 128M
+   max_execution_time = 30
+   
+  ```
+  安装 redis 扩展, 下载地址 https://windows.php.net/downloads/pecl/releases/redis/4.2.0/ ,选择下载 `php_redis-4.2.0-7.2-ts-vc15-x86.zip`,解压至 `C:/xampp/php/ext`
+  在 `C:/xampp/php/php.ini` 增加
+ 
+   ```
+    [Redis]
+    extension=redis
+    
+   ```
+  
 
-
-2.下载最新版本的完整代码包，解压到 c 盘的 www 目录下
+2.下载最新版本的完整代码包，解压到 C 盘的 C:/www 目录下
+  解压后的目录结构如下:
+```
+    hornet-framework     php开发框架
+    sphinx-for-chinese   全文搜索引擎
+    masterlab            
+      |--   app   
+      |--   bin  
+      |--   lib    
+      |--   travis
+      |--   vendor
+      |--   composer.json
+      |--   env.ini-example       
+      |--   LICENSE
+      |--   masterlab.sql    
+      |--   php.ini    
+      |--   README.md
+```
 
 3.修改xampp中的Apache配置文件
 
@@ -42,7 +75,8 @@ https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-insta
 
    ```apache
     <Directory />
-      ..
+        AllowOverride none
+        Require all denied
     </Directory>
   ```
    替换为
@@ -59,7 +93,7 @@ https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-insta
 
    ```apache
    <VirtualHost *:80>
-    DocumentRoot "c:/www/masterlab/app/public"
+    DocumentRoot "C:/www/masterlab/app/public"
     # 这里修改成你自己的域名
     ServerName  www.yoursite.com
     <Directory />    
@@ -67,15 +101,15 @@ https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-insta
         AllowOverride All      
         Allow from All     
     </Directory>    
-    <Directory "c:/www/masterlab/app/public">    
+    <Directory "C:/www/masterlab/app/public">    
         Options  Indexes FollowSymLinks    
         AllowOverride All    
         Order allow,deny    
         Allow from All    
     </Directory>    
 	
-    Alias /attachment "c:/www/masterlab/app/storage/attachment" 
-    <Directory "c:/www/masterlab/app/storage/attachment">
+    Alias /attachment "C:/www/masterlab/app/storage/attachment" 
+    <Directory "C:/www/masterlab/app/storage/attachment">
 		Options Indexes FollowSymLinks
 		AllowOverride All
 		Order allow,deny
@@ -94,7 +128,7 @@ create database masterlab character set utf8mb4 collate utf8mb4_unicode_ci;
 创建好数据库后，将根目录下的 `masterlab.sql` 导入到数据库中
 
 Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下载地址 `http://www.masterlab.vip/sphinx-zh.zip`,解压至
-`C:\www/sphinx`，修改配置文件 `C:/www/sphinx-for-chinese/bin/sphinx.conf`,
+`C:\www/sphinx`，修改配置文件 `C:/www/sphinx/bin/sphinx.conf`,
 ```
     source masterlab_issue
     {
@@ -115,10 +149,10 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
     index issue
     {
         source			= masterlab_issue
-        path			= C:/www/masterlab/bin/sphinx-for-chinese/var/data/issue
+        path			= C:/www/sphinx/var/data/issue
         docinfo			= extern
         charset_type = utf-8
-        chinese_dictionary = C:/www/masterlab/bin/sphinx-for-chinese/etc/xdict
+        chinese_dictionary = C:/www/sphinx/etc/xdict
     }
     
     indexer
@@ -130,30 +164,30 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
     {
         listen			= 9312
         listen			= 9306:mysql41
-        log				= C:/www/masterlab/bin/sphinx-for-chinese/var/log/searchd.log
-        query_log		= C:/www/masterlab/bin/sphinx-for-chinese/var/log/query.log
+        log				= C:/www/sphinx/var/log/searchd.log
+        query_log		= C:/www/sphinx/var/log/query.log
         read_timeout	= 5
         max_children	= 30
-        pid_file		= C:/www/masterlab/bin/sphinx-for-chinese/var/log/searchd.pid
+        pid_file		= C:/www/sphinx/var/log/searchd.pid
         max_matches		= 1000
         seamless_rotate	= 1
         preopen_indexes	= 1
         unlink_old		= 1
         workers			= threads # for RT to work
-        binlog_path		= C:/www/masterlab/bin/sphinx-for-chinese/var/data
+        binlog_path		= C:/www/sphinx/var/data
     }
 
 ```
 
-在 `C:/www/masterlab/bin/sphinx-for-chinese/` 下执行索引构建和启动服务命令
+在 `C:/www/sphinx/` 下执行索引构建和启动服务命令
 ```
-  C:/www/masterlab/bin/sphinx-for-chinese/bin/indexer.exe --all
-  C:/www/masterlab/bin/sphinx-for-chinese/bin/searchd.exe
+  C:/www/sphinx/bin/indexer.exe --all
+  C:/www/sphinx/bin/searchd.exe
 ``` 
 
 5.将根目录下的 `env.ini-example` 重命名为 `env.ini`
 
-6.修改php配置文件
+6.修改masterlab的配置文件
 
  ```
    app/config/deploy/app.cfg.php`     # 主配置文件,将 ROOT_URL 修改为 http://www.yoursite.com/ , 后面的斜杠不能少!
@@ -178,13 +212,13 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
 10.定时任务，Masterlab中的图表功能需要定时执行脚本
  ```text
  每一个小时计算冗余的项目数据
- C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/project.php
+ C:\xampp\php\php.exe  C:/www/masterlab/app/server/timer/project.php
  
  每天晚上 23.55 计算每个项目的冗余数据
- C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/projectDayReport.php
+ C:\xampp\php\php.exe  C:/www/masterlab/app/server/timer/projectDayReport.php
 
  每天晚上 23.50 计算每个迭代的冗余数据
- C:\xampp\php\php.exe  c:/www/masterlab/app/server/timer/sprintDayReport.php
+ C:\xampp\php\php.exe  C:/www/masterlab/app/server/timer/sprintDayReport.php
 ```
 
 
@@ -192,11 +226,11 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
 
 * 环境准备
   安装过程使用 git 和 composer ,同时还要搭建Nginx+Mysql5.7+Php7.2+Redis的运行环境，安装过程可参考下面文档，如果已经安装过则忽略
-```text
-    Centos6 http://www.masterlab.vip/help.php?md=setup_centos6
-    Centos7 http://www.masterlab.vip/help.php?md=setup_centos7
-    Ubuntu http://www.masterlab.vip/help.php?md=setup_ubuntu
-```
+ 
+   - Centos6 http://www.masterlab.vip/help.php?md=setup_centos6
+   - Centos7 http://www.masterlab.vip/help.php?md=setup_centos7
+   - Ubuntu http://www.masterlab.vip/help.php?md=setup_ubuntu
+ 
 
 * 环境搭建好后下载Masterlab代码
 ```bash
