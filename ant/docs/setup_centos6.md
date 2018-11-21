@@ -96,6 +96,7 @@ ngram_token_size=2
 ```
 service mysql start
 ```
+@todo mysql 命令行连接服务器，查看信息，表明安装成功
 
 ### Redis安装
 ```
@@ -108,4 +109,11 @@ yum install redis
 yum install mod_php71w php71w-bcmath php71w-cli php71w-common php71w-dba php71w-devel php71w-embedded php71w-enchant php71w-fpm php71w-gd php71w-imap php71w-interbase php71w-intl php71w-ldap php71w-mbstring php71w-mcrypt php71w-mysqlnd php71w-odbc php71w-opcache php71w-pdo php71w-pear php71w-pecl-apcu php71w-pecl-imagick php71w-pecl-memcached php71w-pecl-mongodb php71w-pecl-redis php71w-pecl-xdebug php71w-pgsql php71w-phpdbg php71w-process php71w-pspell php71w-recode php71w-snmp php71w-soap php71w-tidy php71w-xml php71w-xmlrpc
 ```
 
+### @todo 编写一个运行的示例
+
+- Nginx 配置文件修改
+
+- PHP 配置文件
+
+- 检查 (phpinfo,mysql连接,mysql严格模式)
 
