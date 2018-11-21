@@ -84,18 +84,17 @@ yum install Percona-Server-server-57
 
 4. 停止mysql服务
 ```
-systemctl stop mysql.service
+service mysql stop
 ```
 5. 取消mysql的严格模式和新增对ngram的支持
-修改配置文件/etc/mysql/percona-server.conf.d/mysqld.cnf
-替换掉
+修改配置文件 `/etc/my.cnf` ，在 `[mysqld]` 中添加
 ```
 sql_mode=NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER
 ngram_token_size=2
 ```
 6. 启动mysql
 ```
-systemctl start mysql.service
+service mysql start
 ```
 
 ### Redis安装
