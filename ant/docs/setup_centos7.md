@@ -24,6 +24,25 @@ yum install epel-release
 ```
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 ```
+若出现如下错误
+``` 
+14: problem making ssl connection
+Error: Cannot find a valid baseurl for repo: webtatic
+
+```
+解决方法
+用 修改文件 /etc/yum.repos.d/epel.repo
+``` 
+ [epel]
+ ...
+ enabled=1 
+ ...
+
+```
+
+将enabled=1先改为enabled=0
+yum install ca-certificates，安装成功后，将enabled重新改为1，保存后再执行命令
+
 
 ### Nginx安装
 ```

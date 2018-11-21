@@ -24,6 +24,28 @@ yum install epel-release
 ```
 rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
 ```
+若出现如下错误
+``` 
+14: problem making ssl connection
+Error: Cannot find a valid baseurl for repo: webtatic
+
+```
+解决方法
+用 修改文件 /etc/yum.repos.d/epel.repo
+``` 
+ [epel]
+ name=Extra Packages for Enterprise Linux 6 - $basearch
+ #baseurl=http://download.fedoraproject.org/pub/epel/6/$basearch
+ mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch
+ failovermethod=priority
+ enabled=1
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+
+```
+
+将enabled=1先改为enabled=0
+yum install ca-certificates，安装成功后，将enabled重新改为1，保存后再执行命令
 
 ### Nginx安装
 ```

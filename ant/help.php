@@ -49,6 +49,8 @@ require_once './lib/parsedown/Parsedown.php';
                 <ul class="list-group">
                     <li class="list-group-item <? if ($mdFile == 'introduce') echo 'active'; ?>">
                         <a  href="./help.php">介绍</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'env') echo 'active'; ?>">
+                        <a  href="?md=env">运行环境</a></li>
                     <li class="list-group-item <? if ($mdFile == 'install') echo 'active'; ?>">
                         <a  href="?md=install">安装</a></li>
                     <li class="list-group-item <? if ($mdFile == 'explain_word') echo 'active'; ?>">
