@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./index_files/main.style.a852bc67.css">
     <link rel="apple-touch-icon-precomposed" href="https://view4.rrxiu.net/favicon.ico">
     <link rel="shortcut icon" href="https://view4.rrxiu.net/favicon.ico">
-    <title>感谢有你 | 韦哥SevnW制作</title>
+    <title>感谢有你 | 韦哥 SevnW</title>
     <script type="text/javascript" async="" charset="utf-8" src="./index_files/core.php"></script>
     <script type="text/javascript" async="" defer="" charset="utf-8" src="./index_files/c.php"></script>
     <script type="text/javascript">
@@ -155,29 +155,28 @@
                     </div>
                 </div>
                 <div class="share-copyright"><span class="show-report" style="">举报</span> <span
-                        class="show-copyright"><a href="https://www.rrxiu.net/#waph" target="_blank"
-                                                  style="color:#fff;">免费制作 → 人人秀</a></span></div>
+                        class="show-copyright"><a href="http://www.masterlab.vip/#waph" target="_blank"
+                                                  style="color:#fff;"></a></span></div>
             </div>
             <div class="page_copyrightPage damu-down">
                 <div class="rrx-icon-close-layer"></div>
                 <div class="share-image"><img src="./index_files/1541050039927.jpg@!200x200"></div>
                 <div class="share-title">感谢有你 一路相随</div>
-                <div class="view-more"><a class="view-more-button" href="https://www.rrxiu.net/#waph" target="_blank">查看更多
-                    &gt;&gt;</a></div>
-                <a href="javascript:void(0)" class="show-rrxiu-report">举报</a>
+                <div class="view-more"></div>
+                <a href="javascript:void(0)" class="show-rrxiu-report"></a>
                 <div class="bottomm-text" style="{{bgBottomColor}}"><a class="make-rrxiu"
-                                                                       href="https://www.rrxiu.net/#waph"
-                                                                       target="blank"> <span>免费制作 → 人人秀</span> </a>
+                                                                       href="http://www.masterlab.vip/#waph"
+                                                                       target="blank"> <span></span> </a>
                 </div>
-                <a href="javascript:void(0)" class="show-rrxiu-visit" style="color: rgb(255, 255, 255); display: none;">阅读:{{visitCount}}</a>
+                <a href="javascript:void(0)" class="show-rrxiu-visit" style="color: rgb(255, 255, 255); display: none;"></a>
             </div>
             <div class="cart-button rrx-icon-sidle-cart" style="bottom: 90px;"><span class="cart-num"></span></div>
             <div class="danmu-button rrx-icon-sidle-danmu"></div>
             <div class="danmu-panel damu-down"></div>
             <div class="copyright"
                  style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); text-align: center;"><span
-                    class="show-report">举报</span><span class="show-copyright"><a href="https://www.rrxiu.net/#waph"
-                                                                                 target="_blank" style="color:#fff;">免费制作 → 人人秀</a></span>
+                    class="show-report">举报</span><span class="show-copyright"><a href="http://www.masterlab.vip/#waph"
+                                                                                 target="_blank" style="color:#fff;"></a></span>
             </div>
             <div class="plugin-copyright" style="display: none;"></div>
             <div class="wxmin-share-button">分享</div>
@@ -356,7 +355,7 @@
                                         <div style="text-align: left; width: 100%; height: 100%; overflow: hidden; -webkit-writing-mode: horizontal-tb; writing-mode: horizontal-tb;">
                                             <div class="element-last"
                                                  style="width: 100%; min-height: inherit; padding: 0px 5px; overflow-wrap: break-word; word-break: break-all; font-size: 24px; line-height: 2; -webkit-text-stroke: 0px; cursor: default; opacity: 1; font-family: siyuan_normal;">
-                                                <span style="font-size: 24px; color: rgb(0, 0, 0);">如果一滴水代表一份快乐，我送你整片海洋；如果一朵花代表一片好运，我送你整个春天；如果一朵云代表一阵欢笑，我送你整片天空；如果一颗树代表一阵顺利，我送你整座森林；如果一条短信代表一份祝福，我将世上最好的祝福送给你：感恩节快乐！</span>
+                                                <span style="font-size: 24px; color: rgb(0, 0, 0);">如果一滴水代表一份快乐，我送你整片海洋；如果一朵花代表一片好运，我送你整个春天；如果一朵云代表一阵欢笑，我送你整片天空；如果一颗树代表一阵顺利，我送你整座森林；如果一条信息代表一份祝福，我将世上最好的祝福送给你：感恩节快乐！</span>
                                             </div>
                                         </div>
                                     </div>
@@ -504,7 +503,7 @@
                                         <div style="text-align: left; width: 100%; height: 100%; overflow: hidden; -webkit-writing-mode: horizontal-tb; writing-mode: horizontal-tb;">
                                             <div class="element-last"
                                                  style="width: 100%; min-height: inherit; padding: 0px 5px; overflow-wrap: break-word; word-break: break-all; font-size: 24px; line-height: 2; -webkit-text-stroke: 0px; cursor: default; opacity: 1; font-family: siyuan_normal;">
-                                                <span style="font-size: 24px; color: rgb(0, 0, 0);">留不住的是岁月，忘不了的是朋友，谢不尽的是关照，丢不掉的是情义！我珍惜每一位和我一起走过的朋友，我感恩以往岁月里曾经给予支持和帮助过我的朋友！朋友的心意，不在话语多少，只要你能感受到温暖就好，愿你幸福平安，感恩节快乐！</span>
+                                                <span style="font-size: 24px; color: rgb(0, 0, 0);">感谢你曾经让我感受激情澎湃，朋友的心意，不在话语多少，只要你能感受到温暖就好，愿你幸福平安，感恩节快乐！</span>
                                             </div>
                                         </div>
                                     </div>
@@ -615,154 +614,6 @@
                                     <div class="element element_42 "
                                          style="position:absolute;left:0px;top:1009px;width:640px;height:394px;z-index:100;"
                                          eletype="img" data-id="42">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 640px; height: 394px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1541044245954.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pt-page page_5" data-id="5">
-                            <div class="pt-page-bg-box"
-                                 style="width: 100%; height: 100%; cursor: default; opacity: 1; background-color: rgb(255, 255, 255);"></div>
-                            <div class="normal_wrapper">
-                                <div class="pt-page-element-list-box"
-                                     style="width:100%;height:100%;position: absolute;top:0;left: 0;">
-                                    <div class="element element_66 "
-                                         style="position:absolute;left:227px;top:174px;width:189px;height:51px;z-index:110;"
-                                         eletype="div" data-id="66" id="inner_text_eidtor_66">
-                                        <div style="text-align: left; width: 100%; height: 100%; overflow: hidden; -webkit-writing-mode: horizontal-tb; writing-mode: horizontal-tb;">
-                                            <div class="element-last"
-                                                 style="width: 100%; min-height: inherit; padding: 0px 5px; overflow-wrap: break-word; word-break: break-all; font-size: 42px; line-height: 1.25; -webkit-text-stroke: 0px; cursor: default; opacity: 1; font-family: FZDHTJW; text-align: center;">
-                                                <div style=""><span
-                                                        style="color: rgb(255, 255, 255); -webkit-text-stroke-color: initial;">感恩陪伴</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_65 "
-                                         style="position:absolute;left:134px;top:256px;width:388px;height:349px;z-index:109;"
-                                         eletype="div" data-id="65" id="inner_text_eidtor_65">
-                                        <div style="text-align: left; width: 100%; height: 100%; overflow: hidden; -webkit-writing-mode: horizontal-tb; writing-mode: horizontal-tb;">
-                                            <div class="element-last"
-                                                 style="width: 100%; min-height: inherit; padding: 0px 5px; overflow-wrap: break-word; word-break: break-all; font-size: 24px; line-height: 2; -webkit-text-stroke: 0px; cursor: default; opacity: 1; font-family: siyuan_normal;">
-                                                感恩节到，在此，向陪我苦过、累过、唱过、闹过、哭过、笑过、疯过、玩过、从未错过、一路走过、以后还要一直这样过的朋友致以节日的问候和由衷的感激！愿朋友们永远健康好运，幸福开心！感恩节快乐！<span
-                                                    style="font-size: 24px; color: rgb(0, 0, 0);"></span></div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_64 "
-                                         style="position:absolute;left:207px;top:165px;width:229px;height:68px;z-index:108;"
-                                         eletype="img" data-id="64">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 229px; height: 68px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1540893831389.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_63 "
-                                         style="position:absolute;left:122px;top:633px;width:384px;height:205px;z-index:107;"
-                                         eletype="img" data-id="63">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 384px; height: 205px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1540893831716.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_62 "
-                                         style="position:absolute;left:0px;top:36px;width:640px;height:954px;z-index:106;"
-                                         eletype="img" data-id="62">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 640px; height: 954px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1540893831494.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_49 "
-                                         style="position:absolute;left:312px;top:0px;width:328px;height:374px;z-index:105;"
-                                         eletype="img" data-id="49">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 328px; height: 374px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1541043802342.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_50 "
-                                         style="position:absolute;left:0px;top:0px;width:223px;height:681px;z-index:104;"
-                                         eletype="img" data-id="50">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 223px; height: 681px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1541043802819.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_51 "
-                                         style="position:absolute;left:389px;top:789px;width:251px;height:219px;z-index:103;"
-                                         eletype="img" data-id="51">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 251px; height: 219px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1541043801324.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_52 "
-                                         style="position:absolute;left:0px;top:551px;width:403px;height:457px;z-index:102;"
-                                         eletype="img" data-id="52">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 403px; height: 457px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1541043801409.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_53 "
-                                         style="position:absolute;left:0px;top:0px;width:640px;height:1008px;z-index:101;"
-                                         eletype="img" data-id="53">
-                                        <div style="width: 100%; height: 100%; overflow: hidden;">
-                                            <div style="width:100%;height:100%;position:relative;"
-                                                 class="element-last-box">
-                                                <div class="element-mask"><img class="element-last"
-                                                                               style="-webkit-user-drag: none; width: 640px; height: 1008px; margin-left: 0px; margin-top: 0px; transform: none;"
-                                                                               src="./index_files/1541043801849.png@!user_image_600x1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="element element_54 "
-                                         style="position:absolute;left:0px;top:1009px;width:640px;height:394px;z-index:100;"
-                                         eletype="img" data-id="54">
                                         <div style="width: 100%; height: 100%; overflow: hidden;">
                                             <div style="width:100%;height:100%;position:relative;"
                                                  class="element-last-box">
