@@ -783,12 +783,3 @@
 
 
 <script src="./index_files/tpl_i5sphc.js" type="text/javascript"></script>
-<div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p>
-    <p class="last-btn">复制</p>
-    <iframe src="./index_files/saved_resource.html"></iframe>
-</div>
-</body>
-<div id="qb_collection_img_mask" style="display: block; top: 564.212px; left: 587.5px;">
-    <div class="qb_collection_img_icon"></div>
-    <span>收藏</span></div>
-</html>
