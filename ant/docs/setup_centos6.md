@@ -85,7 +85,7 @@ ngram_token_size=2
 service mysql start
 ```
 
-7. 获取mysql的root账号密码
+7. 获取mysql的root账号初始密码的两种方式：
 - 直接获取安装时生成的随机密码
 ```
 cat /var/log/mysqld.log  | grep "A temporary password" | awk -F " " '{print$11}'
