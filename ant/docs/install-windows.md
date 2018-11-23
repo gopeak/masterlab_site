@@ -170,9 +170,7 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
    
 ```
 
-8.重启Apache，在浏览器中访问`www.yoursite.com`即可
-
-9.配置Redis,如果启用了Redis缓存功能将显著提高Masterlab的访问性能，下载Redis的windows版本,下载地址 
+8.配置Redis,如果启用了Redis缓存功能将显著提高Masterlab的访问性能，下载Redis的windows版本,下载地址 
 `https://github.com/MicrosoftArchive/redis/releases`，下载最新的 zip 文件，解压至于 `C:/www/redis`,
 直接运行 `redis-server.exe` 启动redis，默认配置是
 ```text
@@ -184,6 +182,10 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
    app/config/deploy/app.cfg.php`     # 主配置文件,将 ENABLE_CACHE 修改为 true
    app/config/deploy/cache.cfg.php    # Redis的连接配置,$_config['enable'] 为设置为 true
 ```
+
+9.最后还要赋予 `masterlab\app\storage`  php 的写入权限，重启Apache，在浏览器中访问`www.yoursite.com`即可
+
+
 10.定时任务，Masterlab中的图表功能需要定时执行脚本
  ```text
  每一个小时计算冗余的项目数据

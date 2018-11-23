@@ -10,6 +10,7 @@
 - Mysql
   - 版本 >= 5.5
 
+-  masterlab\app\storage 要求写入权限
 ```
 
 ### Windows运行环境配置
