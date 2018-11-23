@@ -10,6 +10,7 @@
 - Mysql
   - 版本 >= 5.5
 
+-  masterlab\app\storage 要求写入权限
 ```
 
 ### Windows运行环境配置
@@ -25,6 +26,7 @@
        [Redis]
            extension=redis
       ```
+    Windows Xampp 安装 Masterlab示例 http://www.masterlab.vip/help.php?md=install-windows  
 
 ### Linux运行环境配置
  
@@ -33,6 +35,8 @@
    - Centos6 http://www.masterlab.vip/help.php?md=setup_centos6
    - Centos7 http://www.masterlab.vip/help.php?md=setup_centos7
    - Ubuntu http://www.masterlab.vip/help.php?md=setup_ubuntu
+   
+   Linux 安装 Masterlab示例 http://www.masterlab.vip/help.php?md=install-linux  
 
 ### 安装步骤
 

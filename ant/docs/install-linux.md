@@ -123,6 +123,8 @@ server {
   app/config/deploy/cache.cfg.php    
    
 ```
+ * 最后还要赋予 `app/storage`  php 的写入权限，重启Nginx，在浏览器中访问`www.yoursite.com`即可
+
 
  * 设置定时任务
 ```
