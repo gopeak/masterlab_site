@@ -35,17 +35,16 @@
 2. **安装php**
 
 
-- 添加PPA源
+    - 添加PPA源
 ```
 add-apt-repository ppa:ondrej/nginx
 按回车继续
 add-apt-repository ppa:ondrej/php
 按回车继续
 ```
-- apt-get安装php
+    - apt-get安装php
 ```
 apt-get install -y php7.2
-
 apt-get install -y php7.2-bcmath\
  php7.2-bz2\
  php7.2-dba\
@@ -72,7 +71,6 @@ apt-get install -y php7.2-bcmath\
  php7.2-opcache\
  php7.2-odbc\
  php7.2-mysql
-
 apt-get install -y php7.2-ldap\
  php7.2-json\
  php7.2-gmp\
@@ -83,13 +81,13 @@ apt-get install -y php7.2-ldap\
  php7.2-cli\
  php7.2-cgi
 ```
-- 查看版本
+    - 查看版本
 ```
 php7.2 -v
 php-fpm7.2 -v
 ```
 
-- 启动php-fpm
+    - 启动php-fpm
 ```
 service php7.2-fpm start
 或
@@ -102,22 +100,20 @@ systemctl status php7.2-fpm.service
 3. **安装nginx**
 
 
-- 安装命令
+    - 安装命令
 ```
 apt-get install nginx
 ```
 
-- 编辑配置以支持PHP-FPM
-修改这个文件  vi /etc/nginx/sites-enabled/default
+    - 编辑配置以支持PHP-FPM : 修改这个文件  vi /etc/nginx/sites-enabled/default
 ```
-
 location ~ \.php$ {
                 include snippets/fastcgi-php.conf;
                 fastcgi_pass unix:/run/php/php7.2-fpm.sock;
 }
 ```
 
-- 启动nginx
+    - 启动nginx
 ```
 systemctl start nginx.service
 或
@@ -131,27 +127,27 @@ service nginx start
 4. **安装mysql**
 
 
-- 安装
+    - 安装
 ```
 wget https://repo.percona.com/apt/percona-release_0.1-6.$(lsb_release -sc)_all.deb
 dpkg -i percona-release_0.1-6.$(lsb_release -sc)_all.deb
 apt-get update
 apt-get install percona-server-server-5.7
 ```
-- 停止mysql
+    - 停止mysql
 ```
 systemctl stop mysql.service
 ```
-- 取消mysql的严格模式和新增对ngram的支持
+    - 取消mysql的严格模式和新增对ngram的支持
 
-修改配置文件/etc/mysql/percona-server.conf.d/mysqld.cnf
+        修改配置文件/etc/mysql/percona-server.conf.d/mysqld.cnf
 
-替换掉sql_mode的值和新增ngram_token_size
-```
-sql_mode=NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER
-ngram_token_size=2
-```
-- 启动mysql
+        替换掉sql_mode的值和新增ngram_token_size
+        ```
+        sql_mode=NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER
+        ngram_token_size=2
+        ```
+    - 启动mysql
 ```
 systemctl start mysql.service
 ```
@@ -163,11 +159,16 @@ systemctl start mysql.service
 5. **安装redis**
 
 
-- 安装命令
+    - 安装命令
 ```
 apt-get install redis-server
 ```
-- 启动redis
+    - 启动redis
 ```
 systemctl start redis.service
 ```
+
+
+
+
+### FAQ
