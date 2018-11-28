@@ -15,6 +15,7 @@ Masterlab的系统菜单提供了丰富的系统设置功能，系统管理员�
 - 时间设置可以设置`日期格式、时间格式、星期格式、完整日期/时间格式`等，如下图所示：
 ![](http://www.masterlab.vip/docs/images/setting_02.png)
 
+
 - 附件设置可以设置`附件路径、最大上传附件的大小、缩略图、启用压缩文件`等，如下图所示：
 ![](http://www.masterlab.vip/docs/images/setting_03.png)
 
@@ -24,8 +25,10 @@ Masterlab的系统菜单提供了丰富的系统设置功能，系统管理员�
 - 用户默认设置可以设置`默认发送邮件格式、问题导航每页显示的问题数量、页面布局、项目首页`等，如下图所示：
 ![](http://www.masterlab.vip/docs/images/setting_04.png)
 
+
 - 公告栏可以`发布/禁用在首页显示的公告信息`，如下图所示：
 ![](http://www.masterlab.vip/docs/images/setting_15.png)
+
 
 
 ### 安全设置
