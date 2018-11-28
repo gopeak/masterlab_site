@@ -40,6 +40,9 @@
                 <li class="ant-menu-item  <? if($page=='help') echo 'ant-menu-item-selected'; ?>" role="menuitem">
                     <a href="./help.php"><span>文 档</span></a>
                 </li>
+                <li class="ant-menu-item  <? if($page=='download') echo 'ant-menu-item-selected'; ?>" role="menuitem">
+                    <a  href="./download.php"><span>下 载</span></a>
+                </li>
                 <li class="ant-menu-item  <? if($page=='milestone') echo 'ant-menu-item-selected'; ?>" role="menuitem">
                     <a  href="./milestone.php"><span>时间轴</span></a>
                 </li>

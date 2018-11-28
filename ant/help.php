@@ -5,6 +5,9 @@ $mdFile = 'introduce';
 if (isset($_GET['md'])) {
     $mdFile = str_replace(['/', '\\'], ['', ''], $_GET['md']);
 }
+if ($mdFile == 'install') {
+    $mdFile = 'env';
+}
 
 require_once './lib/parsedown/Parsedown.php';
 
@@ -47,22 +50,30 @@ require_once './lib/parsedown/Parsedown.php';
             <div class="inner">
                 <div class="filter-container"></div>
                 <ul class="list-group">
-                    <li class="list-group-item <? if ($mdFile == 'introduce') echo 'active'; ?>"><a
-                                href="./help.php">介绍</a></li>
-                    <li class="list-group-item <? if ($mdFile == 'install') echo 'active'; ?>"><a
-                                href="?md=install">安装</a></li>
-                    <li class="list-group-item <? if ($mdFile == 'explain_word') echo 'active'; ?>"><a
-                                href="?md=explain_word">名词解释</a></li>
-                    <li class="list-group-item <? if ($mdFile == 'quickstart') echo 'active'; ?>"><a
-                                href="?md=quickstart">快速上手</a></li>
-                    <li class="list-group-item <? if ($mdFile == 'advanced') echo 'active'; ?>"><a href="?md=advanced">进阶</a>
+                    <li class="list-group-item <? if ($mdFile == 'introduce') echo 'active'; ?>">
+                        <a href="./help.php">介绍</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'env') echo 'active'; ?>">
+                        <a href="?md=env">运行环境</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'install-windows') echo 'active'; ?>">
+                        <a href="?md=install-windows">Windows安装示例</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'install-linux') echo 'active'; ?>">
+                        <a href="?md=install-linux">Linux安装示例</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'explain_word') echo 'active'; ?>">
+                        <a href="?md=explain_word">名词解释</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'quickstart') echo 'active'; ?>">
+                        <a href="?md=quickstart">快速上手</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'advanced') echo 'active'; ?>">
+                        <a href="?md=advanced">进阶</a>
                     </li>
-                    <li class="list-group-item <? if ($mdFile == 'faq') echo 'active'; ?>"><a href="?md=faq">常见问题</a>
+                    <li class="list-group-item <? if ($mdFile == 'faq') echo 'active'; ?>">
+                        <a href="?md=faq">常见问题</a>
                     </li>
-                    <li class="list-group-item <? if ($mdFile == 'key') echo 'active'; ?>"><a href="?md=key">快捷键</a>
+                    <li class="list-group-item <? if ($mdFile == 'key') echo 'active'; ?>">
+                        <a href="?md=key">快捷键</a>
                     </li>
-                    <li class="list-group-item <? if ($mdFile == 'developer_guide') echo 'active'; ?>"><a
-                                href="?md=developer_guide">开发指南</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'developer_guide') echo 'active'; ?>">
+                        <a href="?md=developer_guide">开发指南</a>
+                    </li>
                 </ul>
             </div>
         </div>
