@@ -87,28 +87,32 @@ Masterlab的系统菜单提供了丰富的系统设置功能，系统管理员�
 - Masterlab系统默认了8种事项状态，如有需要可以添加事项状态，点击新增事项状态，如下图所示
 ![](http://www.masterlab.vip/docs/images/issue_08.png)
 
-- Masterlab系统默认使用`默认工作流`，如有需要可以添加工作流，点击新增工作流，`输入工作流名称，并配置流程状态、流程节点、流程走向`等，如下图所示：
-![](http://www.masterlab.vip/docs/images/issue_09.png)
-
-![](http://www.masterlab.vip/docs/images/issue_20.png)
-
-- Masterlab系统默认使用`默认工作流方案`，如有需要可以添加工作流方案，点击新增工作流方案，如下图所示：
-![](http://www.masterlab.vip/docs/images/issue_11.png)
-
 - Masterlab系统默认了8种解决结果，如有需要可以添加解决结果，点击新增解决结果，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_12.png)
 
 - Masterlab系统默认了5种优先级，如有需要可以添加优先级，点击新增优先级，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_13.png)
 
-### 自定义事项的表单
-通过`字段、事项类型界面方案`可以自定义创建事项时显示的表单。
+### 自定义工作流
+  >Masterlab系统中的项目默认使用`默认工作流方案`，如有业务需要可以自定义专属工作流方案，自定义工作流方案步骤如下：
+
+ 1. 添加工作刘流，点击新增工作流，`输入工作流名称，并配置流程状态、流程节点、流程走向`等，如下图所示：
+![](http://www.masterlab.vip/docs/images/issue_09.png)
+
+![](http://www.masterlab.vip/docs/images/issue_20.png)
+
+ 2. 添加工作流方案，点击新增工作流方案，`输入工作流方案名称，选择事项类型及工作流点击添加`等，如下图所示：
+![](http://www.masterlab.vip/docs/images/issue_11.png)
+
+
+### 自定义事项表单
+通过`字段、事项类型界面方案`可以自定义创建/编辑`事项`时填写的表单。
 
 - 点击`字段`菜单，可以看到Masterlab系统默认提供了`标题、描述、状态、优先级、经办人、模块、标签`等20个事项表单显示的字段，点击新增字段，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_14.png)
 
 
-- 创建了字段以后，我们就可以根据事项类型来自定义事项的表单，点击”创建界面配置“或”编辑界面配置“，定义事项表单要显示的标签页，及增加、编辑、删除事项表单的字段，如下图所示：
+- 创建了字段以后，我们就可以根据事项类型来自定义事项的表单，点击`创建界面配置`或`编辑界面配置`，定义事项表单要显示的标签页，及增加、编辑、删除事项表单的字段，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_15.png)
 ![](http://www.masterlab.vip/docs/images/issue_18.png)
 
