@@ -14,19 +14,20 @@
 ```
 
 ### Windows运行环境配置
-    windows环境我们建议直接使用 Xampp 或 WampServer 集成安装包，然后再额外的安装redis扩展即可，建议使用WampServer 最新版本，集成 `Apache 2.4.27 – Php7.1.9 – MySQL 5.7.19`
-    修改 php.ini 配置即可
-      ```
-       short_open_tag = On
-       upload_max_filesize = 8M
-       post_max_size = 8M
-       memory_limit = 128M
-       max_execution_time = 30
-       
-       [Redis]
-           extension=redis
-      ```
-    Windows Xampp 安装 Masterlab示例 http://www.masterlab.vip/help.php?md=install-windows  
+windows环境我们建议直接使用 Xampp 或 WampServer 集成安装包，然后再额外的安装redis扩展即可，建议使用WampServer 最新版本，
+集成 `Apache 2.4.27 – Php7.1.9 – MySQL 5.7.19`
+修改 php.ini 配置即可
+```
+   short_open_tag = On
+   upload_max_filesize = 8M
+   post_max_size = 8M
+   memory_limit = 128M
+   max_execution_time = 30
+   
+   [Redis]
+       extension=redis
+```
+Windows Xampp 安装 Masterlab示例 http://www.masterlab.vip/help.php?md=install-windows  
 
 ### Linux运行环境配置
  

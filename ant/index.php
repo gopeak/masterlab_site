@@ -91,7 +91,7 @@ $page = 'product';
             document.documentElement.className += isZhCN(pathname) ? 'zh-cn' : 'en-us';
         })()
     </script>
-
+    <? include 'hotjar.php'?>
 </head>
 <body>
 <div id="react-content">

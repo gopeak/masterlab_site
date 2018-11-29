@@ -93,6 +93,7 @@ $page = 'product';
     </script>
 
     <script type="text/javascript" charset="utf-8" async="" src="./product_files/introduce.zh-CN.md.js"></script>
+    <? include 'hotjar.php'?>
 </head>
 <body>
 <div id="react-content">

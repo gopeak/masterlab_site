@@ -34,7 +34,7 @@ require_once './lib/parsedown/Parsedown.php';
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
     <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
     <link rel="stylesheet" type="text/css" href="./product_files/featrue.css">
-
+    <? include 'hotjar.php'?>
 
 </head>
 <body class="template-doc">

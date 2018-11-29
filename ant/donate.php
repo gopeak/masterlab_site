@@ -20,7 +20,7 @@ $page = 'donate';
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
     <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
     <link rel="stylesheet" type="text/css" href="./product_files/featrue.css">
-
+    <? include 'hotjar.php'?>
 </head>
 <body class="template-home">
 <div style="display: none"><img src="./about_files/logo-with-text.svg" alt=""> <img

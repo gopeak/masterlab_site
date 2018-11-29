@@ -164,6 +164,7 @@ $page = 'about';
             display: none;
         }
     </style>
+    <? include 'hotjar.php'?>
 </head>
 <body class="template-home">
 
