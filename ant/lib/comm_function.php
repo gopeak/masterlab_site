@@ -144,6 +144,7 @@ function get_address_by_ip($ip)
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_HEADER, 0);
+    curl_setopt($curl, CURLOPT_TIMEOUT, 10);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $info = curl_exec($curl);
     curl_close($curl);
@@ -166,11 +167,11 @@ function clientlog()
     $city = $rawdata_position['data']['city'];
     $nettype = $rawdata_position['data']['isp'];
 
+    $time = date('y-m-d H:m:s');
+    $file = $_GET['file'];
+    $data = "{$time} {$file}, IP {$nettype} {$clientip},From {$country} {$province} {$city }   {$client_info}\r\n";
 
-    $time = date('y-m-d h:m:s');
-    $data = "来自{$country} {$province} {$city }{$nettype} 的客户端: {$client_info},IP为:{$clientip},在{$time}时刻访问了{$_SERVER['PHP_SELF']}文件！\r\n";
-
-    $filename = "./log.log";
+    $filename = ROOT_PATH."downloads/log.log";
     if (!file_exists($filename)) {
         fopen($filename, "w+");
     }

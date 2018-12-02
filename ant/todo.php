@@ -49,24 +49,32 @@ $page = 'milestone';
         <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-19">
             <article class="markdown">
 
-                <h2>第三次里程碑Todo</h2>
+                <h2>第四次里程碑Todo</h2>
                 <ol>
                     <li>前端使用VUE</li>
                     <li>使用 Websocket 技术 同步配置数据</li>
-                    <li>二次开发指南</li>
                     <li>APP移动端支持</li>
+                    <li>甘特图</li>
+                    <li>跟进不同角色有不通的 UI和交互</li>
+                </ol>
+
+                <h2>第三次里程碑Todo</h2>
+                <ol>
+                    <li>打通钉钉企业微信API</li>
+                    <li>开放自身API</li>
+                    <li>增加一个便签功能，类似 http://www.jq22.com/yanshi19271</li>
+                    <li>跟进不同角色有不通的 UI和交互</li>
                 </ol>
 
                 <h2>第二次里程碑Todo</h2>
                 <ol>
-                    <li>跟进不同角色有不通的 UI和交互</li>
+                    <li>移动端可以扫码上传附件</li>
+                    <li>二次开发指南</li>
                     <li>首页可以自定义面板</li>
-                    <li>甘特图</li>
-                    <li>增加一个便签功能，类似 http://www.jq22.com/yanshi19271</li>
                     <li>使用Hopscotch进行友好提示 http://www.jq22.com/yanshi215</li>
                     <li>参考 hotjar 功能,网页热图、鼠标轨迹记录、转换漏斗(识别访问者离开)、表单分析、反馈调查、收集反馈、问卷、等</li>
                     <li>完善的角色权限设计</li>
-                    <li>防Crs和Xss漏洞等安全措施</li>
+                    <li>防Crsf和Xss漏洞等安全措施</li>
                 </ol>
             </article>
         </div>
