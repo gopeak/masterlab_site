@@ -8,13 +8,13 @@ mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 ```
 
 2. 下载新的CentOS-Base.repo 到/etc/yum.repos.d/
-
 ```
 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
 ```
-3、之后运行yum makecache生成缓存
+3. 之后运行yum makecache生成缓存
 
 ### 安装企业级linux扩展源epel
+
 ```
 yum install -y epel-release
 ```
@@ -24,37 +24,25 @@ yum install -y epel-release
 ```
 rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
 ```
-若出现如下错误
-```
-14: problem making ssl connection
-Error: Cannot find a valid baseurl for repo: webtatic
 
-```
-解决方法
-用 修改文件 /etc/yum.repos.d/epel.repo
-```
- [epel]
- name=Extra Packages for Enterprise Linux 6 - $basearch
- #baseurl=http://download.fedoraproject.org/pub/epel/6/$basearch
- mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch
- failovermethod=priority
- enabled=1
- gpgcheck=1
- gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
-
-```
-
-将enabled=1先改为enabled=0
-yum install ca-certificates，安装成功后，将enabled重新改为1，保存后再执行命令
 
 ### Nginx安装
+1. 安装命令
 ```
-yum install nginx
+yum install -y nginx
+```
+2. 配置文件所在目录
+```
+/etc/nginx
 ```
 
+3. 相关命令
+```
+service nginx start|stop|status|restart
+```
 
 ### Mysql5.7安装
-推荐使用Percona来安装mysql
+推荐使用Percona来安装mysql, **安装或使用过程中遇到的问题请查看本页面的FAQ**
 1. 安装Percona的yum源
 ```
 yum install http://www.percona.com/downloads/percona-release/redhat/0.1-6/percona-release-0.1-6.noarch.rpm
@@ -87,7 +75,7 @@ yum install -y Percona-Server-server-57
 service mysql stop
 ```
 5. 取消mysql的严格模式和新增对ngram的支持
-修改配置文件 `/etc/my.cnf` ，在 `[mysqld]` 中添加
+修改配置文件 `/etc/my.cnf` ，在 `[mysqld]` 段中添加
 ```
 sql_mode=NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER
 ngram_token_size=2
@@ -97,28 +85,45 @@ ngram_token_size=2
 service mysql start
 ```
 
-7. 获取mysql的root账号密码
+7. 获取mysql的root账号初始密码的两种方式：
+    - 直接获取安装时生成的随机密码
 ```
 cat /var/log/mysqld.log  | grep "A temporary password" | awk -F " " '{print$11}'
 ```
 
+    - 使用无密码登陆的方式，修改配置文件 `/etc/my.cnf` ，在 `[mysqld]` 中添加
+```
+skip-grant-tables
+```
+
 8. 测试连接并修改root密码
+    - 登陆命令
 ```
 mysql -uroot -p
 ```
+    - 修改root密码
+```
+step 1: SET PASSWORD = PASSWORD('your new password');
+step 2: ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
+step 3: flush privileges;
+```
 
+
+9. 相关命令
+```
+service mysql start|stop|status|restart
+```
 
 ### Redis安装
 1. 安装命令
 ```
-yum install redis
+yum install -y redis
 ```
 
 2. 修改配置文件
 ```
 vi /etc/redis.conf
-
-简单的单机部署只需要把daemonize改为yes即可，更多的配置项请查阅/etc/redis.conf文件
+PS:简单的单机部署只需要把daemonize改为yes即可，更多的配置项请查阅/etc/redis.conf文件
 ```
 
 3. 启动redis
@@ -131,11 +136,21 @@ service redis start
 redis-cli
 ```
 
+5. 相关命令
+```
+service redis start|stop|status|restart
+```
+
+
 ### PHP安装
 
 1. 安装命令
 ```
-yum install mod_php71w php71w-bcmath php71w-cli php71w-common php71w-dba php71w-devel php71w-embedded php71w-enchant php71w-fpm php71w-gd php71w-imap php71w-interbase php71w-intl php71w-ldap php71w-mbstring php71w-mcrypt php71w-mysqlnd php71w-odbc php71w-opcache php71w-pdo php71w-pear php71w-pecl-apcu php71w-pecl-imagick php71w-pecl-memcached php71w-pecl-mongodb php71w-pecl-redis php71w-pecl-xdebug php71w-pgsql php71w-phpdbg php71w-process php71w-pspell php71w-recode php71w-snmp php71w-soap php71w-tidy php71w-xml php71w-xmlrpc
+yum install -y mod_php71w php71w-bcmath php71w-cli php71w-common php71w-dba php71w-devel php71w-embedded php71w-enchant
+yum install -y php71w-fpm php71w-gd php71w-imap php71w-interbase php71w-intl php71w-ldap php71w-mbstring php71w-mcrypt
+yum install -y php71w-mysqlnd php71w-odbc php71w-opcache php71w-pdo php71w-pear php71w-pecl-apcu php71w-pecl-imagick
+yum install -y php71w-pecl-memcached php71w-pecl-mongodb php71w-pecl-redis php71w-pecl-xdebug php71w-pgsql php71w-phpdbg
+yum install -y php71w-process php71w-pspell php71w-recode php71w-snmp php71w-soap php71w-tidy php71w-xml php71w-xmlrpc
 ```
 
 2. 启动php-fpm
@@ -151,13 +166,97 @@ service php-fpm start
 /etc/php-fpm.d/*
 ```
 
+4. 相关命令
+```
+service php-fpm start|stop|status|restart
+```
 
 
-### @todo 编写一个运行的示例
+### 测试lnmpr
+1. 新建nginx虚拟目录配置文件：vi /etc/nginx/conf.d/test-lnmpr.conf
+```
+server {
+    listen       8080;
+    server_name  localhost;
+    charset UTF-8;
+    location / {
+        root   /var/webroot;
+        index  index.php index.html index.htm;
+    }
 
-- Nginx 配置文件修改
+    location ~ \.php$ {
+        root           /var/webroot;
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  /var/webroot/$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
+```
 
-- PHP 配置文件
+2. 新建php测试文件: vi /var/webroot/index.php
+```
+<?php
+phpinfo();
+```
 
-- 检查 (phpinfo,mysql连接,mysql严格模式)
+3. 访问http://ip:8080
 
+### FAQ
+
+1. 想在测试环境的mysql设置简单密码
+    - 报错如下：
+```
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+```
+    - 解决方法：
+修改配置文件 `/etc/my.cnf` ，在 `[mysqld]` 中添加
+```
+default_password_lifetime=0
+validate_password_length=4
+validate_password_policy=LOW
+```
+
+
+2. rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm 的问题
+    - 若出现如下错误
+```
+14: problem making ssl connection
+Error: Cannot find a valid baseurl for repo: webtatic
+```
+    - 解决方法： 修改文件 /etc/yum.repos.d/epel.repo
+```
+ [epel]
+ name=Extra Packages for Enterprise Linux 6 - $basearch
+ #baseurl=http://download.fedoraproject.org/pub/epel/6/$basearch
+ mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch
+ failovermethod=priority
+ enabled=1
+ gpgcheck=1
+ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+```
+将enabled=1先改为enabled=0
+yum install ca-certificates，安装成功后，将enabled重新改为1，保存后再执行命令
+
+
+3. 在访问nginx的时候出现超时
+    - 原因：防火墙阻止访问
+    - 解决：设置防火墙或关闭防火墙 service iptables stop
+
+
+4. 在访问nginx时出现 403 Forbidden
+    - 权限问题: 查看nginx.conf的运行用户，把对应项目代码目录的权限要与nginx运行用户的权限一致
+    - 看一下selinux是否关闭了
+
+        ```
+        //如果SELinux status参数为enabled即为开启状态
+        /usr/sbin/sestatus -v
+
+        //临时关闭selinux
+        setenforce 0
+
+        //永久关闭selinux
+        step1: 修改/etc/selinux/config 文件
+        step2: 将SELINUX=enforcing改为SELINUX=disabled
+        step3: 重启机器即可
+        ```

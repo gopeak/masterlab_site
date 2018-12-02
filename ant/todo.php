@@ -24,7 +24,7 @@ $page = 'milestone';
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
     <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
     <link rel="stylesheet" type="text/css" href="./product_files/featrue.css">
-
+    <? include 'hotjar.php'?>
 </head>
 <body class="template-doc">
 <div style="display: none">

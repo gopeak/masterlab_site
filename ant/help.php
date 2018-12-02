@@ -5,6 +5,9 @@ $mdFile = 'introduce';
 if (isset($_GET['md'])) {
     $mdFile = str_replace(['/', '\\'], ['', ''], $_GET['md']);
 }
+if ($mdFile == 'install') {
+    $mdFile = 'env';
+}
 
 require_once './lib/parsedown/Parsedown.php';
 
@@ -31,7 +34,7 @@ require_once './lib/parsedown/Parsedown.php';
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
     <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
     <link rel="stylesheet" type="text/css" href="./product_files/featrue.css">
-
+    <? include 'hotjar.php'?>
 
 </head>
 <body class="template-doc">
@@ -48,17 +51,17 @@ require_once './lib/parsedown/Parsedown.php';
                 <div class="filter-container"></div>
                 <ul class="list-group">
                     <li class="list-group-item <? if ($mdFile == 'introduce') echo 'active'; ?>">
-                        <a  href="./help.php">介绍</a></li>
+                        <a href="./help.php">介绍</a></li>
                     <li class="list-group-item <? if ($mdFile == 'env') echo 'active'; ?>">
-                        <a  href="?md=env">运行环境</a></li>
+                        <a href="?md=env">运行环境</a></li>
                     <li class="list-group-item <? if ($mdFile == 'install-windows') echo 'active'; ?>">
-                        <a  href="?md=install-windows">Windows安装示例</a></li>
+                        <a href="?md=install-windows">Windows安装示例</a></li>
                     <li class="list-group-item <? if ($mdFile == 'install-linux') echo 'active'; ?>">
-                        <a  href="?md=install-linux">Linux安装示例</a></li>
+                        <a href="?md=install-linux">Linux安装示例</a></li>
                     <li class="list-group-item <? if ($mdFile == 'explain_word') echo 'active'; ?>">
-                        <a   href="?md=explain_word">名词解释</a></li>
+                        <a href="?md=explain_word">名词解释</a></li>
                     <li class="list-group-item <? if ($mdFile == 'quickstart') echo 'active'; ?>">
-                        <a  href="?md=quickstart">快速上手</a></li>
+                        <a href="?md=quickstart">快速上手</a></li>
                     <li class="list-group-item <? if ($mdFile == 'advanced') echo 'active'; ?>">
                         <a href="?md=advanced">进阶</a>
                     </li>

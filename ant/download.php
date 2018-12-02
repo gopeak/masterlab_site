@@ -210,6 +210,7 @@ if (isset($_GET['file'])) {
             display: none;
         }
     </style>
+    <? include 'hotjar.php'?>
 </head>
 <body class="template-home">
 
