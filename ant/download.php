@@ -241,7 +241,7 @@ if (isset($_GET['file'])) {
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4><a href="?file=sphinx-for-chinese-windows.zip">Sphinx-for-chinese-windows.zip</a></h4>
-                            78.6M
+                            10.3M
                             <p>全文检索引擎Sphinx的中文分词支持版本,若您使用的是Mysql5.6以下版本，请将它作为全站搜索服务，sphinx-for-chinese官方网站 https://sphinxsearchcn.github.io/ </p>
                         </div>
                     </li>

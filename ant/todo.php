@@ -48,24 +48,6 @@ $page = 'milestone';
         </div>
         <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-19">
             <article class="markdown">
-
-                <h2>第四次里程碑Todo</h2>
-                <ol>
-                    <li>前端使用VUE</li>
-                    <li>使用 Websocket 技术 同步配置数据</li>
-                    <li>APP移动端支持</li>
-                    <li>甘特图</li>
-                    <li>跟进不同角色有不通的 UI和交互</li>
-                </ol>
-
-                <h2>第三次里程碑Todo</h2>
-                <ol>
-                    <li>打通钉钉企业微信API</li>
-                    <li>开放自身API</li>
-                    <li>增加一个便签功能，类似 http://www.jq22.com/yanshi19271</li>
-                    <li>跟进不同角色有不通的 UI和交互</li>
-                </ol>
-
                 <h2>第二次里程碑Todo</h2>
                 <ol>
                     <li>移动端可以扫码上传附件</li>
@@ -76,6 +58,24 @@ $page = 'milestone';
                     <li>完善的角色权限设计</li>
                     <li>防Crsf和Xss漏洞等安全措施</li>
                 </ol>
+
+                <h2>第三次里程碑Todo</h2>
+                <ol>
+                    <li>打通钉钉企业微信API</li>
+                    <li>开放自身API</li>
+                    <li>增加一个便签功能，类似 http://www.jq22.com/yanshi19271</li>
+                    <li>跟进不同角色有不通的 UI和交互</li>
+                </ol>
+
+                <h2>第四次里程碑Todo</h2>
+                <ol>
+                    <li>前端使用VUE</li>
+                    <li>使用 Websocket 技术 同步配置数据</li>
+                    <li>APP移动端支持</li>
+                    <li>甘特图</li>
+                    <li>跟进不同角色有不通的 UI和交互</li>
+                </ol>
+
             </article>
         </div>
     </div>
