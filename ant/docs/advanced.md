@@ -114,7 +114,7 @@ Masterlab的系统菜单提供了丰富的系统设置功能，系统管理员�
 
 - 创建了字段以后，我们就可以根据事项类型来自定义事项的表单，点击事项类型的`创建界面配置`或`编辑界面配置`，定义事项表单要显示的标签页，及增加、编辑、删除事项表单的字段，如下图所示：
 ![](http://www.masterlab.vip/docs/images/issue_15.png)
-![](http://www.masterlab.vip/docs/images/issue_18.png)
+![](http://www.masterlab.vip/docs/images/issue_23.png)
 
 ## 项目管理 
 `项目管理`可以`新增、编辑、删除项目`，如下图所示：
