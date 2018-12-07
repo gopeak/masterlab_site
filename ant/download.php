@@ -1,24 +1,44 @@
 <?php
 $page = 'download';
+define('ROOT_PATH', realpath(dirname(__FILE__)) . '/');
+if (function_exists('date_default_timezone_set')) {
+    date_default_timezone_set('Asia/Shanghai');
+}
 
 if (isset($_GET['file'])) {
     require_once "lib/comm_function.php";
-    $file = $_GET['file'];
-    //var_dump('downloads/' . $file);die;
-    if (file_exists('downloads/' . $file)) {
-        clientlog();
-        header("Content-Type: application/octet-stream");
-        header("Accept-Ranges: bytes");
-        header("Accept-Length: " . filesize('downloads/' . $file));
-        header("Content-Disposition: attachment; filename=" . $file);
+    $file = ROOT_PATH . 'downloads/' . $_GET['file'];
 
-        header('location:downloads/' . $file);
-        die;
-        /*        $file = fopen('downloads/' . $file, "rb");
-        echo fread($file, filesize('downloads/' . $file));
+    // local file that should be send to the client
+    $local_file = $file;
+// filename that the user gets as default
+    $download_file = $file;
+    //var_dump('downloads/' . $file);die;
+    $download_rate = 85;
+    if (file_exists($file)) {
+        clientlog();
+
+        // send headers
+        header('Cache-control: private');
+        header('Content-Type: application/octet-stream');
+        header('Content-Length: ' . filesize($local_file));
+        header('Content-Disposition: filename=' . $_GET['file']);
+
+        // flush content
+        flush();
+        // open file stream
+        $file = fopen($local_file, "r");
+        while (!feof($file)) {
+            // send the current file part to the browser
+            print fread($file, round($download_rate * 1024));
+            // flush the content to the browser
+            flush();
+        }
+        // close file stream
         fclose($file);
-        die;*/
     }
+    die;
+
 }
 
 ?>
@@ -221,7 +241,7 @@ if (isset($_GET['file'])) {
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4><a href="?file=sphinx-for-chinese-windows.zip">Sphinx-for-chinese-windows.zip</a></h4>
-                            78.6M
+                            10.3M
                             <p>全文检索引擎Sphinx的中文分词支持版本,若您使用的是Mysql5.6以下版本，请将它作为全站搜索服务，sphinx-for-chinese官方网站 https://sphinxsearchcn.github.io/ </p>
                         </div>
                     </li>

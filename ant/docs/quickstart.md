@@ -4,16 +4,11 @@
   >在浏览器输入Masterlab网址
 
 ## 创建用户
-  >Masterlab默认创建了一个`管理员`供用户操作。使用管理员账号登录后，通常需要在 Masterlab 系统中创建其他用户，通过左上角系统导航菜单-用户管理页面点击新增按钮，如下图所示
-
-![](http://pm.masterlab.vip/doc/images/users_02.png)
+  >Masterlab默认创建了一个`管理员`供用户操作。使用管理员账号登录后，通常需要在 Masterlab 系统中创建其他用户，通过左上角系统导航菜单-用户管理页面点击新增按钮即可创建用户
 
 ## 登录和注册
-- 打开 Masterlab 的登录界面,输入`用户名`、`密码`即可登录 Masterlab 系统，如下图所示：
-![](http://pm.masterlab.vip/doc/images/login_01.png)
-
-- 点击注册链接，输入`显示名称`、`邮箱地址`、`密码`，点击确定即可，界面如下图所示：
-![](http://pm.masterlab.vip/doc/images/login_02.png)
+- 打开 Masterlab 的登录界面,输入`用户名`、`密码`即可登录 Masterlab 系统，点击注册链接，输入`显示名称`、`邮箱地址`、`密码`，点击确定即可，如下图所示：
+![](http://pm.masterlab.vip/doc/images/login_01_thumb.png)![](http://pm.masterlab.vip/doc/images/login_02_thumb.png)
 
 ## 创建组织
   >Masterlab默认创建了一个名为`default`的`组织`，如果团队在十几个人左右，不需要额外创建组织。
@@ -71,7 +66,7 @@
 ### 创建迭代
   >在项目的详细信息界面中，点击`迭代`链接，点击左侧导航栏的创建迭代按钮，弹出创建迭代框，输入`名称`、`描述`、`开始时间`、`结束时间`，如下图所示
 
-![](http://pm.masterlab.vip/doc/images/sprints_01.png)
+![](http://pm.masterlab.vip/doc/images/sprints_05.png)
 
 ### 事项关联迭代
   >`迭代`需要与事项关联以后才能进行跟踪管理，创建`迭代`以后，在创建/修改事项时，选择迭代下拉框的值，保存事项即可，如下图所示
