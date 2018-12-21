@@ -1,6 +1,21 @@
 查阅下面的常见问题,帮助您解决疑惑或困难。
 
 
+## 安装问题排查
+
+1. php 要开启 short_open_tag 
+2. php session 的 session.save_path 对于当前运行的php用户拥有可写入权限
+3. 建议您从官方网站下载完整的安装包，如果从github或码云上下载则不包含以懒的 vendor 类库
+4. app/storage 和 app/public/install 目录php运行用户需要写入权限
+5. 为查看安装出现的具体问题，可在 app/config/deploy/app.cfg.php 中修改错误报告
+```php
+error_reporting(E_ERROR); // 修改为下面一样
+error_reporting(E_ALL);
+```
+6. 重新安装后界面显示有问题，请清除浏览器缓存
+7. 数据显示异常时，可在 app/config/deploy/app.cfg.php 和 app/config/deploy/cache.cfg.php 中手动关闭redis缓存
+
+
 ## 如何快速的上手Masterlab？
 
 1. 首先以管理员身份登录Masterlab

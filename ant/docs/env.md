@@ -8,7 +8,7 @@
   - 扩展 ：curl,mysqlnd,pdo,opcache,mbstring,redis
   - php.ini ： short_open_tag = On
 - Mysql
-  - 版本 >= 5.5
+  - 版本 >= 5.7
 
 -  masterlab\app\storage 要求写入权限
 ```

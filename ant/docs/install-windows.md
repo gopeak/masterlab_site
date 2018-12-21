@@ -7,6 +7,12 @@
   https://www.apachefriends.org/xampp-files/7.2.11/xampp-win32-7.2.11-0-VC15-installer.exe
   下载好后将xampp安装在硬盘的根目录，如 C:/xampp
   
+  为了能够支持全站搜索的中文字符集，建议安装Mysql5.7替换xampp自带的的 MariaDB10，Mysql5.7 window安装请参考 https://blog.csdn.net/qq_39340204/article/details/78593512
+  
+  安装Redis Server，下载地址 http://www.masterlab.vip/download.php?file=Redis-x64-3.0.501.zip
+  解压至于 C:\bin\Redis 目录，在命令行界面下执行 C:\bin\Redis\redis-server.exe C:\bin\Redis\redis.windows.conf
+  
+  
   修改 C:/xampp/php/php.ini 配置项
   ```
    short_open_tag = On
@@ -24,13 +30,11 @@
     extension=redis
     
    ```
-  
 
 2.下载最新版本的完整代码包，解压到 C 盘的 C:/www 目录下
   解压后的目录结构如下:
 ```
-    hornet-framework     php开发框架
-    masterlab            源码
+    masterlab            
       |--   app   
       |--   bin  
       |--   lib    
@@ -94,99 +98,13 @@
   ```
 重启 Apache 服务器
 
-4.打使用xampp自带的phpMyAdmin `http://localhost/phpmyadmin/` 创建数据库 `masterlab`
+4.访问 `http://www.yoursite.com/install/` 安装提示进行安装
  
-```sql
-create database masterlab character set utf8mb4 collate utf8mb4_unicode_ci;
-```
 
-创建好数据库后，将根目录下的 `masterlab.sql` 导入到数据库中
-
-Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下载地址 `http://www.masterlab.vip/download.php?file=sphinx-for-chinese-windows.zip`,解压至
-`C:/www/sphinx`，修改配置文件 `C:/www/sphinx/bin/sphinx.conf`,
-```
-    source masterlab_issue
-    {
-            type                    = mysql
-            sql_host                = 127.0.0.1
-            sql_user                = root
-            sql_pass                =
-            sql_db                  = masterlab
-            sql_port                = 3306
-    
-            sql_query_pre		= SET NAMES utf8
-            sql_query               = select * from issue_main
-            #sql_attr_uint          = id
-            #sql_attr_timestamp     = date_added
-            sql_attr_string        = id
-    }
-    
-    index issue
-    {
-        source			= masterlab_issue
-        path			= C:/www/sphinx/var/data/issue
-        docinfo			= extern
-        charset_type = utf-8
-        chinese_dictionary = C:/www/sphinx/etc/xdict
-    }
-    
-    indexer
-    {
-        mem_limit		= 256M
-    }
-    
-    searchd
-    {
-        listen			= 9312
-        listen			= 9306:mysql41
-        log				= C:/www/sphinx/var/log/searchd.log
-        query_log		= C:/www/sphinx/var/log/query.log
-        read_timeout	= 5
-        max_children	= 30
-        pid_file		= C:/www/sphinx/var/log/searchd.pid
-        max_matches		= 1000
-        seamless_rotate	= 1
-        preopen_indexes	= 1
-        unlink_old		= 1
-        workers			= threads # for RT to work
-        binlog_path		= C:/www/sphinx/var/data
-    }
-
-```
-
-在 `C:/www/sphinx/` 下执行索引构建和启动服务命令
-```
-  C:/www/sphinx/bin/indexer.exe --all
-  C:/www/sphinx/bin/searchd.exe
-``` 
-
-5.将根目录下的 `env.ini-example` 重命名为 `env.ini`
-
-6.修改masterlab的配置文件
-
- ```
-   app/config/deploy/app.cfg.php`     # 主配置文件,将 ROOT_URL 修改为 http://www.yoursite.com/ , 后面的斜杠不能少!
-   app/config/deploy/database.cfg.php # 数据库的连接配置
-   
-```
-
-8.配置Redis,如果启用了Redis缓存功能将显著提高Masterlab的访问性能，下载Redis的windows版本,下载地址 
-`https://github.com/MicrosoftArchive/redis/releases`，下载最新的 zip 文件，解压至于 `C:/www/redis`,
-直接运行 `redis-server.exe` 启动redis，默认配置是
-```text
- host 127.0..0.1
- port 6379
-```
-启用缓存 还需要修改php的以下配置文件
- ```
-   app/config/deploy/app.cfg.php`     # 主配置文件,将 ENABLE_CACHE 修改为 true
-   app/config/deploy/cache.cfg.php    # Redis的连接配置,$_config['enable'] 为设置为 true
-```
-
-9.最后还要赋予 `masterlab\app\storage`  php 的写入权限，重启Apache，在浏览器中访问`www.yoursite.com`即可
+5.登录系统，进入"管理\系统\邮件配置"页面，配置邮件发送功能
 
 
-10.定时任务，Masterlab中的图表功能需要定时执行脚本
+6.定时任务，Masterlab中的图表功能需要定时执行脚本
  ```text
  每一个小时计算冗余的项目数据
  C:\xampp\php\php.exe  C:/www/masterlab/app/server/timer/project.php
@@ -198,3 +116,5 @@ Mysql5.6版本（包含）以下版本需要安装sphinx全文搜索引擎，下
  C:\xampp\php\php.exe  C:/www/masterlab/app/server/timer/sprintDayReport.php
 ```
 
+ 
+ 
