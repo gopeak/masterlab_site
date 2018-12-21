@@ -10,8 +10,10 @@
   为了能够支持全站搜索的中文字符集，建议安装Mysql5.7替换xampp自带的的 MariaDB10，Mysql5.7 window安装请参考 https://blog.csdn.net/qq_39340204/article/details/78593512
   
   安装Redis Server，下载地址 http://www.masterlab.vip/download.php?file=Redis-x64-3.0.501.zip
-  解压至于 C:\bin\Redis 目录，在命令行界面下执行 C:\bin\Redis\redis-server.exe C:\bin\Redis\redis.windows.conf
-  
+  解压至于 C:\bin\Redis 目录，在命令行界面下执行 
+  ```
+    C:\bin\Redis\redis-server.exe C:\bin\Redis\redis.windows.conf
+```
   
   修改 C:/xampp/php/php.ini 配置项
   ```
