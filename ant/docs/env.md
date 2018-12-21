@@ -27,7 +27,7 @@ windows环境我们建议直接使用 Xampp 或 WampServer 集成安装包，然
    [Redis]
        extension=redis
 ```
-Windows Xampp 安装 Masterlab示例 http://www.masterlab.vip/help.php?md=install-windows  
+Windows安装Masterlab示例 http://www.masterlab.vip/help.php?md=install-windows  
 
 ### Linux运行环境配置
  
@@ -37,20 +37,14 @@ Windows Xampp 安装 Masterlab示例 http://www.masterlab.vip/help.php?md=instal
    - Centos7 http://www.masterlab.vip/help.php?md=setup_centos7
    - Ubuntu http://www.masterlab.vip/help.php?md=setup_ubuntu
    
-   Linux 安装 Masterlab示例 http://www.masterlab.vip/help.php?md=install-linux  
+   Linux安装Masterlab示例 http://www.masterlab.vip/help.php?md=install-linux  
 
 ### 安装步骤
 
  1. 下载代码，可前往官方网站 http://www.masterlab.vip/download.php 下载最新的完整包.
 或者从 github上克隆代码
  2. 在web服务器添加虚拟主机并绑定到 app/public 目录
- 3. 在Mysql中创建一个数据库,字符集为 utf8mb4 ,然后将根目录的 masterlab.sql 导入到数据库中
- 4. 配置全文搜索
- 5. 将根目录下的 env.ini-example 重命名为 env.ini
- 6. 修改php配置文件,
- 7. 重启web服务器
- 8. 启用redis缓存
- 9. 执行定时任务
-
-###  
+ 3. 重启web服务器
+ 4. 访问 /install ,根据提示进行安装
+ 5. 执行定时任务
  
