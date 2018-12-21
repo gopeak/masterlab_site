@@ -88,7 +88,7 @@ server {
 
 ```
 
- * 重启web服务器,访问你刚才设置的域名 http://www.yoursite.com/install,安装图文提示进行安装
+ * 重启web服务器,访问你刚才设置的域名  http://www.yoursite.com/install ，安装图文提示进行安装
  
  
 
