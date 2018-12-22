@@ -233,19 +233,10 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4><a href="?file=masterlab-full-last.zip">Masterlab-full-last.zip</a></h4> v1.0-beta 56.6M
+                            <h4><a href="?file=masterlab-full-last.zip">Masterlab-full-last.zip</a></h4> v1.0-beta 56.0M
                             <p>Masterlab完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
                         </div>
                     </li>
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4><a href="?file=sphinx-for-chinese-windows.zip">Sphinx-for-chinese-windows.zip</a></h4>
-                            10.3M
-                            <p>全文检索引擎Sphinx的中文分词支持版本,若您使用的是Mysql5.6以下版本，请将它作为全站搜索服务，sphinx-for-chinese官方网站 https://sphinxsearchcn.github.io/ </p>
-                        </div>
-                    </li>
-
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
