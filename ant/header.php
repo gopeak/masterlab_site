@@ -1,12 +1,3 @@
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?c27224e9422ad09a7671501443713d99";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
 
 <header id="header" class="clearfix home-page-header">
     <div class="ant-row">
