@@ -14,12 +14,10 @@
 ```bash
 mkdir /data/www/
 cd /data/www/
-wget http://www.masterlab.vip/download.php?file=masterlab-full-last.zip
-unzip masterlab-full-last.zip  -d ./masterlab
+ wget -c http://www.masterlab.vip/download.php?file=masterlab-full-last.zip  -O masterlab.zip
+unzip masterlab.zip -d ./masterlab
 cd masterlab
 ```
-如果 composer 命令执行很慢，则可以修改为国内镜像，参考 https://pkg.phpcomposer.com/
-
  
 * nginx 配置虚拟主机映射至 `/data/www/masterlab/app/public`
 
