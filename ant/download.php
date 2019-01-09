@@ -38,7 +38,6 @@ if (isset($_GET['file'])) {
         fclose($file);
     }
     die;
-
 }
 
 ?>
@@ -233,7 +232,7 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4><a href="?file=masterlab-full-last.zip">Masterlab-full-last.zip</a></h4> v1.0 45.4M
+                            <h4><a href="?file=masterlab-v1.0.2.zip">Masterlab-v1.0.2-last.zip</a></h4> v1.0.2 44.4M
                             <p>Masterlab完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
                         </div>
                     </li>
