@@ -61,7 +61,8 @@ $page = 'milestone';
 
                 <h2>第三次里程碑Todo</h2>
                 <ol>
-                    <li>打通钉钉企业微信API</li>
+                    <li>工作量点数</li>
+                    <li>WBS任务分解</li>
                     <li>开放自身API</li>
                     <li>增加一个便签功能，类似 http://www.jq22.com/yanshi19271</li>
                     <li>跟进不同角色有不通的 UI和交互</li>
@@ -69,6 +70,10 @@ $page = 'milestone';
 
                 <h2>第四次里程碑Todo</h2>
                 <ol>
+                    <li>甘特图</li>
+                    <li>打通钉钉或企业微信API</li>
+                    <li>整合Gitlab和Jenkis</li>
+                    <li>文档管理</li>
                     <li>前端使用VUE</li>
                     <li>使用 Websocket 技术 同步配置数据</li>
                     <li>APP移动端支持</li>
