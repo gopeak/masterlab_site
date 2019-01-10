@@ -201,7 +201,7 @@ $page = 'about';
             </div>
         </section>
 
-        <section class="description container text-center">
+        <section class="description container text-center" style="display: none">
             <h2 id="关于团队">团队成员</h2>
             <span class="separator"></span>
             <div class="info-content">
@@ -265,16 +265,6 @@ $page = 'about';
             </div>
         </section>
 
-<!--        <section class="description container text-center">
-            <h2 id="">团队价值观:敏捷武士+大师精神</h2>
-            <span class="separator"></span>
-            <div class="info-content">
-                <p  class="main-info">开发人员的能力体现在于两个方面:技能和修养。如同武侠小说的侠士，古代日本武士和欧洲圆桌骑士般,他们不仅拥有高超的武艺，也要具备良好的品格修养。
-                    开发人员既要注重技能的学习和研究，同时也会加强内在的修养，如谦虚好学的态度,正能量影响他人的精神。
-                    积极向大师学习新知识并结合到实际中，久而久之有一天自己也成为大师人物。</p>
-            </div>
-        </section>
--->
         <section class="description container text-center">
             <h2 id="">开发实践</h2>
             <span class="separator"></span>
