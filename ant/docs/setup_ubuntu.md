@@ -81,7 +81,7 @@ apt-get install -y php7.2-ldap\
  php7.2-curl\
  php7.2-common\
  php7.2-cli\
- php7.2-cgi
+ php7.2-redis\
 ```
 3. 查看版本
 ```

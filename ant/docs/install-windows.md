@@ -8,7 +8,7 @@
 1.首先搭建Masterlab的运行环境，这里使用集成包 `Wampserver`，下载地址:
 ```text
 # 官方下载地址,选择64位的版本 wampserver3.1.4_x64.exe
-https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.1.4_x64.exe/download
+https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.1.7_x64.exe/download
 
 ```
   注：请下载 3.1.4_x64. 版本否则接下来安装的路径可能出错
