@@ -1,5 +1,4 @@
 
-
 <footer id="footer" class="dark">
     <div class="footer-wrap" style="display: none">
         <div class="ant-row">
@@ -73,15 +72,12 @@
     <div class="ant-row bottom-bar">
         <div class="ant-col-sm-24 ant-col-lg-4"></div>
         <div class="ant-col-sm-24 ant-col-lg-20">
-            <span
-                style="line-height: 16px; padding-right: 12px; margin-right: 11px; border-right: 1px solid rgba(255, 255, 255, 0.55);">
-                <a href="#" rel="noopener noreferrer"  target="_blank"><span>隐私权政策</span></a></span><span style="margin-right: 24px;">
-                <a href="#" rel="noopener noreferrer" target="_blank"><span>权益保障承诺书</span></a>
-            </span>
-            <span style="margin-right: 12px;"></span>
-            <span
-                style="margin-right: 12px;"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷科技有限公司</span>
-            </span>
+            <p class="footer-link">
+                <span><a href="#" rel="noopener noreferrer"  target="_blank">隐私权政策</a></span>
+                <span><a href="#" rel="noopener noreferrer" target="_blank">权益保障承诺书</a></span>
+            </p>
+            <p class="footer-copyright"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷科技有限公司</span>
+            </p>
         </div>
     </div>
 </footer>

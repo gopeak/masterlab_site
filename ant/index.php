@@ -8,7 +8,10 @@ $page = 'product';
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <!--添加视口-->
+
+
     <title>MasterLab - 互联网项目、产品管理解决方案--产品介绍</title>
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
@@ -102,14 +105,10 @@ $page = 'product';
         <div class="main-wrapper">
             <section class="home-s1">
                 <div class="banner-wrapper">
-                    <div class="banner-text-wrapper" style=" width: 54%;
-                                max-width: 560px;
-                                min-width: 420px;
-                                min-height: 336px;
-                                color: #0d1a26;">
+                    <div class="banner-text-wrapper">
                         <h2>MasterLab</h2>
 
-                        <p style="opacity: 1; transform: translate(0px, 0px);font-size: 20px; line-height: 40px; color: #314659;" class="">
+                        <p class="banner-text-desc">
                             <span>
                                 基于事项驱动和敏捷开发的项目管理工具;将工程技术之道和艺术设计之美融合一身，在网页、桌面、移动环境都打造出众的体验，让团队协作焕发无限可能。
                                 </span>
@@ -133,16 +132,17 @@ $page = 'product';
             </section>
             <section class="home-s2">
                 <div class="wrapper"><h3>产品特点</h3>
-                    <div class="ant-row" style="margin-left: -36px; margin-right: -36px; margin-bottom: 80px;">
-                        <div class="ant-col-12" style="padding-left: 36px; padding-right: 36px;"><img
-                                    src="./product_files/KUmyjoMxFFbjEdjiIWOw.png" alt="">
+                    <div class="ant-row point-list">
+                        <div class="ant-col-12">
+                            <img src="./product_files/KUmyjoMxFFbjEdjiIWOw.png" alt="">
                             <div class="des">
                                 <div><!-- react-text: 792 -->基于事项驱动 <!-- /react-text --><span class="divider"></span>
-                                    <!-- react-text: 794 --> 功能全面<!-- /react-text --></div>
+                                    <!-- react-text: 794 --> 功能全面<!-- /react-text -->
+                                </div>
                                 <p>跟踪bug，新功能，任务，优化改进等,提交团队协作效率</p></div>
                         </div>
-                        <div class="ant-col-12" style="padding-left: 36px; padding-right: 36px;"><img
-                                    src="./product_files/hfFgCpcxpGjeAlXFFgyT.png" alt="">
+                        <div class="ant-col-12">
+                            <img src="./product_files/hfFgCpcxpGjeAlXFFgyT.png" alt="">
                             <div class="des">
                                 <div><!-- react-text: 800 -->开源 <!-- /react-text --><span class="divider"></span>
                                     <!-- react-text: 802 --> 免费<!-- /react-text --></div>
@@ -150,15 +150,15 @@ $page = 'product';
                                     使用 PHP7/Go/React/Vue/Antd 等前沿技术开发</p></div>
                         </div>
                     </div>
-                    <div class="ant-row" style="margin-left: -24px; margin-right: -24px;">
-                        <div class="ant-col-12" style="padding-left: 24px; padding-right: 24px;"><img
+                    <div class="ant-row point-list1">
+                        <div class="ant-col-12"><img
                                     src="./product_files/nlUNcWIVLKoarLnWNaWS.png" alt="">
                             <div class="des">
                                 <div><!-- react-text: 809 -->敏捷开发 <!-- /react-text --><span class="divider"></span>
                                     <!-- react-text: 811 --> Devops<!-- /react-text --></div>
                                 <p>从需求构思到代码落地，将先进理论融入全套流程，为你提供最优秀的敏捷开发实践，将团队协作提升至全新的标准。</p></div>
                         </div>
-                        <div class="ant-col-12" style="padding-left: 24px; padding-right: 24px;"><img
+                        <div class="ant-col-12"><img
                                     src="./product_files/JjNULDGGwgOZmsZAqvjH.png" alt="">
                             <div class="des">
                                 <div><!-- react-text: 817 -->简单易用 <!-- /react-text --><span class="divider"></span>
