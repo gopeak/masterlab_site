@@ -23,76 +23,7 @@ $page = 'product';
     <![endif]-->
     <!--<script async="" src="./product_files/analytics.js"></script>-->
     <script>
-        if (!window.Intl) {
-            document.writeln('<script src="https://as.alipayobjects.com/g/component/intl/1.0.1/??Intl.js,locale-data/jsonp/en.js,locale-data/jsonp/zh.js">' + '<' + '/script>');
-        }
-        if (!window.Promise) {
-            document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
-        }
-
-        (function () {
-            function checkIfMobile() {
-                var ua = window.navigator.userAgent.toLowerCase();
-                if (ua.indexOf('android') !== -1 || ua.indexOf('iphone') !== -1) {
-                    return true;
-                }
-                return false;
-            }
-
-            function checkIfCn() {
-                return window.navigator.language.toLowerCase() === 'zh-cn'; // wtf safari is 'zh-CN', while chrome and other is 'zh-CN'
-            }
-
-            if (checkIfMobile()) {
-                var url = location.port ? 'http://127.0.0.1:8002/' : window.location.origin + '/kitchen-sink/';
-                if (checkIfCn()) {
-                    url = url + '?lang=zh-CN';
-                } else {
-                    url = url + '?lang=en-US';
-                }
-                //return location.href = url;
-            }
-
-            function isLocalStorageNameSupported() {
-                const testKey = 'test';
-                const storage = window.localStorage;
-                try {
-                    storage.setItem(testKey, '1');
-                    storage.removeItem(testKey);
-                    return true;
-                } catch (error) {
-                    return false;
-                }
-            }
-
-            // 优先级提高到所有静态资源的前面，语言不对，加载其他静态资源没意义
-            var pathname = location.pathname;
-
-            function isZhCN(pathname) {
-                return /-cn\/?$/.test(pathname);
-            }
-
-            function getLocalizedPathname(path, zhCN) {
-                var pathname = path.startsWith('/') ? path : '/' + path;
-                if (!zhCN) { // to enUS
-                    return /\/?index-cn/.test(pathname) ? '/' : pathname.replace('-cn', '');
-                } else if (pathname === '/') {
-                    return '/index-cn';
-                } else if (pathname.endsWith('/')) {
-                    return pathname.replace(/\/$/, '-cn/');
-                }
-                return pathname + '-cn';
-            }
-
-            // 首页无视链接里面的语言设置 https://github.com/ant-design/ant-design/issues/4552
-            if (isLocalStorageNameSupported() && (pathname === '/' || pathname === '/index-cn')) {
-                var lang = (window.localStorage && localStorage.getItem('locale')) || (window.navigator.language.toLowerCase() === 'zh-cn' ? 'zh-CN' : 'en-US');
-                if ((lang === 'zh-CN') !== isZhCN(pathname)) {
-                    //location.pathname = getLocalizedPathname(pathname, lang === 'zh-CN');
-                }
-            }
-            document.documentElement.className += isZhCN(pathname) ? 'zh-cn' : 'en-us';
-        })()
+ 
     </script>
     <? include 'hotjar.php'?>
 </head>
@@ -327,19 +258,6 @@ $page = 'product';
         <? include 'footer.php'?>
     </div>
 </div>
-
-
-<script src="./product_files/saved_resource"></script>
-
-<!-- react-router@3.0.5 -->
-<script src="./product_files/cazbJtoQZXZDNurlPtJd.js"></script>
-
-<!-- history@3.2.1 -->
-<script src="./product_files/VnttsLkEQmyLDBBluBQq.js"></script>
-<!-- babel-polyfill@6.20.0 -->
-<script src="./product_files/wzWaWInUcXErDyTwvySY.js"></script>
-<script src="./product_files/common.js"></script>
-<script src="./product_files/index.js"></script>
 
 
 </body>
