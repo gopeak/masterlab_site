@@ -171,7 +171,7 @@ $page = 'product';
 
             <div class="home-page page1">
                 <div class="home-page-wrapper" id="page1-wrapper">
-                    <div class="page1-bg" style="transform: translate(0px, 527.227px);">Feature</div>
+                    <div class="page1-bg">Feature</div>
                     <h2>功能点</h2>
                     <div class="title-line-wrapper page1-line">
                         <div class="title-line"></div>
