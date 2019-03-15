@@ -74,9 +74,9 @@
         <div class="ant-col-sm-24 ant-col-lg-20">
             <p class="footer-link">
                 <span><a href="#" rel="noopener noreferrer"  target="_blank">隐私权政策</a></span>
-                <span><a href="#" rel="noopener noreferrer" target="_blank">权益保障承诺书</a></span>
+                <span><a href="#" rel="noopener noreferrer" target="_blank">使用协议</a></span>
             </p>
-            <p class="footer-copyright"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷智盛科技有限公司</span>
+            <p class="footer-copyright"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷智盛网络有限公司</span>
             </p>
         </div>
     </div>
