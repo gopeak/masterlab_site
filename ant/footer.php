@@ -55,10 +55,10 @@
                 <div class="footer-center"><h2><span>关于我们</span>
                     </h2>
                     <div>
-                        <a target="_blank " rel="noopener noreferrer" href="#">公司</a><span> - </span><span>深圳市敏捷科技有限公司</span>
+                        <a target="_blank " rel="noopener noreferrer" href="#">公司</a><span> - </span><span>深圳市敏捷智盛科技有限公司</span>
                     </div>
                     <div>
-                        <a target="_blank " rel="noopener noreferrer" href="#">地址</a><span> - </span><span>深圳市罗湖区水贝二路特力大厦</span>
+                        <a target="_blank " rel="noopener noreferrer" href="#">地址</a><span> - </span><span>深圳市罗湖区水贝二路特力大厦9</span>
                     </div>
                     <div>
                         <a target="_blank" rel="noopener noreferrer"  href="#">捐献</a><span> - </span><span>微信二维码</span></div>
@@ -74,9 +74,9 @@
         <div class="ant-col-sm-24 ant-col-lg-20">
             <p class="footer-link">
                 <span><a href="#" rel="noopener noreferrer"  target="_blank">隐私权政策</a></span>
-                <span><a href="#" rel="noopener noreferrer" target="_blank">权益保障承诺书</a></span>
+                <span><a href="#" rel="noopener noreferrer" target="_blank">使用协议</a></span>
             </p>
-            <p class="footer-copyright"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷科技有限公司</span>
+            <p class="footer-copyright"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷智盛网络有限公司</span>
             </p>
         </div>
     </div>
