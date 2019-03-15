@@ -13,26 +13,7 @@
 
         <div class="header-nav-bar ant-col-xs-0 ant-col-sm-0 ant-col-md-16 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20" id="header-nav-bar">
             <div id="search-box" style="display: none"><i class="anticon anticon-search"></i>
-                <div class="ant-select-show-search ant-select-auto-complete ant-select ant-select-combobox ant-select-enabled">
-                    <div class="ant-select-selection
-            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true"
-                         aria-expanded="false">
-                        <div class="ant-select-selection__rendered">
-                            <div unselectable="on" class="ant-select-selection__placeholder"
-                                 style="display: block; user-select: none;">搜索组件...
-                            </div>
-                            <ul>
-                                <li class="ant-select-search ant-select-search--inline">
-                                    <div class="ant-select-search__field__wrap hide">
-                                        <input type="text" value=""  class="ant-input ant-select-search__field">
-                                        <span  class="ant-select-search__field__mirror"></span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <span class="ant-select-arrow" unselectable="on"
-                              style="user-select: none;"><b></b></span></div>
-                </div>
+           
             </div>
 
             <ul class="ant-menu menu-site ant-menu-light ant-menu-root ant-menu-horizontal" id="nav"
@@ -59,7 +40,7 @@
                 <li class="ant-menu-item  <? if($page=='about') echo 'ant-menu-item-selected'; ?>" role="menuitem"><a href="./about.php"><span>关于我们</span></a>
                 </li>
                 <li class="ant-menu-item " role="menuitem" >
-                    <a  href="https://github.com/gopeak/masterlab" target="_blank"><span>Github</span></a>
+                    <a  href="https://github.com/gopeak/masterlab"><span>Github</span></a>
                 </li>
 
             </ul>
@@ -72,11 +53,7 @@
 
 <script>
     $(function () {
-       $(document).on("click", function () {
-           if ($("#header-nav-bar").is(":visible")) {
-               $("#header-nav-bar").slideUp(300);
-           }
-       });
+       
 
 
         $(".btn.btn-toggle").on("click", function (e) {
