@@ -46,6 +46,7 @@ extension=php_redis
 ```
     masterlab            
       |--   app   
+      |--   bin    
       |--   lib    
       |--   travis
       |--   vendor
