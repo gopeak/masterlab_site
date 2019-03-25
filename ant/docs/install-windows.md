@@ -46,6 +46,7 @@ extension=php_redis
 ```
     masterlab            
       |--   app   
+      |--   bin    
       |--   lib    
       |--   travis
       |--   vendor
@@ -114,18 +115,11 @@ extension=php_redis
 2.登录系统，进入"管理\系统\邮件配置"页面，配置邮件发送功能
 
 
-### 五、配置定时执行任务
-Masterlab中的图表功能需要定时执行脚本，打开windows "控制面板\系统和安全\计划任务"并创建以下定时任务
- ```text
- 每一个小时计算冗余的项目数据
- C:\wamp64\bin\php\php7.2.10\php.exe  C:/www/masterlab/app/server/timer/project.php
- 
- 每天晚上 23.55 计算每个项目的冗余数据
-C:\wamp64\bin\php\php7.2.10\php.exe  C:/www/masterlab/app/server/timer/projectDayReport.php
+### 五、下载和运行 MasterlabSocket
+从https://github.com/gopeak/masterlab_socket/releases下载编译后的可执行文件： masterlab_socket_v1.0-windows-64.zip
+将压缩包内的 'masterlab_socket.exe'放置于 masterlab的bin中，然后直接运行 masterlab_socket.exe 即可。
 
- 每天晚上 23.50 计算每个迭代的冗余数据
-C:\wamp64\bin\php\php7.2.10\php.exe  C:/www/masterlab/app/server/timer/sprintDayReport.php
-```
+
 
  
  

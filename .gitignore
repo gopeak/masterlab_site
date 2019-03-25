@@ -1,0 +1,9 @@
+.git
+.idea
+*.log
+!.gitignore
+/composer.lock
+/vendor
+env.ini
+/app/config/.DS_Store
+.DS_Store
