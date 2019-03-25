@@ -90,14 +90,13 @@ server {
  
  
 
- * 设置定时任务
+ * 配置MasterlabSocket
+ Centos操作系统的MasterlabSocket已经build,可以直接运行
+ ```text
+    chmod +x /data/www/masterlab/bin/masterlab_socket
+    ./masterlab_socket 
 ```
-0,30 22-23 * * * /usr/bin/php /data/www/masterlab/app/server/timer/project.php
-55 23 * * * /usr/bin/php /data/www/masterlab/app/server/timer/projectDayReport.php
-56 23 * * * /usr/bin/php /data/www/masterlab/app/server/timer/sprintDayReport.php
-
-```
-
+其他Linux操作请访问 https://github.com/gopeak/masterlab_socket 查看安装文档
 
  
  

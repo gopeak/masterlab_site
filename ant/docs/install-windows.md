@@ -116,9 +116,10 @@ extension=php_redis
 
 
 ### 五、下载和运行 MasterlabSocket
-从https://github.com/gopeak/masterlab_socket/releases下载编译后的可执行文件： masterlab_socket_v1.0-windows-64.zip
-将压缩包内的 'masterlab_socket.exe'放置于 masterlab的bin中，然后直接运行 masterlab_socket.exe 即可。
 
+ * win7操作系统可直接运行 C:/www/masterlab/bin 目录下 masterlab_socket.exe, 
+ * 其他windows系统请访问 https://github.com/gopeak/masterlab_socket 进行编译,编译成功，将 masterlab_socket.exe 拷贝到 C:/www/masterlab/bin 目录下
+ 然后直接点击运行
 
 
  
