@@ -21,6 +21,11 @@
     export GOPATH=/home/gopath
     export PATH=$PATH:$GOBIN:$GOPKG:$GOPATH/bin
     ```
+    再执行
+     ```text
+     source /etc/profile 
+    ```
+    命令使新的环境变量生效
 4. 检查安装是否成功，打开命令行程序，输入
     ```text
     go version
