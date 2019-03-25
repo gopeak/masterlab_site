@@ -91,7 +91,7 @@ server {
  
 
  * 配置MasterlabSocket
- Centos操作系统的MasterlabSocket已经build,可以直接运行
+ Centos操作系统的MasterlabSocket已经编译好成直接运行的文件，直接赋予权限运行即可
  ```text
     chmod +x /data/www/masterlab/bin/masterlab_socket
     ./masterlab_socket 
