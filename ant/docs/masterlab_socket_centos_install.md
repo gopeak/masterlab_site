@@ -1,6 +1,7 @@
 
 ## centos7下配置golang开发环境
-下载地址 https://studygolang.com/dl/ 
+下载地址 https://studygolang.com/dl
+
 1. 下载centos系统所用的版本
     ```text
      wget https://studygolang.com/dl/golang/go1.12.1.linux-arm64.tar.gz

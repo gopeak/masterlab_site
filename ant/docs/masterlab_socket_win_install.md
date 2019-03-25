@@ -14,6 +14,7 @@ https://studygolang.com/dl/golang/go1.12.1.windows-amd64.msi
     GOPATH : 是golang的工作目录，也是用来设置包加载路径的重要变量，也是go get和go install工具将会使用的目录
     ```
    环境变量设置如下图：
+   
    ![](http://www.masterlab.vip/docs/images/masterlab_socket/go_path.png)      
 
 4. 检查安装是否成功，打开命令行程序，输入
