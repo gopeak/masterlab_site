@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c77c5c79-0c3b-4a93-95a0-f558c82bbc23" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ant/product_files/mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/about.php" afterPath="$PROJECT_DIR$/ant/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/color.php" afterPath="$PROJECT_DIR$/ant/color.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/design.php" afterPath="$PROJECT_DIR$/ant/design.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/download.php" afterPath="$PROJECT_DIR$/ant/download.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/fonts.php" afterPath="$PROJECT_DIR$/ant/fonts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/footer.php" afterPath="$PROJECT_DIR$/ant/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/header.php" afterPath="$PROJECT_DIR$/ant/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/help.php" afterPath="$PROJECT_DIR$/ant/help.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/index.php" afterPath="$PROJECT_DIR$/ant/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/meta.php" afterPath="$PROJECT_DIR$/ant/meta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/milestone.php" afterPath="$PROJECT_DIR$/ant/milestone.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/product.php" afterPath="$PROJECT_DIR$/ant/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/product_files/index-1.css" afterPath="$PROJECT_DIR$/ant/product_files/index-1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant/todo.php" afterPath="$PROJECT_DIR$/ant/todo.php" />
+      <change beforePath="$PROJECT_DIR$/ant/download.php" afterPath="$PROJECT_DIR$/ant/download.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,82 +11,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ant/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="132" column="35" lean-forward="false" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ant/product_files/mobile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="156" column="20" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ant/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ant/product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="76" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ant/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="128" lean-forward="false" selection-start-line="0" selection-start-column="128" selection-end-line="0" selection-end-column="128" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-1.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ant/product_files/index-1.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="14770" column="19" lean-forward="false" selection-start-line="14770" selection-start-column="18" selection-end-line="14770" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="meta.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ant/meta.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -137,6 +49,7 @@
         <option value="$PROJECT_DIR$/ant/footer.php" />
         <option value="$PROJECT_DIR$/ant/product_files/index-1.css" />
         <option value="$PROJECT_DIR$/ant/product_files/mobile.css" />
+        <option value="$PROJECT_DIR$/ant/download.php" />
       </list>
     </option>
   </component>
@@ -150,7 +63,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
@@ -168,54 +81,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="masterlab_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="masterlab_site" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="masterlab_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="masterlab_site" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ant" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="masterlab_site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="masterlab_site" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ant" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="masterlab_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="masterlab_site" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="masterlab_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="masterlab_site" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ant" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,15 +161,6 @@
       <PhpTestRunnerSettings />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -307,9 +181,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -321,26 +206,27 @@
       <workItem from="1552363749591" duration="582000" />
       <workItem from="1552370926024" duration="11764000" />
       <workItem from="1552441742641" duration="6605000" />
+      <workItem from="1553512796768" duration="45000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18951000" />
+    <option name="totallyTimeSpent" value="18996000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2551975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -351,7 +237,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -363,11 +249,65 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ant/index.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="76" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="128" lean-forward="false" selection-start-line="0" selection-start-column="128" selection-end-line="0" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant/product_files/index-1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280630">
+          <caret line="14770" column="19" lean-forward="false" selection-start-line="14770" selection-start-column="18" selection-end-line="14770" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant/meta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant/product_files/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2964">
+          <caret line="156" column="20" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant/index.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -421,7 +361,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ant/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="285">
           <caret line="15" column="76" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="76" />
           <folding />
         </state>
@@ -437,25 +377,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ant/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="132" column="35" lean-forward="false" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1178">
+          <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ant/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="33" />
+        <state relative-caret-position="1387">
+          <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ant/product_files/index-1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
+        <state relative-caret-position="280630">
           <caret line="14770" column="19" lean-forward="false" selection-start-line="14770" selection-start-column="18" selection-end-line="14770" selection-end-column="19" />
           <folding />
         </state>
@@ -465,6 +403,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
           <caret line="156" column="20" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant/download.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="234" column="81" lean-forward="false" selection-start-line="234" selection-start-column="81" selection-end-line="234" selection-end-column="81" />
           <folding />
         </state>
       </provider>
