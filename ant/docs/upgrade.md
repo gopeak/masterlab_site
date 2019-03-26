@@ -80,7 +80,11 @@
  
  5. 重新给 `app/storage` 赋予写入权限  
  
- 6. good luck ~~  
+ 
+ 6. 修改 `app/config/deploy/app.cfg.php` 的 `MASTERLAB_VERSION` 为 `1.1` ,清除浏览器缓存并重新登录  
+ 
+ 
+ 7. good luck ~~  
  
       
     
