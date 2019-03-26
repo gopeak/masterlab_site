@@ -49,7 +49,23 @@ $page = 'milestone';
         <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-19">
             <article class="markdown">
                 <h1><!-- react-text: 7590 -->更新log<!-- /react-text --></h1>
-
+                <h2>v1.1 版本发布</h2>
+                <p>新增多项功能和修复bug</p>
+                <p>新增功能:</p>
+                <ol>
+                    <li>事项更时触发邮件推送，收件人可选：报告人，负责人，关注人</li>
+                    <li>增加了socket服务程序，用于实时数据通信和异步执行</li>
+                    <li>增加事项详情的相关活动日志</li>
+                    <li>增加Redis连接配置密码认证</li>
+                </ol>
+                    <p>修复bug：</p>
+                    <ol>
+                    <li>UI界面问题</li>
+                    <li>邮件无法发送的问题</li>
+                    <li>后台管理用户的一系列问题</li>
+                    <li>首页自定义面板删除无效的问题</li>
+                </ol>
+                <p></p>
                 <h2>v1.0.3 版本发布</h2>
                 <p>Masterlab在打造极致卓越的项目管理工具路上奔跑着！v1.0.3版本增加了事项模块的多个新功能，进一步完善权限模块，并修复20多个bug，建议升级到该版本：</p>
                 <ol>

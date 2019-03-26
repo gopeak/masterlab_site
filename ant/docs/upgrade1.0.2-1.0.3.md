@@ -1,10 +1,88 @@
-升级指南
+#升级指南
 
 
-## v1.0.2 升级到 v1.0.3 指南
+  
+## v1.0.3 到 v1.1 升级指南  
 
-1. 下载补丁包  https://github.com/gopeak/masterlab/releases/download/v1.0.3/patch-v1.0.2tov1.0.3.zip ，覆盖代码
-2. 在数据库中找到表user_main，删除重复（字段 email 和 username）的用户数据
+>  步骤
+
+ 1. 下载补丁文件  
+
+    https://github.com/gopeak/masterlab/releases/download/v1.1/up_v1.0.3-to-v1.1.zip 
+      
+
+ 2. 将补丁包的文件覆盖原来的代码  
+  
+    
+ 3. 在数据库中执行补丁包的更新Sql文件  
+    ```text
+    upgrade\database\up-v1.0.3-to-1.1.sql
+    ```
+   
+4. 修改masterlab_socket服务器的配置文件 `bin/config.toml`  
+    ```text
+    # 修改Mysql数据库和redis服务的连接配置
+     [mysql]
+         database 	=	"masterlab"   
+         host        =   "localhost"
+         port		=	"3306"        
+         user 		= 	"root"
+         password 	= 	""
+         charset	    =	"utf8mb4_unicode_ci"
+         timeout	    =	"10"
+         max_open_conns = 2000
+         max_idle_conns = 1000
+     
+     [object]
+         data_type 	= "redis"
+         redis_host 	= "127.0.0.1"
+         redis_port 	= "6379"
+         redis_password = ""
+    ```
+    修改masterlab_socket服务器的cron文件 `bin/cron.json`  
+    修改 `exe_bin` 为php的实际路径, 修改 `file` 为实际的文件路径
+     ```text
+     
+      {
+        "desc": "Project compute",
+        "schedule": [
+          {
+            "name": "ProjectStat 每个半小时执行一次",
+            "exe_bin": "/usr/bin/php", 
+            "exp": "0 */30 * * * ?",
+            "file": "/data/www/masterlab/app/server/timer/project.php",
+            "arg": "-f"
+          },
+          {
+            "name": "ProjectReport 每天23点58分执行项目统计",
+            "exe_bin": "/usr/bin/php", 
+            "exp": "0 58 23 * * ?",
+            "file": "/data/www/masterlab/app/server/timer/projectDayReport.php",
+            "arg": "-f"
+          },
+          {
+            "name": "SprintReport 每天23点59分执行迭代统计",
+            "exe_bin": "/usr/bin/php", 
+            "exp": "0 59 23 * * ?",
+            "file": "/data/www/masterlab/server/timer/sprintDayReport.php",
+            "arg": "-f"
+          }
+        ]
+      }
+     ```
+    最后执行 `bin/masterlab_socket`  
+      
+    
+      
+
+## v1.0.2 到 v1.0.3 升级指南  
+
+>  步骤  
+
+1. 下载补丁包  https://github.com/gopeak/masterlab/releases/download/v1.0.3/patch-v1.0.2tov1.0.3.zip ，覆盖代码  
+
+2. 在数据库中找到表user_main，删除重复（字段 email 和 username）的用户数据  
+
 3. 在数据库中执行以下SQL语句
 ```sql
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,8 +102,11 @@ CREATE UNIQUE INDEX `email` ON `user_main`(`email`) USING BTREE ;
 DROP INDEX `username` ON `user_main`;
 CREATE UNIQUE INDEX `username` ON `user_main`(`username`) USING BTREE ;
 SET FOREIGN_KEY_CHECKS=1;
-```
+```  
 
-4. 修改 app/config/deploy/app.cfg.php MASTERLAB_VERSION 为 1.0.3
 
-5. 清除浏览器缓存
+4. 修改 app/config/deploy/app.cfg.php MASTERLAB_VERSION 为 1.0.3  
+
+
+5. 清除浏览器缓存  
+
