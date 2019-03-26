@@ -58,8 +58,8 @@ require_once './lib/parsedown/Parsedown.php';
                         <a href="?md=install-windows">Windows安装示例</a></li>
                     <li class="list-group-item <? if ($mdFile == 'install-linux') echo 'active'; ?>">
                         <a href="?md=install-linux">Linux安装示例</a></li>
-                    <li class="list-group-item <? if ($mdFile == 'upgrade1.0.2-1.0.3') echo 'active'; ?>">
-                        <a href="?md=upgrade1.0.2-1.0.3">升级指南</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'upgrade') echo 'active'; ?>">
+                        <a href="?md=upgrade">升级指南</a></li>
                     <li class="list-group-item <? if ($mdFile == 'explain_word') echo 'active'; ?>">
                         <a href="?md=explain_word">名词解释</a></li>
                     <li class="list-group-item <? if ($mdFile == 'quickstart') echo 'active'; ?>">
