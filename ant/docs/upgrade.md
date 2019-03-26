@@ -70,7 +70,18 @@
         ]
       }
      ```
-    最后执行 `bin/masterlab_socket`  
+ 4. 运行 `masterlab_socket` 服务  
+     如果是centos或windows操作系统，赋予 `bin/masterlab_socket`  和 `bin/masterlab_socket.exe` 执行权限，其他操作系统访问  
+     https://github.com/gopeak/masterlab_socket 自行编译  
+     运行命令
+     ```text
+       ./bin/masterlab_socket
+      ```
+ 
+ 5. 重新给 `app/storage` 赋予写入权限  
+ 
+ 6. good luck ~~  
+ 
       
     
       
