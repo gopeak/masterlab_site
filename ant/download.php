@@ -232,7 +232,7 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4><a href="?file=masterlab-v1.1.zip">Masterlab-v1.1-last.zip</a></h4> v1.0.3 44.5M
+                            <h4><a href="?file=masterlab-v1.1.zip">Masterlab-v1.1-last.zip</a></h4>
                             <p>Masterlab完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
                         </div>
                     </li>
