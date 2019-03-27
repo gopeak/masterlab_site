@@ -64,7 +64,7 @@
             "name": "SprintReport 每天23点59分执行迭代统计",
             "exe_bin": "/usr/bin/php", 
             "exp": "0 59 23 * * ?",
-            "file": "/data/www/masterlab/server/timer/sprintDayReport.php",
+            "file": "/data/www/masterlab/app/server/timer/sprintDayReport.php",
             "arg": "-f"
           }
         ]

@@ -65,7 +65,7 @@ masterlab
 目前Masterlab尚未支持插件功能，因为如果要进行二次开发，只能在当前的代码直接修改
 
 ## PHP代码说明
-* PHP代码遵循psr2标准，使用户驼峰命名规范
+* PHP代码遵循psr2标准，使用驼峰命名规范
 * 更多的开发说明，请参考 Hornet-framework 的开发指南 https://github.com/gopeak/hornet-framework/wiki
 * 项目中大部分使用了前后端分离，以ajax异步调用的方式获取和显示数据。
 * 部分页面的内容仍然使用php代码直接输出和控制前端的html js, php.ini需要开启 short_open_tag 
