@@ -54,6 +54,9 @@ require_once './lib/parsedown/Parsedown.php';
                         <a href="./help.php">介绍</a></li>
                     <li class="list-group-item <? if ($mdFile == 'env') echo 'active'; ?>">
                         <a href="?md=env">运行环境</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'faq') echo 'active'; ?>">
+                        <a href="?md=faq">常见问题</a>
+                    </li>
                     <li class="list-group-item <? if ($mdFile == 'install-windows') echo 'active'; ?>">
                         <a href="?md=install-windows">Windows安装示例</a></li>
                     <li class="list-group-item <? if ($mdFile == 'install-linux') echo 'active'; ?>">
@@ -67,9 +70,7 @@ require_once './lib/parsedown/Parsedown.php';
                     <li class="list-group-item <? if ($mdFile == 'advanced') echo 'active'; ?>">
                         <a href="?md=advanced">进阶</a>
                     </li>
-                    <li class="list-group-item <? if ($mdFile == 'faq') echo 'active'; ?>">
-                        <a href="?md=faq">常见问题</a>
-                    </li>
+
                     <li class="list-group-item <? if ($mdFile == 'key') echo 'active'; ?>">
                         <a href="?md=key">快捷键</a>
                     </li>
