@@ -239,6 +239,13 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
+                            <h4><a href="?file=xampp-masterlab-v1.1.7z">Xampp-masterlab-v1.1.7z 绿色懒人版</a></h4>
+                            <p>Xampp+Masterlab，解压到硬盘跟目录即可，仅适用于Windows，<a href="/help.php?md=install-windows-xampp-portable">安装教程</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
                             <h4><a href="?file=Redis-x64-3.0.501.zip">Redis-x64-3.0.501.zip</a></h4> 5.7M
                             <p>Redis3.0 的Windows版本</p>
                         </div>

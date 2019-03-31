@@ -2,12 +2,14 @@
 
 ## Windows xampp3.2.3 懒人版安装示例
 
-该示例基于 xampp3.2.3-portable并加装了masterlab，下载后直接解压到硬盘根目录下运行就可以，免去繁琐的安装过程，  
+该示例基于 xampp3.2.3-portable并加装了Masterlab，下载后直接解压到硬盘根目录下运行就可以，免去繁琐的安装过程，  
 但整合的数据库是MariaDB10而非Mysql5.7，导致全文索引中文字词无效，因此只适合懒人或小白。  
 
+注：该示例仅在windows7下通过测试，其他windows版本还在调试中    
+
 ### 1. 下载  
-  从 Masterlab官网下载打包好的 xampp-masterlab-v1.1.zip 文件，包文件包含了 masterlab所运行的环境和代码
-  http://www.masterlab.vip/download.php?file=xampp-masterlab-v1.1.zip  
+  从 Masterlab官网下载打包好的 `xampp-masterlab-v1.1.7z` 文件，包文件包含了Masterlab所运行的环境和代码  
+  http://www.masterlab.vip/download.php?file=xampp-masterlab-v1.1.7z   
   下载好后将文件解压到在硬盘的根目录，如 `e:/xampp`   
 
 ### 2. 运行  
