@@ -6,31 +6,25 @@
 ### **运行环境的检查与配置**
 
 0. masterlab需要的运行环境
-推荐使用LINUX+PHP+MYSQL+REDIS，不推荐使用windows来作为生产环境, 但可以作为预览环境或开发环境来使用
-
-PHP(5.6/7.0/7.1/7.2版本)
-MYSQL(5.6/5.7版本)
-NGINX
-REDIS
+    * 推荐使用LINUX+PHP+MYSQL+REDIS，不推荐使用windows来作为生产环境, 但可以作为预览环境或开发环境来使用
+    * PHP(5.6/7.0/7.1/7.2版本)
+    * MYSQL(5.6/5.7版本)
+    * NGINX
+    * REDIS
 
 1. 检查masterlab需要的PHP配置
-
-    - 检查或安装redis扩展
-    - 修改php.ini文件，把short_open_tag 设置为 On
-
-
+    * 检查或安装redis扩展
+    * 修改php.ini文件，把short_open_tag 设置为 On
 
 2. 检查masterlab需要的mysql配置
-
-    - 取消mysql的严格模式和新增对ngram的支持，修改配置文件my.ini/my.cnf ，在 [mysqld] 段中添加
-```
-sql_mode=NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER
-
-ngram_token_size=2
-```
+    * 取消mysql的严格模式和新增对ngram的支持，修改配置文件my.ini/my.cnf ，在 [mysqld] 段中添加
+    ```
+    sql_mode=NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER
+    ngram_token_size=2
+    ```
 
 3. 检查masterlab需要的NGINX配置
-    - masterlab/app/public 为项目的入口目录, 假设你的源码目录为 /data/www/masterlab
+    * masterlab/app/public 为项目的入口目录, 假设你的源码目录为 /data/www/masterlab
     ```
     server {
         ...
