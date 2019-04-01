@@ -11,10 +11,12 @@
     * MYSQL(5.6/5.7版本)
     * NGINX
     * REDIS
+    * composer(PHP依赖包管理工具)
 
 1. 检查masterlab需要的PHP配置
     * 检查或安装redis扩展
     * 修改php.ini文件，把short_open_tag 设置为 On
+    * 检查或安装composer，推荐使用国内镜像
 
 2. 检查masterlab需要的mysql配置
     * 取消mysql的严格模式和新增对ngram的支持，修改配置文件my.ini/my.cnf ，在 [mysqld] 段中添加
