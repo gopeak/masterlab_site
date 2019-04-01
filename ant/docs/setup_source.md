@@ -46,10 +46,9 @@
     ```
 
 4. 检查REDIS是否安装
-redis存在无密码漏洞攻击，安全起见要设置密码
+    * redis存在无密码漏洞攻击，安全起见要设置密码
 
-
-
+***
 
 ### **部署masterlab源代码**
 
@@ -60,16 +59,18 @@ https://github.com/gopeak/masterlab/releases
 
 2. 将其解压缩，并将目录重命名为masterlab。相应的目录, 如： /data/www/masterlab。
 
-
 3. 通过浏览器访问以下地址，系统会自动转入安装程序。
-
 ```
 http://域名/install  或  http://ip:端口/install
 ```
 
+***
 
 ### **手动修改masterlab配置信息**
 
 ```
 masterlab/app/config/deploy
 ```
+
+
+***
