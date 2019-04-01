@@ -6,7 +6,7 @@
 ### **运行环境的检查与配置**
 
 0. masterlab需要的运行环境
-    * 推荐使用LINUX+PHP+MYSQL+REDIS，不推荐使用windows来作为生产环境, 但可以作为预览环境或开发环境来使用
+    * 推荐使用LINUX+NGINX+PHP+MYSQL+REDIS，不推荐使用windows来作为生产环境, 但可以作为预览环境或开发环境来使用
     * PHP(5.6/7.0/7.1/7.2版本)
     * MYSQL(5.6/5.7版本)
     * NGINX
@@ -53,16 +53,22 @@
 ### **部署masterlab源代码**
 
 1. 下载源码, 得到masterlab-{version}.zip文件
-```
-https://github.com/gopeak/masterlab/releases
-```
+    ```
+    https://github.com/gopeak/masterlab/releases
+    ```
 
 2. 将其解压缩，并将目录重命名为masterlab。相应的目录, 如： /data/www/masterlab。
 
 3. 通过浏览器访问以下地址，系统会自动转入安装程序。
-```
-http://域名/install  或  http://ip:端口/install
-```
+    ```
+    http://域名/install  或  http://ip:端口/install
+    ```
+
+4. 安装依赖包
+    * 进入masterlab的根目录执行
+    ```
+    composer install -vvv
+    ```
 
 ***
 
