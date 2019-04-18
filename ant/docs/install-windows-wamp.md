@@ -1,6 +1,8 @@
 
 ## Windows Wampserver 安装示例
 
+  注：该教程在win7 64位操作系统下测试通过，其他如win10操作系统请先安装vc14 vc15的64位运行库  
+  
 ### 一、环境安装和配置
 
 1.使用Apache+PHP+Mysql集成包 `Wampserver3.1.7`，下载地址:  
@@ -10,6 +12,8 @@ https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.
 
 ```
   下载好后将 `Wampserver` 安装在硬盘的根目录，如 `d:/wamp64`  
+  
+
     
 2.安装Redis Server，下载地址 http://www.masterlab.vip/download.php?file=Redis-x64-3.0.501.zip
   解压至于 `d:\bin\Redis` 目录，在命令行界面下执行 
@@ -17,7 +21,8 @@ https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.
     d:\bin\Redis\redis-server.exe d:\bin\Redis\redis.windows.conf
 ```
   
-3.修改 `d:\wamp64\bin\apache\apache2.4.35\bin\php.ini` 配置项
+3.修改 `d:\wamp64\bin\apache\apache2.4.35\bin\php.ini` 配置项，  
+注:如果找不到文件， apache的版本可能不一样请自行查找
   ```
    short_open_tag = On
    upload_max_filesize = 8M
@@ -37,7 +42,7 @@ extension=php_redis
 ### 二、下载Masterlab代码
 
 下载最新版本的完整代码  http://www.masterlab.vip/download.php?file=masterlab-full-last.zip ，
- 解压到 d 盘的 C:/www 目录下,解压后的目录结构如下:
+ 解压到 d 盘的 d:/www 目录下,解压后的目录结构如下:
 ```
     masterlab            
       |--   app   
@@ -55,7 +60,8 @@ extension=php_redis
 ### 三、Apache配置Masterlab的虚拟主机
 1.修改 `Wampserver` 中的Apache配置文件
 
-   + 打开 d:\wamp64\bin\apache\apache2.4.35\conf\httpd.conf文件,找到
+   + 打开 d:\wamp64\bin\apache\apache2.4.35\conf\httpd.conf文件,(注:如果找不到文件， apache的版本可能不一样请自行查找)  
+   找到
 
    ```apache
     <Directory />

@@ -19,7 +19,7 @@
   运行 `e:/xampp/redis-server/redis-server.exe`   
     ![](http://www.masterlab.vip/docs/images/install/redis-server.png)  
 
-  运行 `e:/masterlab/bin/masterlab_socket.exe`   
+  运行 `e:/xampp/masterlab/bin/masterlab_socket.exe`   
     ![](http://www.masterlab.vip/docs/images/install/masterlab_socket.png)  
 
 ### 3. 修改hosts
