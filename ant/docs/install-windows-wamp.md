@@ -111,7 +111,14 @@ extension=php_redis
 
 
 ### 四、图文安装  
-1.访问 http://www.yoursite.com/install/ 按照提示进行安装   
+
+如果没有域名可修改hosts，在 C:\Windows\System32\drivers\etc\hosts 文件中加入
+```text
+127.0.0.1 www.yoursite.com
+```
+
+1.访问 http://www.yoursite.com/install/ 按照提示进行安装  
+  注：如果想在内网中其他用户访问，修改 app/config/deploy/app.cfg.php 中的ROOT_URL,将你的ip地址代替域名  
 
 2.登录系统，进入"管理\系统\邮件配置"页面，配置邮件发送功能  
 

@@ -33,7 +33,6 @@
 在浏览器中访问 http://www.yoursite.com/ 默认账号 master 密码 123456   
 登录成功后在个人设置中修改密码即可  
 
-
 good luck to u~~  
 
 
