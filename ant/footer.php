@@ -55,10 +55,10 @@
                 <div class="footer-center"><h2><span>关于我们</span>
                     </h2>
                     <div>
-                        <a target="_blank " rel="noopener noreferrer" href="#">公司</a><span> - </span><span>深圳市敏捷智盛科技有限公司</span>
+                        <a target="_blank " rel="noopener noreferrer" href="#">公司</a><span> - </span><span>深圳市敏捷智胜科技有限公司</span>
                     </div>
                     <div>
-                        <a target="_blank " rel="noopener noreferrer" href="#">地址</a><span> - </span><span>深圳市罗湖区水贝二路特力大厦9</span>
+                        <a target="_blank " rel="noopener noreferrer" href="#">地址</a><span> - </span><span>深圳市南山区星美科技园916</span>
                     </div>
                     <div>
                         <a target="_blank" rel="noopener noreferrer"  href="#">捐献</a><span> - </span><span>微信二维码</span></div>
