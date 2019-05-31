@@ -173,7 +173,7 @@ function clientlog()
 
     $filename = ROOT_PATH."downloads/log.log";
     if (!file_exists($filename)) {
-        fopen($filename, "w+");
+        @file_put_contents($filename, "\n", FILE_APPEND);
     }
-    file_put_contents($filename, $data, FILE_APPEND);
+    @file_put_contents($filename, $data, FILE_APPEND);
 }

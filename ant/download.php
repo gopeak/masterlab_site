@@ -232,21 +232,33 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4><a href="?file=masterlab-v1.1.zip">Masterlab-v1.1-last.zip</a></h4>
+                            <h4>Masterlab-v1.1-last.zip
+                                <a  style="margin-left: 10px;font-size: small" href="?file=masterlab-v1.1.zip" style="margin-left: 10px">官网下载</a>
+                                <a  style="margin-left: 10px;font-size: small" href="https://pan.baidu.com/s/1rfr2tT19hMU76G12Sj5AFQ">百度网盘</a>
+                                <span style="font-size: small">提取码：cauk </span>
+                            </h4>
                             <p>Masterlab完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
                         </div>
                     </li>
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4><a href="?file=xampp-masterlab-v1.1.7z">Xampp-masterlab-v1.1.7z 绿色懒人版</a></h4>
+                            <h4>Xampp-masterlab-v1.1.7z 绿色懒人版
+                                <a style="margin-left: 10px;font-size: small" href="?file=xampp-masterlab-v1.1.7z">官网下载</a>
+                                <a  style="margin-left: 10px;font-size: small" href="https://pan.baidu.com/s/1xZW1oktmYWt5toe3vrm19w">百度网盘</a>
+                                <span style="font-size: small">提取码：7806 </span>
+                            </h4>
                             <p>Xampp+Masterlab，解压到硬盘根目录即可，仅适用于Windows，<a href="/help.php?md=install-windows-xampp-portable">安装教程</a></p>
                         </div>
                     </li>
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4><a href="?file=Redis-x64-3.0.501.zip">Redis-x64-3.0.501.zip</a></h4> 5.7M
+                            <h4>Redis-x64-3.0.501.zip
+                                <a style="margin-left: 10px;font-size: small" href="?file=Redis-x64-3.0.501.zip">官网下载</a>
+                                <a  style="margin-left: 10px;font-size: small" href="https://pan.baidu.com/s/1iT5abl6KjqOIcQwNm4BtRA">百度网盘</a>
+                                <span style="font-size: small">提取码：3p5t </span>
+                            </h4> 5.7M
                             <p>Redis3.0 的Windows版本</p>
                         </div>
                     </li>
