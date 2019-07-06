@@ -112,13 +112,8 @@ section {
 }
 .features {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#544ff9+0,7351f4+26,874bff+100 */
-  background: #544ff9;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #544ff9 0%, #7351f4 26%, #874bff 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #544ff9 0%, #7351f4 26%, #874bff 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #544ff9 0%, #7351f4 26%, #874bff 100%);
+  background: #F8FAFE;
+
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#544ff9', endColorstr='#874bff', GradientType=1);
   /* IE6-9 */
