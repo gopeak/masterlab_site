@@ -19,7 +19,8 @@ require_once './lib/parsedown/Parsedown.php';
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
     <title>MasterLab - 互联网项目、产品管理解决方案</title>
     <link rel="icon" href="https://gw.alipayobjects.com/os/antv/assets/favoricon.png" type="image/x-icon">
     <link rel="stylesheet" href="./history_files/bootstrap.min.css">
@@ -34,7 +35,7 @@ require_once './lib/parsedown/Parsedown.php';
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
     <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
     <link rel="stylesheet" type="text/css" href="./product_files/featrue.css">
-    <? include 'hotjar.php'?>
+    <? include 'hotjar.php' ?>
 
 </head>
 <body class="template-doc">
@@ -61,7 +62,7 @@ require_once './lib/parsedown/Parsedown.php';
                         <a href="?md=install-windows">Windows安装示例</a></li>
                     <li class="list-group-item <? if ($mdFile == 'install-linux') echo 'active'; ?>">
                         <a href="?md=install-linux">Linux安装示例</a></li>
-                    <li class="list-group-item <? if ($mdFile == 'upgrade') echo 'active'; ?>">
+                    <li class="list-group-item <? if (in_array($mdFile, ['upgrade', 'upgrade-step', 'upgrade-compare'])) echo 'active'; ?>">
                         <a href="?md=upgrade">升级指南</a></li>
                     <li class="list-group-item <? if ($mdFile == 'explain_word') echo 'active'; ?>">
                         <a href="?md=explain_word">名词解释</a></li>
