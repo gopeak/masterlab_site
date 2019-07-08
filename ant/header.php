@@ -28,7 +28,7 @@
                     <a   href="./index.php"><span>首 页</span></a>
                 </li>
                 <li class="ant-menu-item  <? if($page=='demo') echo 'ant-menu-item-selected'; ?>" role="menuitem">
-                    <a target="_blank" href="http://demo.masterlab.vip"><span>Demo</span></a>
+                    <a href="./demo.php"><span>Demo</span></a>
                 </li>
                 <li class="ant-menu-item  <? if($page=='help') echo 'ant-menu-item-selected'; ?>" role="menuitem">
                     <a href="./help.php"><span>文 档</span></a>

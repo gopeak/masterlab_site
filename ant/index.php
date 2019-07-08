@@ -44,7 +44,7 @@ $page = 'product';
                                 基于事项驱动和敏捷开发的项目管理工具;将工程技术之道和艺术设计之美融合一身，在网页、桌面、移动环境都打造出众的体验，让团队协作焕发无限可能。
                                 </span>
                         </p>
-                        <div class="start-button"><a href="http://demo.masterlab.vip" target="_blank">
+                        <div class="start-button"><a href="./demo.php" >
                                 <button type="button" class="ant-btn ant-btn-primary ant-btn-lg"><span>开始体验</span>
                                 </button>
                             </a>
