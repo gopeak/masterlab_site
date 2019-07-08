@@ -1,44 +1,10 @@
 <?php
-$page = 'download';
+$page = 'demo';
 define('ROOT_PATH', realpath(dirname(__FILE__)) . '/');
 if (function_exists('date_default_timezone_set')) {
     date_default_timezone_set('Asia/Shanghai');
 }
 
-if (isset($_GET['file'])) {
-    require_once "lib/comm_function.php";
-    $file = ROOT_PATH . 'downloads/' . $_GET['file'];
-
-    // local file that should be send to the client
-    $local_file = $file;
-// filename that the user gets as default
-    $download_file = $file;
-    //var_dump('downloads/' . $file);die;
-    $download_rate = 85;
-    if (file_exists($file)) {
-        clientlog();
-
-        // send headers
-        header('Cache-control: private');
-        header('Content-Type: application/octet-stream');
-        header('Content-Length: ' . filesize($local_file));
-        header('Content-Disposition: filename=' . $_GET['file']);
-
-        // flush content
-        flush();
-        // open file stream
-        $file = fopen($local_file, "r");
-        while (!feof($file)) {
-            // send the current file part to the browser
-            print fread($file, round($download_rate * 1024));
-            // flush the content to the browser
-            flush();
-        }
-        // close file stream
-        fclose($file);
-    }
-    die;
-}
 
 ?>
 <!DOCTYPE html>
@@ -49,7 +15,7 @@ if (isset($_GET['file'])) {
     <meta name="description" content="助您交付卓越的产品">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
     <title>MasterLab - 互联网项目、产品管理解决方案--关于我们</title>
-    <link rel="stylesheet" href="./about_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./about_files/bootstrap.min.css">s
     <link rel="stylesheet" href="./about_files/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./about_files/font_470089_q8g1f7kwli.css">
     <link rel="stylesheet" href="./about_files/common-84eda.css">
@@ -217,51 +183,15 @@ if (isset($_GET['file'])) {
         <? include 'header.php' ?>
 
         <section class="description container text-center">
-            <h2>下 载</h2>
+            <h2>Demo</h2>
             <span class="separator"></span>
             <div class="info-content">
-                <p class="main-info">源代码托管于<a href="https://github.com/gopeak/masterlab/"> Github </a></p>
-                <p class="main-info">Masterlab-v1.1-last.zip为完整的代码包，无需安装Git和Composer命令行工具，安装过程详见<a href="help.php?md=install"> 文档 </a>页面 </p>
+                <p class="main-info">以系统管理员身份登录，可以立即体验所有功能。体验账号:master 体验密码:testtest <a href="http://demo.masterlab.vip" target="_blank"> 立即体验 </a> </p>
             </div>
         </section>
 
-        <section class="description container text-center">
+        <section class="description container text-center" style="min-height: 500px">
             <div class="info-content">
-                <ul class="text-left info-items">
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4>Masterlab-v1.1-last.zip
-                                <a  style="margin-left: 10px;font-size: small" href="?file=masterlab-v1.1.zip" style="margin-left: 10px">官网下载</a>
-                                <a  style="margin-left: 10px;font-size: small" href="https://pan.baidu.com/s/1rfr2tT19hMU76G12Sj5AFQ">百度网盘</a>
-                                <span style="font-size: small">提取码：cauk </span>
-                            </h4>
-                            <p>Masterlab完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4>Xampp-masterlab-v1.1.7z 绿色懒人版
-                                <a style="margin-left: 10px;font-size: small" href="?file=xampp-masterlab-v1.1.7z">官网下载</a>
-                                <a  style="margin-left: 10px;font-size: small" href="https://pan.baidu.com/s/1xZW1oktmYWt5toe3vrm19w">百度网盘</a>
-                                <span style="font-size: small">提取码：7806 </span>
-                            </h4>
-                            <p>Xampp+Masterlab，解压到硬盘根目录即可，仅适用于Windows，<a href="/help.php?md=install-windows-xampp-portable">安装教程</a></p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4>Redis-x64-3.0.501.zip
-                                <a style="margin-left: 10px;font-size: small" href="?file=Redis-x64-3.0.501.zip">官网下载</a>
-                                <a  style="margin-left: 10px;font-size: small" href="https://pan.baidu.com/s/1iT5abl6KjqOIcQwNm4BtRA">百度网盘</a>
-                                <span style="font-size: small">提取码：3p5t </span>
-                            </h4> 5.7M
-                            <p>Redis3.0 的Windows版本</p>
-                        </div>
-                    </li>
-                </ul>
             </div>
         </section>
 

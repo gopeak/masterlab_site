@@ -25,6 +25,9 @@
                 <li class="ant-menu-item <? if($page=='product') echo 'ant-menu-item-selected'; ?> " role="menuitem">
                     <a   href="./index.php"><span>首 页</span></a>
                 </li>
+                <li class="ant-menu-item  <? if($page=='demo') echo 'ant-menu-item-selected'; ?>" role="menuitem">
+                    <a href="./demo.php"><span>Demo</span></a>
+                </li>
                 <li class="ant-menu-item  <? if($page=='help') echo 'ant-menu-item-selected'; ?>" role="menuitem">
                     <a href="./help.php"><span>文 档</span></a>
                 </li>
