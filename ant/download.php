@@ -221,7 +221,7 @@ if (isset($_GET['file'])) {
             <span class="separator"></span>
             <div class="info-content">
                 <p class="main-info">源代码托管于<a href="https://github.com/gopeak/masterlab/"> Github </a></p>
-                <p class="main-info">Masterlab-v1.1-last.zip为完整的代码包，无需安装Git和Composer命令行工具，安装过程详见<a href="help.php?md=install"> 文档 </a>页面 </p>
+                <p class="main-info">Masterlab-v1.2-last.zip为完整的代码包，无需安装Git和Composer命令行工具，安装过程详见<a href="help.php?md=install"> 文档 </a>页面 </p>
             </div>
         </section>
 
