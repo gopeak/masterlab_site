@@ -49,6 +49,18 @@ $page = 'milestone';
         <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-19">
             <article class="markdown">
                 <h1><!-- react-text: 7590 -->更新log<!-- /react-text --></h1>
+                <h2>v1.2 版本发布</h2>
+                <p>新增多项实用功能和优化改进项，同时修复大量bug</p>
+                <p>新功能和优化改进有:</p>
+                <ol>
+                    <li>增加项目成员管理功能</li>
+                    <li>事项列表中用户可以自定义显示列 </li>
+                    <li>事项导入导出</li>
+                    <li>响应式视图及排序功能</li>
+                    <li>可以在事项描述中粘贴截图</li>
+                    <li>浏览器兼容提示</li>
+                </ol>
+                <p></p>
                 <h2>v1.1 版本发布</h2>
                 <p>新增多项功能和修复bug</p>
                 <p>新增功能:</p>
