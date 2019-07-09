@@ -8,7 +8,8 @@
    - Centos6 http://www.masterlab.vip/help.php?md=setup_centos6
    - Centos7 http://www.masterlab.vip/help.php?md=setup_centos7
    - Ubuntu http://www.masterlab.vip/help.php?md=setup_ubuntu
- 
+   
+ 如果您的Linux Web服务器使用的是Apache，可参考 [Windows安装示例](./help.php?md=install-windows "Windows安装示例") 的Apache配置   
 
 * 环境搭建好后下载Masterlab代码
 ```bash

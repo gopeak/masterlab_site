@@ -86,7 +86,7 @@ require_once './lib/parsedown/Parsedown.php';
 
                 </div>
             </div>
-            <article id="description-view" class="markdown">
+            <article id="description-view" class="markdown" style="max-width: 1200px;">
                 <?php
                 $markdown = file_get_contents('./docs/' . $mdFile . '.md');
                 echo Parsedown::instance()->text($markdown);

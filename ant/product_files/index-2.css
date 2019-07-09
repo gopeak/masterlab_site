@@ -7686,6 +7686,8 @@ footer .bottom-bar .translate-button {
 .markdown img {
   vertical-align: middle;
   max-width: 100%;
+  border: 1px solid #63b7ff;
+  padding: 2px;
 }
 .markdown h1 {
   color: #404040;
