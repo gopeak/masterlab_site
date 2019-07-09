@@ -8,7 +8,7 @@
 
  2. 下载补丁文件  
 
-    https://github.com/gopeak/masterlab/releases/download/v1.2/up_v1.1-to-v1.2.zip 
+    https://github.com/gopeak/masterlab/releases/download/v1.2/up-v1.1-to-v1.2.zip 
 
  3. 将补丁包的文件覆盖原来的代码  
     
