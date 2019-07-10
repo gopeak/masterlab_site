@@ -67,12 +67,14 @@ require_once './lib/parsedown/Parsedown.php';
                         <a href="?md=explain_word">名词解释</a></li>
                     <li class="list-group-item <? if ($mdFile == 'quickstart') echo 'active'; ?>">
                         <a href="?md=quickstart">快速上手</a></li>
-                    <li class="list-group-item <? if ($mdFile == 'advanced') echo 'active'; ?>">
-                        <a href="?md=advanced">进阶</a>
+                    <li class="list-group-item <? if ($mdFile == 'agile') echo 'active'; ?>">
+                        <a href="?md=agile">敏捷开发管理</a>
                     </li>
-
-                    <li class="list-group-item <? if ($mdFile == 'key') echo 'active'; ?>">
-                        <a href="?md=key">快捷键</a>
+                    <li class="list-group-item <? if ($mdFile == 'advanced') echo 'active'; ?>">
+                        <a href="?md=advanced">高级功能</a>
+                    </li>
+                    <li class="list-group-item <? if ($mdFile == 'system') echo 'active'; ?>">
+                        <a href="?md=system">管 理</a>
                     </li>
                     <li class="list-group-item <? if ($mdFile == 'developer_guide') echo 'active'; ?>">
                         <a href="?md=developer_guide">开发指南</a>
@@ -89,7 +91,9 @@ require_once './lib/parsedown/Parsedown.php';
             <article id="description-view" class="markdown" style="max-width: 1200px;">
                 <?php
                 $markdown = file_get_contents('./docs/' . $mdFile . '.md');
-                echo Parsedown::instance()->text($markdown);
+                $html = Parsedown::instance()->text($markdown);
+                $html = preg_replace('%h2>([^<]+)<\/h2%m', 'h2 id="${1}">${1}</h2', $html);
+                echo $html;
                 ?>
             </article>
         </div>
@@ -129,6 +133,15 @@ require_once './lib/parsedown/Parsedown.php';
      style="position: absolute; display: none; max-height: 300px; z-index: 9999;">
 
 </div>
+
+<script>
+    $(function () {
+        $('.toc-list li a').each(function (e) {
+            $(this).attr('href','#'+$(this).text());
+        })
+    });
+
+</script>
 
 </body>
 </html>

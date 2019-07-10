@@ -1,6 +1,6 @@
 
 
-# v1.1到v1.2升级步骤  
+## v1.1到v1.2升级步骤  
 
 提示：当前版本号的查看，一般位于`app/config/deploy/app.cfg.php` `MASTERLAB_VERSION`变量  
 
