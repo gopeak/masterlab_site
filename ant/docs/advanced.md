@@ -52,7 +52,16 @@ Masterlab还支持导出事项为Excel格式，可以选择筛选数据内容和
 在事项列表的右上角点击"更多/导出Excel数据"，设置导出的内容    
 ![10000cut-201907101907144412.png](http://pm.masterlab.vip/attachment/image/20190710/10000cut-201907101907144412.png "导出Excel数据")  
   
-    
+## 手机上传附件
+在新增或编辑事项时，附件上传可以通过移动端进行上传，如下图  
+![1cut-201907110007558389.png](http://pm.masterlab.vip/attachment/image/20190711/1cut-201907110007558389.png "移动端进行上传")  
+
+## 视频文件播放
+如果事项附件上传的是视频文件：mp4 flv 的可以直接点击在线播放  
+![1cut-201907110007596444.png](http://pm.masterlab.vip/attachment/image/20190711/1cut-201907110007596444.png "截图-1cut-201907110007596444.png")
+
+
+ 
       
       
       
