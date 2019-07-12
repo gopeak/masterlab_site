@@ -28,11 +28,11 @@ require_once './lib/parsedown/Parsedown.php';
     <link rel="stylesheet" href="./history_files/common-84eda.css">
     <link rel="stylesheet" href="./history_files/solarized-light.css">
     <link rel="stylesheet" href="./history_files/tocbot.css">
-    <link rel="stylesheet" href="./history_files/doc-dda30.css">
+    <link rel="stylesheet" href="./history_files/doc-dda30.css?v=1.2">
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
-    <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
+    <link rel="stylesheet" type="text/css" href="./product_files/index-2.css?v=1.2">
     <link rel="stylesheet" type="text/css" href="./product_files/featrue.css">
     <? include 'hotjar.php' ?>
 
@@ -54,15 +54,16 @@ require_once './lib/parsedown/Parsedown.php';
                         <a href="./help.php">介绍</a></li>
                     <li class="list-group-item <? if ($mdFile == 'env') echo 'active'; ?>">
                         <a href="?md=env">运行环境</a></li>
-                    <li class="list-group-item <? if ($mdFile == 'faq') echo 'active'; ?>">
-                        <a href="?md=faq">常见问题</a>
-                    </li>
                     <li class="list-group-item <? if ($mdFile == 'install-windows') echo 'active'; ?>">
                         <a href="?md=install-windows">Windows安装示例</a></li>
                     <li class="list-group-item <? if ($mdFile == 'install-linux') echo 'active'; ?>">
                         <a href="?md=install-linux">Linux安装示例</a></li>
                     <li class="list-group-item <? if (in_array($mdFile, ['upgrade', 'upgrade-step', 'upgrade-compare'])) echo 'active'; ?>">
-                        <a href="?md=upgrade">升级指南</a></li>
+                        <a href="?md=upgrade">升级指南</a>
+                    </li>
+                    <li class="list-group-item <? if ($mdFile == 'faq') echo 'active'; ?>">
+                        <a href="?md=faq">常见问题</a>
+                    </li>
                     <li class="list-group-item <? if ($mdFile == 'explain_word') echo 'active'; ?>">
                         <a href="?md=explain_word">名词解释</a></li>
                     <li class="list-group-item <? if ($mdFile == 'quickstart') echo 'active'; ?>">
