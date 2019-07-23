@@ -179,7 +179,7 @@ $page = 'product';
                                         <img src="https://gw.alipayobjects.com/zos/rmsportal/XxqEexmShHOofjMYOCHi.svg"
                                              alt="img" style="margin-left: -15px;"></div>
                                     <h3>自定义事项UI</h3>
-                                    <p>每个事项类型均有预定义的表单配置方案，可以自定意配置事项的表单</p></div>
+                                    <p>每个事项类型均有预定义的表单配置方案，可以自定义配置事项的表单</p></div>
                             </li>
                             <li>
                                 <div class="page1-box">
