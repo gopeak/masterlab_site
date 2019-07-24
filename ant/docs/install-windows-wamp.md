@@ -117,7 +117,7 @@ extension=php_redis
 ```
 
 1.访问 http://www.yoursite.com/install/ 按照提示进行安装  
-  注：如果想在内网中其他用户访问，修改 app/config/deploy/app.cfg.php 中的ROOT_URL,将你的ip地址代替域名  
+  注：如果以后要修改域名，也要同时修改 app/config/deploy/app.cfg.php 中的ROOT_URL 
 
 ![1cut-201907090007493572.png](http://pm.masterlab.vip/attachment/image/20190709/1cut-201907090007493572.png "截图-1cut-201907090007493572.png")  
 
