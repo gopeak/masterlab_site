@@ -6,14 +6,14 @@ $page = 'product';
 <html class="zh-cn">
 <head>
     <meta name="keywords" content="团队协作,项目管理,项目管理软件,项目管理工具,研发管理,敏捷研发,工作计划软件">
-    <meta name="description" content="MasterLab 是一个易于上手、基于事项驱动和敏捷开发的开源项目管理工具。使用masterlab可以用来进行项目管理、团队协作。">
+    <meta name="description" content="MasterLab 是一个易于上手、基于事项驱动和敏捷开发的专业项目管理工具。使用masterlab可以用来进行项目管理、团队协作。">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
     <!--添加视口-->
 
-    <title>MasterLab - 免费开源的项目管理工具</title>
+    <title>MasterLab - 专业的项目管理工具</title>
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./product_files/index-1.css">
     <link rel="stylesheet" type="text/css" href="./product_files/index-2.css">
