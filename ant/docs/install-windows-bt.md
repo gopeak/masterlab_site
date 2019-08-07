@@ -101,10 +101,9 @@ https://www.bt.cn/download/windows.html
 ```text
     Alias /attachment "C:\wwwroot\masterlab_full\app\storage\attachment" 
     <Directory "C:\wwwroot\masterlab_full\app\storage\attachment">
-		Options Indexes FollowSymLinks
-		AllowOverride All
-		Order allow,deny
-		Allow from all
+		Options FollowSymLinks ExecCGI
+        AllowOverride All
+        Require all granted
 	</Directory>
 ```  
 
