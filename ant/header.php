@@ -1,6 +1,4 @@
 <link rel="stylesheet" type="text/css" href="./product_files/mobile.css" media="screen and (min-width: 320px) and (max-width:640px)">
-<meta name="keywords" content="团队协作,项目管理,项目管理软件,研发管理,敏捷研发,工作计划软件,甘特图,在线甘特图,okr">
-<meta name="description" content="基于事项驱动和敏捷开发的项目管理工具;将工程技术之道和艺术设计之美融合一身，在网页、桌面、移动环境都打造出众的体验，让团队协作焕发无限可能。在跨部门协同办公、项目管理、研发管理、客户管理、人事管理等多种场景下，支持团队高效协作。">
 
 <header id="header" class="clearfix home-page-header">
     <div class="ant-row header-content">

@@ -44,9 +44,7 @@ if (isset($_GET['file'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="团队协作,项目管理,项目管理软件,项目管理工具,研发管理,敏捷研发,工作计划软件">
-    <meta name="description" content="MasterLab 是一个易于上手、基于事项驱动和敏捷开发的专业项目管理工具。使用masterlab可以用来进行项目管理、团队协作。">
+    <? include 'meta.php' ?>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
     <title>MasterLab - 专业的项目管理工具 - 下载</title>
     <link rel="stylesheet" href="./about_files/bootstrap.min.css">
