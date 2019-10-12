@@ -14,7 +14,7 @@ if (function_exists('date_default_timezone_set')) {
     <? include 'seo.php'?>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
     <title>MasterLab - 互联网项目、产品管理解决方案-- Demo</title>
-    <link rel="stylesheet" href="./about_files/bootstrap.min.css">s
+    <link rel="stylesheet" href="./about_files/bootstrap.min.css">
     <link rel="stylesheet" href="./about_files/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./about_files/font_470089_q8g1f7kwli.css">
     <link rel="stylesheet" href="./about_files/common-84eda.css">

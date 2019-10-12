@@ -20,11 +20,11 @@ https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.
   安装完毕后将 php版本切换到 7.3 ，再将 short_open_tag 启用，如下图所示  
   ![1cut-201907082307437473.png](http://pm.masterlab.vip/attachment/image/20190708/1cut-201907082307437473.png "截图-1cut-201907082307437473.png")
   
-  ![1cut-201907082307081145.png](http://pm.masterlab.vip/attachment/image/20190708/1cut-201907082307081145.png "截图-1cut-201907082307081145.png")
+  ![1cut-201907082307081145.png](http://pm.masterlab.vip/attachment/image/20190708/1cut-201907082307081145.png "截图-1cut-201907082307081145.png")  
 
   
 2.安装 redis 扩展, 下载地址 https://windows.php.net/downloads/pecl/releases/redis/4.2.0/ ,选择下载 `php_redis-4.2.0-7.3-ts-vc15-x64.zip`,
- 解压至 `d:\wamp64\bin\php\php7.3.5\ext` 目录，在 `d:\wamp64\bin\apache\apache2.4.39\bin\php.ini` 末尾增加一下内容，然后重启Apache
+ 解压至 `d:\wamp64\bin\php\php7.3.5\ext` 目录，在 `d:\wamp64\bin\apache\apache2.4.39\bin\php.ini` 末尾增加以下内容，然后重启Apache
  
    ```
 [Redis]
