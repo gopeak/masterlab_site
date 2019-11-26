@@ -1,17 +1,24 @@
 #header {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background: #fff;
+  background: #fff !important;
+  width: 100%;
   -webkit-box-shadow: 0 2px 8px #f0f1f2 !important;
   box-shadow: 0 2px 8px #f0f1f2 !important;
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   z-index: 99999999;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
   width: 100%;
-  overflow: hidden;
   box-sizing: border-box;
+  padding-top: 64px;
 }
 
 .btn.btn-toggle {
