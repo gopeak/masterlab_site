@@ -9,10 +9,10 @@
  
 
 ### 1. 文件下载和安装  
-  首先下载所需的文件，如果你不想到官方网站一个个的下载，我这里把配置好的文件打包成一个压缩包直接下载解压即可   
-  打包下载地址： 
+  首先下载所需的文件，如果你不想到官方网站一个个的下载，我这里把配置好的文件打包成一个压缩包直接下载解压即可，  
+  然后直接跳转到步骤4配置MySQL,打包文件下载地址： 
    ```text
-    所有文件打包下载地址 https://
+     https://
    ```
     
   逐个下载方式（如果打包下载了就不用一个个下载了）：  
@@ -188,41 +188,86 @@ PHPIniDir "c:/phpenv/php-7.4"
 extension=php_redis.dll
 ```
 
+将php目录下的libssh2.dll放到apache安装目录的bin目录下  
+
+进入命令行启动 apache
+  ```text
+cd C:\phpenv\Apache24\bin
+httpd.exe
+ 
+```
+启动成功没有报错的话，在浏览器中访问 `http://localhost/p.php`,便可以查看php的配置输出  
+![1cut-201912301612062275.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612062275.png "php配置")
+
+  
+### 4. Mysql 配置
+进入一个新的命令行
+  ```text
+
+# 进入bin目录
+cd C:\phpenv\mysql-8.0\bin
+# 安装mysql服务
+mysqld  -install
+# 执行初始化
+mysqld --initialize-insecure
+# 启动mysql服务
+net start mysql
+
+```
+![1cut-201912301612416930.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612416930.png "mysql启动") 
+
+root用户初始密码为空，因此要要创建一个新的mysql用户  
+打开一个新的命令行，通过sql命令创建: 用户名  dev_user , 密码 123456
+  ```text
+
+mysql -u root -h127.0.0.1
+
+create user 'dev_user'@'%' identified by '123456';
+alter user 'dev_user'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+grant all privileges on *.* to 'dev_user'@'%';
+flush privileges;
+ 
+```
+![1cut-201912301612126556.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612126556.png "Mysql创建用户")  
+![1cut-201912301612161636.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612161636.png "Mysql连接")  
 
 
+### 4. Redis-server 启动
+直接运行 C:\phpenv\Redis-server\redis-server.exe 文件即可. 默认为 6379 端口，如果要改服务
+  ```text
+# 进入目录  
+C:\phpenv\Redis-server
+# 注册服务，并命名为 redis-hd
+redis-server.exe --service-install redis.windows.conf --service-name redis-hd
+# 删除服务
+sc delete redis-hd
+#开启服务
+sc start redis-hd
+#停止服务
+sc stop redis-hd
+ 
+```
+ 
+
+### 5. Masterlab 安装
 修改 masterlab 代码
-找到 C:\phpenv\www\masterlab\lib\MyPdo.php 文件
+找到 C:\phpenv\www\masterlab\lib\MyPdo.php 文件 125行
 
 将 $sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'";
 替换为（其实删除 NO_AUTO_CREATE_USER ）
 $sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'";
 
 
-在php.ini中将extension=curl前的分号去掉；（默认情况下已经去掉）
+在浏览器中访问  http://localhost/install  
+请按照提示，一步一步执行即可  
+需要注意的是，数据库服务器请使用 127.0.0.1 ,否则会提示连接失败
 
-将php目录下的libssh2.dll放到apache安装目录的bin目录下；
-重启apache。
-
-
-
-### 3. 修改hosts
-在 `C:\Windows\System32\drivers\etc\hosts` 文件中加入
-```text
-127.0.0.1 www.yoursite.com
-```
-重启 apache
-
-### 4. 修改管理密码
-在浏览器中访问 http://www.yoursite.com/ 默认账号 master 密码 123456   
-登录成功后在个人设置中修改密码即可  
+ ![1cut-201912301712329462.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301712329462.png "设置数据库")  
+  
+ ![1cut-201912301712302468.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301712302468.png "安装成功")  
 
 good luck to u~~  
 
 
  
  
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 26ac8b48442b3e55f3ddbe490321ef46553cce18
