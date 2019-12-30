@@ -239,7 +239,7 @@ net start mysql
 ```
 ![1cut-201912301612416930.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612416930.png "mysql启动") 
 
-root用户初始密码为空，因此要要创建一个新的mysql用户  
+root用户初始密码为空，占用很不安全，因此要要创建一个新的mysql用户  
 打开一个新的命令行，通过sql命令创建: 用户名  dev_user , 密码 123456
   ```text
 mysql -u root -h127.0.0.1
@@ -251,11 +251,13 @@ flush privileges;
  
 ```
 ![1cut-201912301612126556.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612126556.png "Mysql创建用户")  
+
+使用Mysql管理工具Navicat测试是否连接成功  
 ![1cut-201912301612161636.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612161636.png "Mysql连接")  
 
 
 ### 6. Redis-server 启动
-直接运行 c:\phpenv\Redis-server\redis-server.exe 文件即可. 默认为 6379 端口，如果要改服务
+直接运行 c:\phpenv\Redis-server\redis-server.exe 文件即可. 默认为 6379 端口，如果要改为Windows服务方式管理,执行以下命令
   ```text
 # 进入目录  
 c:\phpenv\Redis-server
