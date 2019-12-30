@@ -219,7 +219,7 @@ cd c:\phpenv\Apache24\bin
 
 ### 4. 安装过程遇到的问题排除
  1. 本教程在win7 ,win10 64位操作系统下通过测试，其他32位操作系统请下载时改变对应的32版本即可
- 2. 遇到vcruntime1xx.dll 的问题，请下载安装下载vc_redist_x64/86.exe运行库
+ 2. 遇到`vcruntime140.dll` 错误的问题，请下载安装 vc_redist_x64/86.exe 运行库
  3. Apache默认80端口,如果已经被其他进程占用,请修改 `c:\phpenv\Apache24\conf\httpd.conf`  80 端口为其他
 
   
@@ -260,7 +260,7 @@ flush privileges;
 直接运行 c:\phpenv\Redis-server\redis-server.exe 文件即可. 默认为 6379 端口，如果要改为Windows服务方式管理,执行以下命令
   ```text
 # 进入目录  
-c:\phpenv\Redis-server
+cd c:\phpenv\Redis-server
 # 注册服务，并命名为 redis-hd
 redis-server.exe --service-install redis.windows.conf --service-name redis-hd
 
