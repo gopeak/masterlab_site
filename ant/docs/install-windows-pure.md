@@ -2,51 +2,70 @@
 
 ## Windows Apache2.4 PHP7.4 Mysql8 绿色纯净安装教程
 
-Apache 
+ php运行环境的搭建是困扰新手们的一道难题，很多童鞋为了省事经常直接安装wamp集成软件， 
+ 这样虽然方便了新手童鞋，但是，个人觉得，这样对于深入学习及问题排错会造成相当的困扰，
+ 比如不知道是程序代码出现问题还是环境问题导致的。
+ 其实手动自行安装和配置环境，只要按照以下教程，整个时间花费还是很短的，文件下载完后5分钟内可以完成。
+ 
 
-注：该示例仅在windows7下通过测试，其他windows版本还在调试中    
-
-### 1. 下载和安装  
-  首先下载所需的文件  
+### 1. 文件下载和安装  
+  首先下载所需的文件，如果你不想到官方网站一个个的下载，我这里把配置好的文件打包成一个压缩包直接下载解压即可   
+  打包下载地址： 
+   ```text
+    所有文件打包下载地址 https://
+   ```
+    
+  逐个下载方式（如果打包下载了就不用一个个下载了）：  
   Apache，这里选择 win64-VC15 2.4.41 版本
   ```text
-  https://www.apachelounge.com/download/VC15/
-  https://home.apache.org/~steffenal/VC15/binaries/httpd-2.4.41-win64-VC15.zip
+  官方下载页 https://www.apachelounge.com/download/VC15/
+  直接下载地址 https://home.apache.org/~steffenal/VC15/binaries/httpd-2.4.41-win64-VC15.zip
   ```
 
   PHP，这里选择 7.4.0-Win32-vc15-x64 版本
   ```text
-  https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip
+  官网下载地址 https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip
   ```
 
   PHP-Redis扩展库，这里选择 5.1.1-7.4-ts-vc15-x64 版本
   ```text
-  https://windows.php.net/downloads/pecl/releases/redis/5.1.1/php_redis-5.1.1-7.4-ts-vc15-x64.zip
+  官网下载地址 https://windows.php.net/downloads/pecl/releases/redis/5.1.1/php_redis-5.1.1-7.4-ts-vc15-x64.zip
   ```
   Mysql8，这里选择 8.0.18-winx64. 版本
   ```text
-  https://windows.php.net/downloads/pecl/releases/redis/5.1.1/php_redis-5.1.1-7.4-ts-vc15-x64.zip
+  官方下载页: https://dev.mysql.com/downloads/mysql/
+  官方直接下载地址：https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip 
+  163镜像直接下载地址：http://mirrors.163.com/mysql/Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip
   ```
+  Masterlab，这里选择 2.0 版本
+  ```text
+  官方直接下载地址：http://www.masterlab.vip/download.php?file=masterlab-v1.2.zip 
+  ```
+ 
 
   VC运行库, Microsoft visual c++ 2019 redistributable (x64) 
   ```text
-  https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
-  https://aka.ms/vs/16/release/vc_redist.x64.exe 
+  VC15下载页面 https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
+  直接下载地址 https://aka.ms/vs/16/release/vc_redist.x64.exe 
   ```  
    
    下载完毕后，首先安装VC运行库，如果已经安装则忽略；然后将Apache，PHP，Mysql压缩包解压到统一的一个目录下，这里暂定为  c:/phpenv  
     解压后的目录结构为：
   ```text
-    c:/phpenv            
+    C:/phpenv            
       |--   Apache24   
       |--   php-7.4    
       |--   mysql-8.0 
+      |--   www
+            |-- masterlab
 ```
     最后将 PHP-Redis 压缩包内的 php-redis.dll 文件解压到  c:/phpenv/php-7.4/ext 目录下  
+    注：如果你想安装别的版本，请确保 Apache，php，php的redis扩展都是一个VC库，比如我这里使用的都是VC15 64位的版本
 
 ### 2. Apache 配置
+下面以`C:\phpenv`作为环境的基准目录  
 
-编辑 `C:\phpenv\Apache24\conf\httpd.conf` 文件
+首先编辑 `C:\phpenv\Apache24\conf\httpd.conf` 文件
 
 找到
 `Define SRVROOT "c:/Apache24"`
@@ -168,8 +187,6 @@ PHPIniDir "c:/phpenv/php-7.4"
 [Redis]
 extension=php_redis.dll
 ```
-
-
 
 
 
