@@ -9,13 +9,14 @@
  
 
 ### 1. 文件下载和安装  
-  首先下载所需的文件，如果你不想到官方网站一个个的下载，我这里把配置好的文件打包成一个压缩包直接下载解压即可，  
-  然后直接跳转到步骤4配置MySQL,打包文件下载地址： 
+  首先下载所需的文件. 
+  如果你不想到一个个下载修改配置文件，我这里把配置好的文件打包成一个zip文件，下载解压后，直接跳转到步骤4“配置MySQL”。
+  打包文件下载地址： 
    ```text
-     https://
+     http://download.888zb.com/phpenv.zip
    ```
     
-  逐个下载方式（如果打包下载了就不用一个个下载了）：  
+  逐个下载方式（如果打包下载了就不用一个个下载了）  
   Apache，这里选择 win64-VC15 2.4.41 版本
   ```text
   官方下载页 https://www.apachelounge.com/download/VC15/
@@ -109,6 +110,17 @@
 找到
 `#Include conf/extra/httpd-vhosts.conf`
 去掉前面的`#`
+
+在文件末尾增加
+  ```text
+# php7 support
+LoadModule php7_module "c:/phpenv/php-7.4/php7apache2_4.dll"
+AddType application/x-httpd-php .php .html .htm
+
+# configure the path to php.ini
+PHPIniDir "c:/phpenv/php-7.4"
+```
+
  
 保存 `C:\phpenv\Apache24\conf\httpd.conf`
 
@@ -140,15 +152,6 @@
         #Allow from all
     </Directory>
   </VirtualHost>
-```
-在文件末尾增加
-  ```text
-# php7 support
-LoadModule php7_module "c:/phpenv/php-7.4/php7apache2_4.dll"
-AddType application/x-httpd-php .php .html .htm
-
-# configure the path to php.ini
-PHPIniDir "c:/phpenv/php-7.4"
 ```
 
 ### 3. PHP 配置
@@ -239,24 +242,26 @@ flush privileges;
 C:\phpenv\Redis-server
 # 注册服务，并命名为 redis-hd
 redis-server.exe --service-install redis.windows.conf --service-name redis-hd
-# 删除服务
-sc delete redis-hd
+
 #开启服务
 sc start redis-hd
-#停止服务
-sc stop redis-hd
+
+#停止服务 sc stop redis-hd
+# 删除服务 sc delete redis-hd
  
 ```
  
 
 ### 5. Masterlab 安装
 修改 masterlab 代码
-找到 C:\phpenv\www\masterlab\lib\MyPdo.php 文件 125行
-
-将 $sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'";
+找到 C:\phpenv\www\masterlab\lib\MyPdo.php 文件 125行，将   
+  ```text
+$sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'";
+```
 替换为（其实删除 NO_AUTO_CREATE_USER ）
+  ```text
 $sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'";
-
+```
 
 在浏览器中访问  http://localhost/install  
 请按照提示，一步一步执行即可  
@@ -265,6 +270,9 @@ $sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DI
  ![1cut-201912301712329462.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301712329462.png "设置数据库")  
   
  ![1cut-201912301712302468.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301712302468.png "安装成功")  
+
+要更换域名访问，则修改 `C:/phpenv/Apache24/conf/extra/httpd-vhosts.conf` 中的域名，  
+以及 修改 `C:/phpenv/www/masterlab/app/config/deploy/app.cfg.php` 的 ROOT_URL 常量
 
 good luck to u~~  
 
