@@ -207,9 +207,9 @@ httpd.exe
 ```
 ![10000cut-201912302112512522.png](http://pm.masterlab.vip/attachment/image/20191230/10000cut-201912302112512522.png "Apache运行")   
 
-启动成功没有报错的话，在浏览器中访问 http://localhost/p.php,便可以查看php的配置输出 
+启动成功没有报错的话，在浏览器中访问 http://localhost/p.php ,便可以查看php的配置输出 
  
-![1cut-201912301612062275.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612062275.png "php配置")
+![10000cut-201912302212385958.png](http://pm.masterlab.vip/attachment/image/20191230/10000cut-201912302212385958.png "php配置")
 
 可以将Apache加入到服务中
   ```text
