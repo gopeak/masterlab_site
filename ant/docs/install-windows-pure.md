@@ -38,7 +38,7 @@
   官方直接下载地址：https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip 
   163镜像直接下载地址：http://mirrors.163.com/mysql/Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip
   ```
-  Masterlab，这里选择 2.0 版本
+  Masterlab，这里选择 1.2 版本
   ```text
   官方直接下载地址：http://www.masterlab.vip/download.php?file=masterlab-v1.2.zip 
   ```
