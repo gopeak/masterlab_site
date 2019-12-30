@@ -10,46 +10,52 @@
 
 ### 1. 文件下载和安装  
   首先下载所需的文件. 
-  如果你不想到一个个下载修改配置文件，我这里把配置好的文件打包成一个zip文件，下载解压后，直接跳转到步骤4“配置MySQL”。
-  打包文件下载地址： 
-   ```text
-     http://download.888zb.com/phpenv.zip
-   ```
+  如果你不想到一个个下载修改配置文件，我这里把配置好的文件打包成一个zip文件，下载解压后，直接跳转到步骤5“MySQL配置”。
+  打包文件下载地址：  http://download.888zb.com/phpenv.zip
+  
     
-  逐个下载方式（如果打包下载了就不用一个个下载了）  
-  Apache，这里选择 win64-VC15 2.4.41 版本
+  逐个下载方式（已经打包下载就免了）  
+   #### VC运行库
+```text
+    # Apache和PHP运行需要 Microsoft visual c++ 2019 redistributable (x64) 
+    VC15下载页面 https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
+    直接下载地址 https://aka.ms/vs/16/release/VC_redist.x64.exe
+```  
+ 
+  #### Apache2.4
   ```text
+  # 选择 win64-VC15 2.4.41 版本
   官方下载页 https://www.apachelounge.com/download/VC15/
   直接下载地址 https://home.apache.org/~steffenal/VC15/binaries/httpd-2.4.41-win64-VC15.zip
   ```
 
-  PHP，这里选择 7.4.0-Win32-vc15-x64 版本
+  #### PHP7.4
   ```text
+  # 选择 7.4.0-Win32-vc15-x64 版本
   官网下载地址 https://windows.php.net/downloads/releases/php-7.4.0-Win32-vc15-x64.zip
   ```
 
-  PHP-Redis扩展库，这里选择 5.1.1-7.4-ts-vc15-x64 版本
+  #### PHP-Redis扩展库
   ```text
+  #  这里选择 5.1.1-7.4-ts-vc15-x64 版本
   官网下载地址 https://windows.php.net/downloads/pecl/releases/redis/5.1.1/php_redis-5.1.1-7.4-ts-vc15-x64.zip
   ```
-  Mysql8，这里选择 8.0.18-winx64. 版本
+  #### Mysql8.0
   ```text
   官方下载页: https://dev.mysql.com/downloads/mysql/
   官方直接下载地址：https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip 
   163镜像直接下载地址：http://mirrors.163.com/mysql/Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip
   ```
-  Masterlab，这里选择 1.2 版本
+  #### Masterlab1.2
   ```text
   官方直接下载地址：http://www.masterlab.vip/download.php?file=masterlab-v1.2.zip 
   ```
- 
+   #### Redis-server3.0
+   ```text
+   官方直接下载地址：https://github.com/microsoftarchive/redis/releases/download/win-3.0.504/Redis-x64-3.0.504.zip
+   ```
 
-  VC运行库, Microsoft visual c++ 2019 redistributable (x64) 
-  ```text
-  VC15下载页面 https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
-  直接下载地址 https://aka.ms/vs/16/release/vc_redist.x64.exe 
-  ```  
-   
+
    下载完毕后，首先安装VC运行库，如果已经安装则忽略；然后将Apache，PHP，Mysql压缩包解压到统一的一个目录下，这里暂定为  c:/phpenv  
     解压后的目录结构为：
   ```text
@@ -60,13 +66,13 @@
       |--   www
             |-- masterlab
 ```
-    最后将 PHP-Redis 压缩包内的 php-redis.dll 文件解压到  c:/phpenv/php-7.4/ext 目录下  
-    注：如果你想安装别的版本，请确保 Apache，php，php的redis扩展都是一个VC库，比如我这里使用的都是VC15 64位的版本
+最后将 `php_redis-5.1.1-7.4-ts-vc15-x64.zip` 压缩包内的 `php-redis.dll` 文件解压到  `c:/phpenv/php-7.4/ext` 目录下    
+注：如果你想安装别的版本，请确保 Apache，php，php的redis扩展都是一个VC库，比如我这里使用的都是VC15 64位的版本
 
 ### 2. Apache 配置
 下面以`C:\phpenv`作为环境的基准目录  
 
-首先编辑 `C:\phpenv\Apache24\conf\httpd.conf` 文件
+首先编辑 `c:\phpenv\Apache24\conf\httpd.conf` 文件
 
 找到
 `Define SRVROOT "c:/Apache24"`
@@ -122,7 +128,7 @@ PHPIniDir "c:/phpenv/php-7.4"
 ```
 
  
-保存 `C:\phpenv\Apache24\conf\httpd.conf`
+保存 `c:\phpenv\Apache24\conf\httpd.conf`
 
 
 打开 `C:/phpenv/Apache24/conf/extra/httpd-vhosts.conf`
@@ -191,24 +197,38 @@ PHPIniDir "c:/phpenv/php-7.4"
 extension=php_redis.dll
 ```
 
-将php目录下的libssh2.dll放到apache安装目录的bin目录下  
+将php目录下的`libssh2.dll`放到Apache的`bin`目录下  
 
 进入命令行启动 apache
   ```text
-cd C:\phpenv\Apache24\bin
+cd c:\phpenv\Apache24\bin
 httpd.exe
  
 ```
-启动成功没有报错的话，在浏览器中访问 `http://localhost/p.php`,便可以查看php的配置输出  
+![10000cut-201912302112512522.png](http://pm.masterlab.vip/attachment/image/20191230/10000cut-201912302112512522.png "Apache运行")   
+
+启动成功没有报错的话，在浏览器中访问 http://localhost/p.php,便可以查看php的配置输出 
+ 
 ![1cut-201912301612062275.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612062275.png "php配置")
 
+可以将Apache加入到服务中
+  ```text
+cd c:\phpenv\Apache24\bin
+ httpd -k install 
+```
+
+### 4. 安装过程遇到的问题排除
+ 1. 本教程在win7 ,win10 64位操作系统下通过测试，其他32位操作系统请下载时改变对应的32版本即可
+ 2. 遇到vcruntime1xx.dll 的问题，请下载安装下载vc_redist_x64/86.exe运行库
+ 3. Apache默认80端口,如果已经被其他进程占用,请修改 `c:\phpenv\Apache24\conf\httpd.conf`  80 端口为其他
+
   
-### 4. Mysql 配置
+### 5. Mysql 配置
 进入一个新的命令行
   ```text
 
 # 进入bin目录
-cd C:\phpenv\mysql-8.0\bin
+cd c:\phpenv\mysql-8.0\bin
 # 安装mysql服务
 mysqld  -install
 # 执行初始化
@@ -222,7 +242,6 @@ net start mysql
 root用户初始密码为空，因此要要创建一个新的mysql用户  
 打开一个新的命令行，通过sql命令创建: 用户名  dev_user , 密码 123456
   ```text
-
 mysql -u root -h127.0.0.1
 
 create user 'dev_user'@'%' identified by '123456';
@@ -235,26 +254,26 @@ flush privileges;
 ![1cut-201912301612161636.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612161636.png "Mysql连接")  
 
 
-### 4. Redis-server 启动
-直接运行 C:\phpenv\Redis-server\redis-server.exe 文件即可. 默认为 6379 端口，如果要改服务
+### 6. Redis-server 启动
+直接运行 c:\phpenv\Redis-server\redis-server.exe 文件即可. 默认为 6379 端口，如果要改服务
   ```text
 # 进入目录  
-C:\phpenv\Redis-server
+c:\phpenv\Redis-server
 # 注册服务，并命名为 redis-hd
 redis-server.exe --service-install redis.windows.conf --service-name redis-hd
 
-#开启服务
+# 开启服务
 sc start redis-hd
 
-#停止服务 sc stop redis-hd
+# 停止服务 sc stop redis-hd
 # 删除服务 sc delete redis-hd
  
 ```
  
 
-### 5. Masterlab 安装
+### 7. Masterlab 安装
 修改 masterlab 代码
-找到 C:\phpenv\www\masterlab\lib\MyPdo.php 文件 125行，将   
+找到 c:\phpenv\www\masterlab\lib\MyPdo.php 文件 125行，将   
   ```text
 $sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'";
 ```
@@ -271,8 +290,8 @@ $sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DI
   
  ![1cut-201912301712302468.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301712302468.png "安装成功")  
 
-要更换域名访问，则修改 `C:/phpenv/Apache24/conf/extra/httpd-vhosts.conf` 中的域名，  
-以及 修改 `C:/phpenv/www/masterlab/app/config/deploy/app.cfg.php` 的 ROOT_URL 常量
+如果要更换域名访问，则修改 `C:/phpenv/Apache24/conf/extra/httpd-vhosts.conf` 中的域名,然后重启Apache，  
+最后修改 `C:/phpenv/www/masterlab/app/config/deploy/app.cfg.php` 的 ROOT_URL 常量
 
 good luck to u~~  
 
