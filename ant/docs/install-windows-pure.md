@@ -218,7 +218,7 @@ cd c:\phpenv\Apache24\bin
 ```
 
 ### 4. 安装过程遇到的问题排除
- 1. 本教程在win7 ,win10, windows server2008 64位操作系统下通过测试，其他32位操作系统请下载时改变对应的32版本即可
+ 1. 本教程在windows7 ,windows10, windows server2008 64位操作系统下通过测试，其他32位操作系统请下载时改变对应的32版本即可
  2. 遇到`vcruntime140.dll` 错误的问题，请下载安装 vc_redist_x64/86.exe 运行库
  3. Apache默认80端口,如果已经被其他进程占用,请修改 `c:\phpenv\Apache24\conf\httpd.conf`  80 端口为其他
 
