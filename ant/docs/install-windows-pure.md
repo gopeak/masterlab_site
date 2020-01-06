@@ -239,11 +239,37 @@ net start mysql
 ```
 ![1cut-201912301612416930.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301612416930.png "mysql启动") 
 
-root用户初始密码为空，占用很不安全，因此要要创建一个新的mysql用户  
+在Mysql根目录下创建配置文件 my.ini,内容如下：
+
+  ```text
+[client]
+#客户端端口号为3306
+port   = 3306
+default-character-set=utf8
+ 
+[mysqld]
+# 设置3306端口
+port = 3306
+user = root
+socket  =C:/phpenv/mysql-8.0/bin/mysql.sock
+# 设置mysql的安装目录
+basedir=C:/phpenv/mysql-8.0
+# 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错
+#datadir=C:/phpenv/mysql-8.0/data
+max_connections=128
+character-set-server=utf8
+default-storage-engine=INNODB
+default_authentication_plugin=mysql_native_password
+
+```
+将my.ini文件路径加入到环境变量 Path 中
+
+使用root用户操作数据库，这样很不安全，因此要要创建一个新的mysql用户  
 打开一个新的命令行，通过sql命令创建: 用户名  dev_user , 密码 123456
   ```text
+# root密码默认为空，如果错误可以查看 log/mysqld.log 
 mysql -u root -h127.0.0.1
-
+# 创建新用户并赋予权限
 create user 'dev_user'@'%' identified by '123456';
 alter user 'dev_user'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 grant all privileges on *.* to 'dev_user'@'%';
