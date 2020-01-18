@@ -1,31 +1,30 @@
 
 
-### 环境要求
+### 配置要求
 ```
-- Web Server : Nginx or Apache
+- Web Server : Nginx 或 Apache
 - Php
   - 版本 >= 5.6 
-  - 扩展 ：curl,mysqlnd,pdo,opcache,mbstring,redis
-  - php.ini ： short_open_tag = On
+  - 必备扩展 ：curl,mysqlnd,pdo,opcache,mbstring,redis
+  - php.ini ： 需要short_open_tag = On
 - Mysql
   - 版本 >= 5.7
 
--  masterlab\app\storage 要求写入权限
+-  masterlab\app\storage 目录要求写入权限
+-  masterlab\app\public\attachment 目录要求写入权限
+-  masterlab\app\public\install 目录要求写入权限
 ```
 
 ### Windows运行环境配置
-windows环境我们建议直接使用 Xampp 或 WampServer 集成安装包，然后再额外的安装redis扩展即可，建议使用WampServer 最新版本，
-集成 `Apache 2.4.27 – Php7.1.9 – MySQL 5.7.19`
-修改 php.ini 配置即可
+建议使用手动安装和配置 Apache+PHP+Mysql 环境，参考链接 http://www.masterlab.vip/help.php?md=install-windows-pure  
+还要修改PHP的 php.ini 一下选项   
 ```
    short_open_tag = On
    upload_max_filesize = 8M
    post_max_size = 8M
    memory_limit = 128M
    max_execution_time = 30
-   
-   [Redis]
-       extension=redis
+ 
 ```
 Windows安装Masterlab示例 http://www.masterlab.vip/help.php?md=install-windows  
 
