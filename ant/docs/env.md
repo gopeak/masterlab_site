@@ -39,12 +39,3 @@ Windows安装Masterlab示例 http://www.masterlab.vip/help.php?md=install-window
    
    Linux安装Masterlab示例 http://www.masterlab.vip/help.php?md=install-linux  
 
-### 安装步骤
-
- 1. 下载代码，可前往官方网站 http://www.masterlab.vip/download.php 下载最新的完整包.
-或者从 github上克隆代码
- 2. 在web服务器添加虚拟主机并绑定到 app/public 目录
- 3. 重启web服务器
- 4. 访问 /install ,根据提示进行安装
- 5. 执行定时任务
- 
