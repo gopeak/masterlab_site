@@ -69,11 +69,7 @@ server {
                 break;
          }
     }
-
-    location ^~ /attachment/ {
-        root  /data/www/masterlab/app/storage/;
-    }
-
+ 
     location ~ \.php {
         fastcgi_pass   127.0.0.1:9000;
         fastcgi_index  index.php;
@@ -88,7 +84,6 @@ server {
 ```
 
  * 重启web服务器,访问你刚才设置的域名  http://www.yoursite.com/install ，安装图文提示进行安装
- 
  
 
  * 配置MasterlabSocket

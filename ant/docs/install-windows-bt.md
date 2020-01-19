@@ -86,26 +86,6 @@ https://www.bt.cn/download/windows.html
 
 4. 点击宝塔“Web面板”修改网站的Apache的配置  
 ![1cut-201907231907035389.png](http://pm.masterlab.vip/attachment/image/20190723/1cut-201907231907035389.png "修改网站的Apache的配置")  
-找到内容  
-```text
-    <Directory "C:/wwwroot/masterlab_full/app/public">    
-        Options  Indexes FollowSymLinks    
-        AllowOverride All    
-        Order allow,deny    
-        Allow from All    
-    </Directory>
-```  
-
-在后面添加  
- 
-```text
-    Alias /attachment "C:\wwwroot\masterlab_full\app\storage\attachment" 
-    <Directory "C:\wwwroot\masterlab_full\app\storage\attachment">
-		Options FollowSymLinks ExecCGI
-        AllowOverride All
-        Require all granted
-	</Directory>
-```  
 
 5. 修改网站的伪静态设置   
 
@@ -139,7 +119,6 @@ https://www.bt.cn/download/windows.html
 
 
 1.访问 http://www.yoursite.com/install/ 按照提示进行安装  
-  注：如果以后要修改域名，也要同时修改 app/config/deploy/app.cfg.php 中的ROOT_URL 
  
 2.登录系统，进入"管理\系统\邮件配置"页面，配置邮件发送功能  
 

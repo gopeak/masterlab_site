@@ -30,7 +30,7 @@ $page = 'product';
 <div id="react-content">
     <div data-reactroot="" class="page-wrapper">
 
-        <? include 'header.php'?>
+        <? include './header.php'?>
 
         <div class="main-wrapper">
             <section class="home-s1">

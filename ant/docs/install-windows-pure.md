@@ -46,9 +46,9 @@
   官方直接下载地址：https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip 
   163镜像直接下载地址：http://mirrors.163.com/mysql/Downloads/MySQL-8.0/mysql-8.0.18-winx64.zip
   ```
-  #### Masterlab1.2
+  #### Masterlab2.0
   ```text
-  官方直接下载地址：http://www.masterlab.vip/download.php?file=masterlab-v1.2.zip 
+  官方直接下载地址：http://download.888zb.com/masterlab-full-last.zip
   ```
    #### Redis-server3.0
    ```text
@@ -149,14 +149,7 @@ PHPIniDir "c:/phpenv/php-7.4"
         #Order allow,deny
         #Allow from All
     </Directory>
-
-    Alias /attachment "c:/phpenv/www/masterlab/app/storage/attachment"
-    <Directory "c:/phpenv/www/masterlab/app/storage/attachment">
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        #Order allow,deny
-        #Allow from all
-    </Directory>
+ 
   </VirtualHost>
 ```
 
@@ -164,11 +157,6 @@ PHPIniDir "c:/phpenv/php-7.4"
 
 将 `c:/phpenv/php-7.4/php.ini-production` 重命名为 `c:/phpenv/php-7.4/php.ini`
 修改 `c:/phpenv/php-7.4/php.ini` 
-
-找到
-`short_open_tag = Off`
-替换为
-`short_open_tag = On`
 
 找到
 `error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT`
@@ -300,16 +288,7 @@ sc start redis-hd
  
 
 ### 7. Masterlab 安装
-修改 masterlab 代码
-找到 c:\phpenv\www\masterlab\lib\MyPdo.php 文件 125行，将   
-  ```text
-$sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'";
-```
-替换为（其实删除 NO_AUTO_CREATE_USER ）
-  ```text
-$sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'";
-```
-
+ 
 在浏览器中访问  http://localhost/install  
 请按照提示，一步一步执行即可  
 需要注意的是，数据库服务器请使用 127.0.0.1 ,否则会提示连接失败
@@ -319,7 +298,6 @@ $sqlMode = "SET SQL_MODE='IGNORE_SPACE,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DI
  ![1cut-201912301712302468.png](http://pm.masterlab.vip/attachment/image/20191230/1cut-201912301712302468.png "安装成功")  
 
 如果要更换域名访问，则修改 `C:/phpenv/Apache24/conf/extra/httpd-vhosts.conf` 中的域名,然后重启Apache，  
-最后修改 `C:/phpenv/www/masterlab/app/config/deploy/app.cfg.php` 的 ROOT_URL 常量
 
 good luck to u~~  
 

@@ -7,7 +7,7 @@
 
 1.下载Apache+PHP+Mysql集成包:Wampserver3:  
 ```text
-# 官方下载地址, 选择64位的版本 wampserver3.1.9_x64.exe
+# 官方下载地址, 选择64位的版本 wampserver3.2.0_x64.exe
 https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/
 
 # 百度网盘下载 
@@ -95,15 +95,7 @@ extension=php_redis
         AllowOverride All    
         Order allow,deny    
         Allow from All    
-    </Directory>    
-	
-    Alias /attachment "d:/www/masterlab/app/storage/attachment" 
-    <Directory "d:/www/masterlab/app/storage/attachment">
-		Options Indexes FollowSymLinks
-		AllowOverride All
-		Order allow,deny
-		Allow from all
-	</Directory>  
+    </Directory> 
   </VirtualHost>
   ```
 重启 Apache 服务器
