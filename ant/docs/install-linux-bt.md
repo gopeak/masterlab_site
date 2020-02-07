@@ -73,7 +73,10 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
 
 ### 5. 下载和运行 MasterlabSocket  
 
-Centos和Windows系统已经编译成二进制，可以直接使用，下载放置在 masterlab/bin 目录下，其他操作系统自行编译
+Centos和Windows系统已经编译成二进制，可以直接使用，  
+下载放置在 masterlab/bin 目录下，其他操作系统自行编译  
+直接运行`./masterlab_socket` 
+
 https://github.com/gopeak/masterlab_socket/releases
 
 
