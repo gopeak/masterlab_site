@@ -71,6 +71,7 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
 <br>
 
 
+
 ### 5. 下载和运行 MasterlabSocket  
 
 Centos和Windows系统已经编译成二进制，可以直接使用，  
@@ -81,6 +82,7 @@ https://github.com/gopeak/masterlab_socket/releases
 
 
 ### 6. 访问 http://www.masterlab.ce/install/ 按照提示进行安装  
+安装过程有些目录需要给 www 用户赋予写入权限  
  
 
 
