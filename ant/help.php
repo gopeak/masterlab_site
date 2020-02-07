@@ -56,6 +56,8 @@ require_once './lib/parsedown/Parsedown.php';
                         <a href="?md=install-windows">Windows安装示例</a></li>
                     <li class="list-group-item <? if ($mdFile == 'install-linux') echo 'active'; ?>">
                         <a href="?md=install-linux">Linux安装示例</a></li>
+                    <li class="list-group-item <? if ($mdFile == 'install-linux-bt') echo 'active'; ?>">
+                        <a href="?md=install-linux-bt">Linux宝塔安装示例</a></li>
                     <li class="list-group-item <? if (in_array($mdFile, ['upgrade', 'upgrade-step', 'upgrade-compare'])) echo 'active'; ?>">
                         <a href="?md=upgrade">升级指南</a>
                     </li>
