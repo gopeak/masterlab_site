@@ -3,7 +3,13 @@
 
 ## 安装问题排查
 
-1. 确保 php 要开启 `short_open_tag` ，可通过访问 `/p.php` 查找 `short_open_tag` 是否为 `on`  
+1. 安装成功后访问首页报500错误，请确保从官方网站 http://www.masterlab.vip/download.php 下载最新的完整包  
+   ,github上下载的代码没有包含运行的类库，因此需要使用php的composer工具下载类库
+```                   
+# 在masterlab根目录下执行,如果执行错误请将php加入到环境变量中
+php composer.phar config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+php composer.phar update
+```  
 2. 如果输入正确账号密码却无法登录成功，要确保`php session` 的 `session.save_path` 对于当前运行的php用户拥有可写入权限，可通过访问 /p.php 查找 session.save_path 的路径
 3. 建议您从官方网站下载完整的安装包，如果从github或码云上下载则不包含依赖的 vendor 类库
 4. `app/storage` 和 `app/public/install` 目录php运行用户需要写入权限
@@ -14,7 +20,11 @@ error_reporting(E_ALL);
 ```
 6. 重新安装后界面显示有问题，请清除浏览器缓存
 
-7. 可手动关闭redis缓存，在 `app/config/deploy/app.cfg.php` 和 `app/config/deploy/cache.cfg.php` 中进行设置
+7. 可手动关闭redis缓存，在  `app/config/deploy/cache.cfg.php` 中将`enable`修改为`false`
+
+8. 邮件配置中发送测试成功，但是收不到邮件，是因为没有后台运行 `masterlab_socket` 程序,可以在邮件配置中禁用"异步方式发送邮件" 
+
+
 
 ## 如何快速的上手Masterlab？
 

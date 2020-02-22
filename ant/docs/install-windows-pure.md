@@ -289,7 +289,7 @@ sc start redis-hd
 
 ### 7. Masterlab 安装
  
-在浏览器中访问  http://localhost/install  
+在浏览器中访问  http://www.yoursite.com/install  
 请按照提示，一步一步执行即可  
 需要注意的是，数据库服务器请使用 127.0.0.1 ,否则会提示连接失败
 
