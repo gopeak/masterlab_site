@@ -219,7 +219,7 @@ if (isset($_GET['file'])) {
             <span class="separator"></span>
             <div class="info-content">
                 <p class="main-info">源代码托管于<a href="https://github.com/gopeak/masterlab/"> Github </a></p>
-                <p class="main-info">Masterlab-v2.0-alpha.zip为完整的代码包，无需安装Git和Composer命令行工具，安装过程详见<a href="help.php?md=install"> 文档 </a>页面 </p>
+                <p class="main-info">Masterlab-v2.0.zip为完整的代码包，无需安装Git和Composer命令行工具，安装过程详见<a href="help.php?md=install"> 文档 </a>页面 </p>
             </div>
         </section>
 
@@ -229,8 +229,8 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4>Masterlab-v2.0-alpha.zip
-                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-v2.0-alpha.zip" style="margin-left: 10px">http下载</a>
+                            <h4>Masterlab-v2.0.zip
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-v2.0.zip" style="margin-left: 10px">http下载</a>
                             </h4>
                             <p>Masterlab2.0完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
                         </div>
