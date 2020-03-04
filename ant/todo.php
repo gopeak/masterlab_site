@@ -46,6 +46,14 @@ $page = 'milestone';
         </div>
         <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-19">
             <article class="markdown">
+
+                <h2>第一个里程碑(已完成)</h2>
+                <ol>
+                    <li>基于事项驱动的项目管理</li>
+                    <li>迭代&待办事项</li>
+                    <li>看板</li>
+                    <li>自定义事项</li>
+                </ol>
                 <h2>第二次里程碑(已完成)</h2>
                 <ol>
                     <li>移动端可以扫码上传附件</li>
@@ -56,16 +64,15 @@ $page = 'milestone';
                     <li>防Crsf和Xss漏洞等安全措施</li>
                 </ol>
 
-                <h2>第三次里程碑Todo</h2>
+                <h2>第三次里程碑(已完成)</h2>
                 <ol>
-                    <li>工作量点数</li>
                     <li>WBS任务分解</li>
                     <li>甘特图</li>
-                    <li>文档管理</li>
                 </ol>
 
                 <h2>第四次里程碑Todo</h2>
                 <ol>
+                    <li>文档管理</li>
                     <li>开放自身API</li>
                     <li>打通钉钉或企业微信API</li>
                     <li>整合Gitlab和Jenkis</li>

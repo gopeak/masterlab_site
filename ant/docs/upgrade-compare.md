@@ -6,22 +6,7 @@
     安装参考 https://www.runoob.com/w3cnote/composer-install-and-usage.html  
 2. 下载最新的Masterlab代码  
      最新版本下载地址:  https://github.com/gopeak/masterlab/archive/v1.2.zip  
-     找到 masterlab 的所在目录，  
-	 假设原来的代码位于 `/data/www/masterlab`(请以实际目录地址为准)，把将新代码解压至 `/data/www/masterlab_last` 
-     进入命令行界面，执行以下命令,如果询问是否覆盖，请选全部同意:  
-```
-        wget https://github.com/gopeak/masterlab/archive/v1.2.zip
-        unzip v1.2.zip  -d masterlab_last
-        mv -rf /data/www/masterlab_last/masterlab-1.2/* /data/www/masterlab_last/
-		cd /data/www/masterlab_last
-		composer update
-        cp -f  /data/www/masterlab/env.ini       /data/www/masterlab_last/env.ini
-        cp -rf /data/www/masterlab/app/config/deploy /data/www/masterlab_last/app/config/
-        cp -rf /data/www/masterlab/app/storage/attachment  /data/www/masterlab_last/app/storage
-        cp -rf /data/www/masterlab/app/storage/upload     /data/www/masterlab_last/app/storage
-        cp -rf /data/www/masterlab/app/storage/log        /data/www/masterlab_last/app/storage
-        cp -rf /data/www/masterlab/bin                    /data/www/masterlab_last/
-```  
+
  3. 数据同步  
      安装 Navicat Mysql 管理工具，版本最好为 11.0 以上  
      在数据库中创建一个可以远程连接的账号，将 Navicat 连接到数据库 
