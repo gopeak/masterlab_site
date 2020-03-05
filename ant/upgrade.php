@@ -63,7 +63,7 @@ function echoFailJson($msg)
 function echoSuccessJson($msg, $data)
 {
     $arr = [];
-    $arr['ret'] = '0';
+    $arr['ret'] = '200';
     $arr['msg'] = $msg;
     $arr['data'] = $data;
     echo json_encode($arr);
