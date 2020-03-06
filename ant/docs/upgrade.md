@@ -20,9 +20,9 @@
 3.使用数据库管理`Navicat最新版` 进行老版本和v2.0数据的差异对比，并同步   
   可参考文章 https://www.cnblogs.com/guoyinghome/p/11220281.html   
   
-4.将 1.2版本的`app/storage/attachment` 的所有子目录和文件拷贝到2.0的 `app/public/attachment` 
+4.将当前的`app/storage/attachment` 的所有子目录和文件拷贝到2.0的 `app/public/attachment` 
 
-5.将原来的1.2 `app/config/deploy/database.cfg.php` 覆盖到 v2.0的 `app/config/deploy/database.cfg.php` 
+5.将当前的 `app/config/deploy/database.cfg.php` 覆盖到 v2.0的 `app/config/deploy/database.cfg.php` 
 
 6.使用2.0版本进行访问  
 

@@ -3,17 +3,14 @@ header('Content-Type: application/json;charset=utf-8');
 
 // 第一个元素为最新版本
 $versions = [
-    ['version' => '3.0', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v3.0'],
-    ['version' => '2.1', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1'],
-    ['version' => '2.0.2', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.0.2'],
+    //['version' => '3.0', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v3.0'],
+    //['version' => '2.1', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1'],
+    //['version' => '2.0.2', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.0.2'],
     ['version' => '2.0.1', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.0.1']
 ];
 
 $patches = [
-    '2.0-3.0' => 'http://download.888zb.com/2.0-3.0.patch.zip',
-    '2.0.1-3.0' => 'http://download.888zb.com/2.0.1-3.0.patch.zip',
-    '2.0.2-3.0' => 'http://download.888zb.com/2.0.2-3.0.patch.zip',
-    '2.1-3.0' => 'http://download.888zb.com/2.1-3.0.patch.zip'
+    '2.0-2.0.1' => 'http://www.masterlab.vip/2.0-2.0.1-upgrade.zip'
 ];
 
 /*
