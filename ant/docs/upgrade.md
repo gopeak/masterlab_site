@@ -1,13 +1,21 @@
 ## 升级指南
 
 
-### v1.2 至 v2.0 升级
-下载升级文件 http://download.888zb.com/v1.2-v2.0-upgrade.zip ,按照压缩包内的 readme.md 进行升级  
-注：连接mysql的用户要求具备修改表结构的权限，升级期间请勿对masterlab进行操作
+### v2.0  至 v2.0.1 升级
+下载升级文件 http://download.888zb.com/v2.0alpha-v2.0-upgrade.zip ,按照压缩包内的 readme.md 进行升级
+注：如果升级失败，建议安装最新的2.0版本，然后在就系统中的项目的"事项列表/更多/导出Excel"中导出事项，再导入进2.0即可
+
+
 
 ### v2.0alpha  至 v2.0 升级
 下载升级文件 http://download.888zb.com/v2.0alpha-v2.0-upgrade.zip ,按照压缩包内的 readme.md 进行升级
 注：如果升级失败，建议安装最新的2.0版本，然后在就系统中的项目的"事项列表/更多/导出Excel"中导出事项，再导入进2.0即可
+
+
+### v1.2 至 v2.0 升级
+下载升级文件 http://download.888zb.com/v1.2-v2.0-upgrade.zip ,按照压缩包内的 readme.md 进行升级  
+注：连接mysql的用户要求具备修改表结构的权限，升级期间请勿对masterlab进行操作
+
 
 
 ### 版本小于1.2升级  

@@ -229,10 +229,10 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4>Masterlab-v2.0.zip
-                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-v2.0.zip" style="margin-left: 10px">http下载</a>
+                            <h4>Masterlab-v2.0.1.zip
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab_v2.0.1.zip" style="margin-left: 10px">http下载</a>
                             </h4>
-                            <p>Masterlab2.0完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
+                            <p>Masterlab2.0.1完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
                         </div>
                     </li>
 
