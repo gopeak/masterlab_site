@@ -10,7 +10,7 @@ $versions = [
 ];
 
 $patches = [
-    '2.0-2.0.1' => 'http://www.masterlab.vip/2.0-2.0.1-upgrade.zip'
+    '2.0-2.0.1' => 'http://www.masterlab.vip/downloads/2.0-2.0.1-upgrade.zip'
 ];
 
 /*
