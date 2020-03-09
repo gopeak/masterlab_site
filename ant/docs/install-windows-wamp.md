@@ -17,10 +17,9 @@ https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.
   
 
   下载好后将 `Wampserver` 安装在硬盘的根目录，如 `d:/wamp64`  
-  安装完毕后将 php版本切换到 7.3 ，再将 short_open_tag 启用，如下图所示  
+  安装完毕后将 php版本切换到 7.3 ，如下图所操作  
   ![1cut-201907082307437473.png](http://pm.masterlab.vip/attachment/image/20190708/1cut-201907082307437473.png "截图-1cut-201907082307437473.png")
   
-  ![1cut-201907082307081145.png](http://pm.masterlab.vip/attachment/image/20190708/1cut-201907082307081145.png "截图-1cut-201907082307081145.png")  
 
   
 2.安装 redis 扩展, 下载地址 https://windows.php.net/downloads/pecl/releases/redis/4.2.0/ ,选择下载 `php_redis-4.2.0-7.3-ts-vc15-x64.zip`,
@@ -78,7 +77,7 @@ extension=php_redis
   ```
 <br>
 
-2.打开 `d:\wamp64\bin\apache\apache2.4.39\conf\extra\httpd-vhosts.conf`文件，添加以下代码(为你自己的域名):
+2.打开 `d:\wamp64\bin\apache\apache2.4.39\conf\extra\httpd-vhosts.conf`文件，添加以下配置:
 
    ```apache
    <VirtualHost *:80>
@@ -128,9 +127,14 @@ extension=php_redis
 ### 五、下载和运行 MasterlabSocket  
 
  * win7操作系统可直接运行 d:/www/masterlab/bin 目录下 masterlab_socket.exe,  
- * 其他windows系统请访问 https://github.com/gopeak/masterlab_socket 进行编译,编译成功后，将 masterlab_socket.exe 拷贝到 C:/www/masterlab/bin 目录下  
+ * 其他windows系统请访问 https://github.com/gopeak/masterlab_socket 进行编译,编译成功后，将 masterlab_socket.exe 拷贝到 d:/www/masterlab/bin 目录下  
  然后直接点击运行  
+ 
+ 
+### 六、启用缓存
 
+
+  
 
  
  

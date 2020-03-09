@@ -3,7 +3,7 @@
 ###Linux 安装步骤
 
 * 环境准备
-  安装之前需要有 git 和 composer 命令行工具, 以及 Nginx+Mysql5.7+Php7.2+Redis 的运行环境，安装过程可参考下面文档，如果已经安装过则忽略
+  安装之前需要有:web服务器(Nginx 或 Apache),Php,Mysql,Redis的运行环境 ，Linux的各操作系统的运行环境可参考下面文档，如果已经安装过则忽略  
  
    - Centos6 http://www.masterlab.vip/help.php?md=setup_centos6
    - Centos7 http://www.masterlab.vip/help.php?md=setup_centos7
@@ -11,16 +11,18 @@
    
  如果您的Linux Web服务器使用的是Apache，可参考 [Windows安装示例](./help.php?md=install-windows "Windows安装示例") 的Apache配置   
 
-* 环境搭建好后下载Masterlab代码
+* 下载Masterlab代码
 ```bash
 mkdir /data/www/
 cd /data/www/
- wget -c http://www.masterlab.vip/download.php?file=masterlab-full-last.zip  -O masterlab.zip
+wget -c http://download.888zb.com/masterlab_v2.0.1.zip  -O masterlab.zip
 unzip masterlab.zip -d ./masterlab
 cd masterlab
 ```
  
 * nginx 配置虚拟主机映射至 `/data/www/masterlab/app/public`
+centos系统 在`/etc/nginx/conf.d/` 新增配置文件 masterlab.conf  
+ubuntu系统 在`/etc/nginx/sites-enabled/` 新增配置文件 masterlab.conf  
 
 ```nginx
 server {
@@ -86,14 +88,28 @@ server {
  * 重启web服务器,访问你刚才设置的域名  http://www.yoursite.com/install ，安装图文提示进行安装
  
 
- * 配置MasterlabSocket
- Centos操作系统的MasterlabSocket已经编译好成直接运行的文件，直接赋予权限运行即可
+
+ * 配置 MasterlabSocket  
+    MasterlabSocket 是Masterlab用于异步发送邮件以及定时计算数据的后台程序（该程序不运行masterlab也是可以登录使用的）
+    centos操作系统的 `masterlab_socket`已经编译好成直接运行的文件，位于 masterlab的bin 目录下，赋予权限运行即可，
  ```text
     chmod +x /data/www/masterlab/bin/masterlab_socket
+    # 建议将masterlab_socket作为后台程序运行
     ./masterlab_socket 
 ```
-其他Linux操作请访问 https://github.com/gopeak/masterlab_socket 查看安装文档
+   其他Linux操作请访问 https://github.com/gopeak/masterlab_socket 查看安装文档  
+
+ * 配置缓存
+  安装好后，使用管理员登录系统，在“系统/缓存/修改”配置 是否启用redis缓存  
+  启用redis缓存可提高程序的执行性能  
+ 
+ * 配置邮件发送
+  安 使用管理员登录系统，在“系统/邮件配置/修改”配置邮件发送功能，如果你没有自己的smtp服务器，建议关闭邮件推送功能，否则
+  在masterlab执行操作时会出现卡慢的情况   
+  
+  
+ 
 
  
- 
+
 
