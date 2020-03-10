@@ -28,7 +28,7 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
 
  
 
-### 1. 下载最新masterlab的完整代码  http://download.888zb.com/masterlab-v2.0.zip ，
+### 1. 下载最新masterlab的完整代码  http://download.888zb.com/masterlab-last.zip ，
  解压到 /www/masterlab 目录下,解压后的目录结构如下:
 ```
     /www/masterlab            

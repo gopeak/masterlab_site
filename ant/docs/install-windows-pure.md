@@ -48,7 +48,7 @@
   ```
   #### Masterlab2.0
   ```text
-  官方直接下载地址：http://download.888zb.com/masterlab-v2.0.zip
+  官方直接下载地址： http://download.888zb.com/masterlab-last.zip
   ```
    #### Redis-server3.0
    ```text

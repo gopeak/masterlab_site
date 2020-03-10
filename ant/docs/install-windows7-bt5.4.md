@@ -43,7 +43,7 @@ https://www.bt.cn/download/windows.html
 
 ### 二、下载Masterlab代码
 
-1. 下载最新版本的完整代码  http://www.masterlab.vip/download.php?file=masterlab-full-last.zip ，
+1. 下载最新版本的完整代码  http://download.888zb.com/masterlab-last.zip ，
  解压到 c 盘的 c:/wwwroot 目录下,解压后的目录结构如下:
 ```
     c:/wwwroot/masterlab_full            

@@ -15,7 +15,7 @@
 
 ### 二、下载Masterlab代码
 
-1. 下载masterlab的最新完整代码  http://download.888zb.com/masterlab_v2.0.1.zip ，
+1. 下载masterlab的最新完整代码  http://download.888zb.com/masterlab-last.zip ，
  解压到 c 盘的 c:/wwwroot 目录下,解压后的目录结构如下:
 ```
     c:/wwwroot/masterlab            
