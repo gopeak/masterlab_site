@@ -5,11 +5,12 @@ header('Content-Type: application/json;charset=utf-8');
 $versions = [
     //['version' => '3.0', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v3.0'],
     //['version' => '2.1', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1'],
-    //['version' => '2.0.2', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.0.2'],
+    ['version' => '2.0.2', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.0.2'],
     ['version' => '2.0.1', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.0.1']
 ];
 
 $patches = [
+    '2.0.1-2.0.2' => 'http://download.888zb.com/v2.0.1-v2.0.2-upgrade.zip',
     '2.0-2.0.1' => 'http://download.888zb.com/v2.0-v2.0.1-upgrade.zip'
 ];
 
