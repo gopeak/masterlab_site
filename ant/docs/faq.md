@@ -4,13 +4,14 @@
 ## 安装问题排查
 
 1. 安装成功后访问首页报500错误，请确保从官方网站 http://www.masterlab.vip/download.php 下载最新的完整包  
-   ,github上下载的代码没有包含运行的类库，因此需要使用php的composer工具下载类库
+   ,如果从 https://github.com/gopeak/masterlab 下载的代码没有包含运行的类库，因此需要使用php的composer工具下载类库
 ```                   
-# 在masterlab根目录下执行,如果执行错误请将php加入到环境变量中
+# 在masterlab根目录下执行以下命令
 php composer.phar config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 php composer.phar update
+# 如果执行错误请将php加入到环境变量中
 ```  
-2. 如果输入正确账号密码却无法登录成功，要确保`php session` 的 `session.save_path` 对于当前运行的php用户拥有可写入权限，可通过访问 /p.php 查找 session.save_path 的路径
+2. 如果输入正确账号密码却无法登录成功，要确保`php session` 的 `session.save_path` 对于当前运行的php用户拥有读写权限，可通过访问 /p.php 查找 session.save_path 的路径
 3. 建议您从官方网站下载完整的安装包，如果从github或码云上下载则不包含依赖的 vendor 类库
 4. `app/storage` 和 `app/public/install` 目录php运行用户需要写入权限
 5. 为查看安装出现的具体问题，可在 `app/config/deploy/app.cfg.php` 中修改错误报告
