@@ -229,10 +229,39 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4>Masterlab-v2.0.2.zip
+                            <h4>Masterlab-v2.1.zip
                                 <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-last.zip" style="margin-left: 10px">http下载</a>
                             </h4>
                             <p>Masterlab2.0.2完整代码,包含开发框架,Vendor类库,UTF-8字符集</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>Masterlab-socket-windows.zip
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-socket-v1.1-windows.zip" style="margin-left: 10px">http下载</a>
+                            </h4>
+                            <p>Masterlab-socket是Masterlab的辅助工具，用于异步计算和定时执行脚本，实时数据通信</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>Masterlab-socket-centos.zip
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-socket-v1.1-centos.zip" style="margin-left: 10px">http下载</a>
+                            </h4>
+                            <p>centos二进制版本</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./about_files/intro-landscape.svg" class="face">
+                        <div class="person">
+                            <h4>Masterlab-socket-ubuntu.zip
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-socket-v1.1-ubuntu.zip" style="margin-left: 10px">http下载</a>
+                            </h4>
+                            <p>ubuntu二进制版本</p>
                         </div>
                     </li>
 
