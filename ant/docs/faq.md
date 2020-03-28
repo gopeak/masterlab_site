@@ -4,24 +4,27 @@
 ## 安装问题排查
 
 1. 安装成功后访问首页报500错误，请确保从官方网站 http://www.masterlab.vip/download.php 下载最新的完整包  
-   ,如果从 https://github.com/gopeak/masterlab 下载的代码没有包含运行的类库，因此需要使用php的composer工具下载类库
+   ,如果从 https://github.com/gopeak/masterlab 下载的代码,需要手动解压根目录的`vendor.zip`文件 
 ```                   
-# 在masterlab根目录下执行以下命令
-php composer.phar config -g repo.packagist composer https://mirrors.aliyun.com/composer/
-php composer.phar update
-# 如果执行错误请将php加入到环境变量中
+# Linux
+unzip ./vendor.zip
 ```  
-2. 如果输入正确账号密码却无法登录成功，要确保`php session` 的 `session.save_path` 对于当前运行的php用户拥有读写权限，可通过访问 /p.php 查找 session.save_path 的路径
-3. 建议您从官方网站下载完整的安装包，如果从github或码云上下载则不包含依赖的 vendor 类库
-4. `app/storage` 和 `app/public/install` 目录php运行用户需要写入权限
-5. 为查看安装出现的具体问题，可在 `app/config/deploy/app.cfg.php` 中修改错误报告
+
+2. 如果输入正确账号密码却无法登录成功，要确保会话的目录对于当前运行的php用户拥有读写权限，可通过访问 /p.php 查找`$_SERVER['USER']`和`session.save_path`分别找到会话目录和当前php用户  
+
+3. 建议您从官方网站下载完整的安装包，如果从github或码云上下载则不包含依赖的 vendor 类库  
+
+4. `app/storage` 和 `app/public/install` 目录php运行用户需要写入权限  
+
+5. 为查看安装出现的具体问题，可在 `app/config/deploy/app.cfg.php` 中修改错误报告  
 ```php
 error_reporting(E_ERROR); // 修改为下面一行
 error_reporting(E_ALL);
-```
-6. 重新安装后界面显示有问题，请清除浏览器缓存
+```  
 
-7. 可手动关闭redis缓存，在 "管理/系统/缓存/修改"界面中可关闭缓存
+6. 重新安装后或升级后界面显示有问题，请清除浏览器缓存  
+
+7. 可手动关闭redis缓存，在 "管理/系统/缓存/修改"界面中可关闭缓存  
 
 8. 邮件配置中发送测试成功，但是收不到邮件，是因为没有后台运行 `masterlab_socket` 程序,可以在邮件配置中禁用"异步方式发送邮件" 
 
@@ -37,6 +40,52 @@ error_reporting(E_ALL);
 4. 在创建好的项目的设置中，给已经创建好的用户分配角色及权限
 5. 在项目中再创建事项(bug 任务 优化改进型等)并分配给用户
 6. 然后通过迭代看板和统计图表跟进事项的状态和解决结果。
+
+
+
+## 如何启用LDAP认证
+
+1. 先启用PHP的`ldap`扩展  
+  windows系统纯净安装的，在浏览器访问 /p.php 查找`Loaded Configuration File`找到php的配置文件`php.ini`路径编辑,  
+   ```
+   # 去掉;
+   ;extension=ldap
+   extension=ldap
+   ```  
+   windows系统宝塔安装的，进入web管理面板，在`软件管理`界面找到php所有版本，在设置里将 ldap 扩展启用  
+   
+   Linux centos系统的，如果使用 yum webtatic 的源，则直接执行
+   ```
+   # php7.1版本用下面命令
+   yum install -y php71w-ldap
+   # php7.2版本用下面命令
+   yum install -y php72w-ldap
+   # 重启php-fpm
+   systemctl start php-fpm
+   ```     
+   Linux ubuntu，如果使用 yum webtatic 的源，则直接执行
+   ```
+   # php7.1版本用下面命令
+   sudo apt-get install -y php7.1-ldap
+   # php7.2版本用下面命令
+   sudo apt-get install -y php7.2-ldap
+   # 重启php-fpm
+   sudo systemctl status php7.2-fpm.service
+   ```
+   Linux 源码安装的  
+   ```
+   # 进入php源码根目录的ext/ldap
+   cd ./ext/ldap/
+   phpize
+   ./configure
+   make & make install
+   # 编译成功会生成ldap.so文件，并提示你要在php.ini加载 extension=ldap.so
+   # 使用命令检查是否加载成功
+   php -m | grep "ld"
+   ```      
+  
+2. 启用`ldap`扩展后，以管理员身份进入Masterlab的"管理/系统/ldap认证"，配置ldap相关信息即可
+
 
 ## 什么是事项？
 
