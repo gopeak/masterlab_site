@@ -115,6 +115,12 @@ error_reporting(E_ALL);
 每个工作流跳转由箭头指引方向。你可以在 "系统"中添加自己的自定义工作流，详见《使用指南》。
 
 
+## 升级失败怎么解决？
+建议您升级前，手动备份masterlab的主程序和数据库。如果升级失败，编辑 `app/config/deploy/app.cfg.php`文件，将`MASTERLAB_VERSION`  
+修改为原版本号，然后重新进入升级界面再次升级。如果无法得到解决，请加群联系群主。 
+
+
+
 ## 发现严重bug或修改怎么办？
 
 您可以到 `https://github.com/gopeak/masterlab/issues/new` 提交您发现的bug或建议，我们将会尽快处理和反馈。

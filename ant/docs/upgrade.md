@@ -2,7 +2,21 @@
 
 
 ### 从v2.0.1往后已经支持在线升级
-在页面右上角点击"向下箭头/升级"打开升级界面进行确认操作即可，升级前请先备份好数据库
+在页面右上角点击"向下箭头/升级"打开升级界面进行确认操作即可，升级前请先备份好数据库  
+如果在线升级失败，可以尝试进行手动操作
+```text
+# 下载对应的补丁包
+http://download.888zb.com/v2.0.1-v2.0.2-upgrade.zip
+http://download.888zb.com/v2.0.2-v2.1-upgrade.zip
+# 1.将补丁包下载到masterlab/upgrade目录下,并解压缩
+# 2.将压缩包内的patch.zip文件和目录覆盖到masterlab原文件
+# 3.将压缩包内的vendor.zip文件和目录覆盖到masterlab原文件
+# 4.在分别在数据库中执行 database.sql和index.sql
+# 5.最后修改 `app/config/deploy/app.cfg.php`文件，将`MASTERLAB_VERSION`修改为最新版本号
+
+
+```
+
 
 ### v2.0  至 v2.0.1 升级
 下载升级文件 http://download.888zb.com/v2.0-v2.0.1-upgrade.zip ,压缩包内文件覆盖到根目录即可
