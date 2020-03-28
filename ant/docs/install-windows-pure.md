@@ -168,13 +168,14 @@ PHPIniDir "c:/phpenv/php-7.4"
 替换为
 `extension_dir = "C:/phpenv/php-7.4/ext"`
 
-找到
+找到下面的每一行
   ```text
 ;extension=curl
 ;extension=gd2
 ;extension=mysqli
 ;extension=pdo_mysql
 ;extension=mbstring
+;extension=ldap
 ```
 去掉前面的 `;`
 

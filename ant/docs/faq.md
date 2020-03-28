@@ -52,7 +52,8 @@ error_reporting(E_ALL);
    ;extension=ldap
    extension=ldap
    ```  
-   windows系统宝塔安装的，进入web管理面板，在`软件管理`界面找到php所有版本，在设置里将 ldap 扩展启用  
+  
+   宝塔安装的，进入web管理面板，在`软件管理`界面找到php所有版本，在设置里将 ldap 扩展启用  
    
    Linux centos系统的，如果使用 yum webtatic 的源，则直接执行
    ```
@@ -61,7 +62,7 @@ error_reporting(E_ALL);
    # php7.2版本用下面命令
    yum install -y php72w-ldap
    # 重启php-fpm
-   systemctl start php-fpm
+   systemctl restart php-fpm.service
    ```     
    Linux ubuntu，如果使用 yum webtatic 的源，则直接执行
    ```
@@ -70,7 +71,8 @@ error_reporting(E_ALL);
    # php7.2版本用下面命令
    sudo apt-get install -y php7.2-ldap
    # 重启php-fpm
-   sudo systemctl status php7.2-fpm.service
+   sudo service php7.1-fpm restart 
+   sudo service php7.2-fpm restart 
    ```
    Linux 源码安装的  
    ```
