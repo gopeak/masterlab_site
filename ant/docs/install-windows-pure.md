@@ -4,8 +4,8 @@
 
  php运行环境的搭建是困扰新手们的一道难题，很多童鞋为了省事经常直接安装wamp集成软件， 
  这样虽然方便了新手童鞋，但是，个人觉得，这样对于深入学习及问题排错会造成相当的困扰，
- 比如不知道是程序代码出现问题还是环境问题导致的。
- 其实手动自行安装和配置环境，只要按照以下教程，整个时间花费还是很短的，文件下载完后2分钟内可以完成。
+ 比如不知道是程序出现问题还是环境问题导致的。
+ 其实手动自行安装和配置环境，只要按照以下教程，整个时间花费还是很短的，文件下载完后5分钟内可以完成。
  
 
 ### 1. 文件下载和安装  
@@ -134,9 +134,10 @@ PHPIniDir "c:/phpenv/php-7.4"
 打开 `C:/phpenv/Apache24/conf/extra/httpd-vhosts.conf`
 增加内容
   ```text
+  # 默认80端口，可以更改
   <VirtualHost *:80>
     DocumentRoot "c:/phpenv/www/masterlab/app/public"
-    # 这里修改成你自己的域名
+    # 暂且用下面域名测试，以后正式使用修改掉就好
     ServerName  www.yoursite.com
     <Directory />
         Options Indexes FollowSymLinks
@@ -168,13 +169,14 @@ PHPIniDir "c:/phpenv/php-7.4"
 替换为
 `extension_dir = "C:/phpenv/php-7.4/ext"`
 
-找到
+找到下面的每一行
   ```text
 ;extension=curl
 ;extension=gd2
 ;extension=mysqli
 ;extension=pdo_mysql
 ;extension=mbstring
+;extension=ldap
 ```
 去掉前面的 `;`
 
@@ -289,7 +291,11 @@ sc start redis-hd
 
 ### 7. Masterlab 安装
  
-在浏览器中访问  http://www.yoursite.com/install  
+由于演示安装需要模拟一个域名。编辑 `C:\Windows\System32\drivers\etc\HOSTS` 文件，在末尾追加  
+```text
+127.0.0.1 www.yoursite.com
+```
+在浏览器（一定要用非IE内核的浏览器）中访问  http://www.yoursite.com/install  
 请按照提示，一步一步执行即可  
 需要注意的是，数据库服务器请使用 127.0.0.1 ,否则会提示连接失败
 

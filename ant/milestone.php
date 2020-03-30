@@ -46,6 +46,24 @@ $page = 'milestone';
         <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-19">
             <article class="markdown">
                 <h1><!-- react-text: 7590 -->更新log<!-- /react-text --></h1>
+                <h2>v2.1 更新</h2>
+                <p>2020-3-27，更新内容：</p>
+                <ol>
+                    <li>增加Ldap认证登录 </li>
+                    <li>增加“管理甘特图”和“事项分解设置”权限项 </li>
+                    <li>MasterlabSocket增加命令行模式, -d 可后台运行 </li>
+                    <li>增加系统消息功能  </li>
+                    <li>事项列表增加标签分类的筛选功能  </li>
+                    <li>事项列表增加显示标签  </li>
+                    <li>工作流被重命名为状态流  </li>
+                    <li>项目设置可修改所属的状态流方案和事项类型方案  </li>
+                    <li>增加邀请用户加入功能  </li>
+                    <li>支持宝塔的一键安装  </li>
+                    <li>甘特图增加：“每周上班日的选项” </li>
+                    <li>安装时增加composer类库的检查 </li>
+                    <li>修复甘特图项目成员无法选择的bug  </li>
+                    <li>修复创建事项后甘特图添加事项的bug </li>
+                </ol>
                 <h2>v2.0.2 更新</h2>
                 <p>2020-3-10，修改下：</p>
                 <ol>

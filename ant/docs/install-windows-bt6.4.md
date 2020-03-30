@@ -56,7 +56,13 @@
 
 ### 四、下载和运行 MasterlabSocket  
 
- * 运行 C:\wwwroot\masterlab\bin 目录下 masterlab_socket.exe,  
+ * 运行 C:\wwwroot\masterlab\bin 目录下 
+ ```text
+ cd C:\wwwroot\masterlab\bin
+ masterlab_socket.exe start -d
+```
+
+   
  注：masterlab_socket.exe 是masterlab的异步和数据定时计算服务器， masterlab_socket不运行不会影响masterlab使用
 
 

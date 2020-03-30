@@ -11,7 +11,7 @@ $versions = [
 
 $patches = [
 
-    '2.0.2-2.1' => 'http://www.masterlab.vip/downloads/v2.0.2-v2.1-upgrade.zip',
+    '2.0.2-2.1' => 'http://download.888zb.com/v2.0.2-v2.1-upgrade.zip',
     '2.0.1-2.0.2' => 'http://download.888zb.com/v2.0.1-v2.0.2-upgrade.zip',
     '2.0-2.0.1' => 'http://download.888zb.com/v2.0-v2.0.1-upgrade.zip'
 ];
