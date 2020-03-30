@@ -57,6 +57,7 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
  
 ### 4. 修改伪静态  
 
+对于Web服务器是Nginx的： 
 ![1cut-202002071702442457.png](http://pm.masterlab.vip/attachment/image/20200207/1cut-202002071702442457.png "修改伪静态")  
 
 ```
@@ -67,24 +68,56 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
          }
     }
 
-  ```
-<br>
+```
 
+对于Web服务器是Apache的： 
+```
+ <IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
+</IfModule>
+
+```
+
+<br>
 
 
 ### 5. 下载和运行 MasterlabSocket  
 
 Centos和Windows系统已经编译成二进制，可以直接使用，  
-下载放置在 masterlab/bin 目录下，其他操作系统自行编译  
-直接运行`./masterlab_socket` 
+https://github.com/gopeak/masterlab_socket/releases  
+下载放置在 masterlab/bin 目录下，其他操作系统自行编译。  
 
-https://github.com/gopeak/masterlab_socket/releases
+运行命令 
+
+```
+cd /www/masterlab/bin
+chmod +x ./masterlab_socket
+./masterlab_socket start -d
+
+```
 
 
-### 6. 访问 http://www.masterlab.ce/install/ 按照提示进行安装  
+
+
+### 6. 访问 http://www.masterlab.ce/install/ 
 安装过程有些目录需要给 www 用户赋予写入权限  
- 
+
+```
+chown -R www:www /www/masterlab/app/public/install/
+chown -R www:www /www/masterlab/app/public/attachment/
+chown -R www:www /www/masterlab/app/storage/
+chown -R www:www /www/masterlab/app/config/deploy/
+chown -R www:www /www/masterlab/bin/
+chown -R www:www /www/masterlab/upgrade/
+
+```
+
+剩下按照提示进行安装  
 
 
+good luck~~~
  
  

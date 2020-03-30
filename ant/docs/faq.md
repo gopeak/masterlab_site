@@ -3,7 +3,7 @@
 
 ## 安装问题排查
 
-1. 安装成功后访问首页报500错误，请确保从官方网站 http://www.masterlab.vip/download.php 下载最新的完整包  
+1.安装成功后访问首页报500错误或空白，请确保从官方网站 http://www.masterlab.vip/download.php 下载最新的完整包  
    ,如果从 https://github.com/gopeak/masterlab 下载的代码没有包含运行的类库，因此需要使用php的composer工具下载类库
 ```                   
 # 在masterlab根目录下执行以下命令
@@ -11,21 +11,28 @@ php composer.phar config -g repo.packagist composer https://mirrors.aliyun.com/c
 php composer.phar update
 # 如果执行错误请将php加入到环境变量中
 ```  
-2. 如果输入正确账号密码却无法登录成功，要确保`php session` 的 `session.save_path` 对于当前运行的php用户拥有读写权限，可通过访问 /p.php 查找 session.save_path 的路径
-3. 建议您从官方网站下载完整的安装包，如果从github或码云上下载则不包含依赖的 vendor 类库
-4. `app/storage` 和 `app/public/install` 目录php运行用户需要写入权限
-5. 为查看安装出现的具体问题，可在 `app/config/deploy/app.cfg.php` 中修改错误报告
+
+2.如果输入正确账号密码却无法登录成功，要确保`php session` 的 `session.save_path` 对于当前运行的php用户拥有读写权限，可通过访问 /p.php 查找 session.save_path 的路径   
+
+3.建议您从官方网站下载完整的安装包，如果从github或码云上下载则不包含依赖的 vendor 类库  
+
+4.`app/storage` 和 `app/public/install` 目录php运行用户需要写入权限  
+
+5.为查看安装出现的具体问题，可在 `app/config/deploy/app.cfg.php` 中修改错误报告  
 ```php
 error_reporting(E_ERROR); // 修改为下面一行
 error_reporting(E_ALL);
 ```
-6. 重新安装后界面显示有问题，请清除浏览器缓存
+6.重新安装后界面显示有问题，请清除浏览器缓存  
 
-7. 可手动关闭redis缓存，在 "管理/系统/缓存/修改"界面中可关闭缓存
+7.可手动关闭redis缓存，在 "管理/系统/缓存/修改"界面中可关闭缓存  
 
-8. 邮件配置中发送测试成功，但是收不到邮件，是因为没有后台运行 `masterlab_socket` 程序,可以在邮件配置中禁用"异步方式发送邮件" 
+8.邮件配置中发送测试成功，但是收不到邮件，是因为没有后台运行 `masterlab_socket` 程序,可以在邮件配置中禁用"异步方式发送邮件"   
 
-9. 如果创建和更新事项都会有卡慢卡顿的情况，应该会是邮件推送引起的，在 “管理/系统/邮件配置”关闭邮件推送选项，然后重试  
+9.如果创建和更新事项都会有卡慢卡顿的情况，应该会是邮件推送引起的，在 “管理/系统/邮件配置”关闭邮件推送选项，然后重试  
+
+10.修改上传附件的大小限制无效，解决办法是先修改`php.ini`文件的`upload_max_filesize`值，`php.ini`文件可通过访问 `/.php`查找 `Loaded Configuration File`找到，修改完后重启web服务器和php。
+  最后再进入Masterlab的管理后台修改`系统/附件设置/附件大小`的值  
 
 
 
