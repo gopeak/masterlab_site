@@ -6,8 +6,12 @@
 如果在线升级失败，可以尝试进行手动操作
 ```text
 # 下载对应的补丁包
-http://download.888zb.com/v2.0.1-v2.0.2-upgrade.zip
-http://download.888zb.com/v2.0.2-v2.1-upgrade.zip
+
+v2.1 到 v2.1.1补丁包：   http://download.888zb.com/v2.1-v2.1.1-upgrade.zip
+v2.0.2 到 v2.1补丁包：   http://download.888zb.com/v2.0.2-v2.1-upgrade.zip  
+v2.0.1 到 v2.0.2补丁包： http://download.888zb.com/v2.0.1-v2.0.2-upgrade.zip
+
+
 # 1.将补丁包下载到masterlab/upgrade目录下,并解压缩
 # 2.将压缩包内的patch.zip文件和目录覆盖到masterlab原文件
 # 3.将压缩包内的vendor.zip文件和目录覆盖到masterlab原文件
