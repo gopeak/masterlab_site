@@ -2,11 +2,11 @@
 header('Content-Type: application/json;charset=utf-8');
 
 $ipArr = [
-    '47.244.62.11',
-    '113.104.244.229'
+    //'47.244.62.11',
+    //'113.104.244.229'
 ];
 if(!checkIpAddr($ipArr)){
-    echoFailJson("IP地址受限!");
+    echoFailJson("升级不可用，IP地址受限!");
 }
 
 $lastReleaseHtml = <<<'EOT'
@@ -33,7 +33,7 @@ $versions = [
 ];
 
 $patches = [
-    '2.1-2.1.1' => 'http://www.masterlab.vip/downloads/v2.1-v2.1.1-upgrade.zip',
+    '2.1-2.1.1' => 'http://download.888zb.com/v2.1-v2.1.1-upgrade.zip',
     '2.0.2-2.1' => 'http://download.888zb.com/v2.0.2-v2.1-upgrade.zip',
     '2.0.1-2.0.2' => 'http://download.888zb.com/v2.0.1-v2.0.2-upgrade.zip',
     '2.0-2.0.1' => 'http://download.888zb.com/v2.0-v2.0.1-upgrade.zip'
