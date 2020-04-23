@@ -5,8 +5,8 @@ Apache+Php+Mysql 或 Nginx+Php+Mysql
 ```
 - Web Server : Nginx 或 Apache
 - Php
-  - 版本 >= 5.6 
-  - 必备扩展 ：curl,mysqlnd,pdo,opcache,mbstring,redis
+  - 版本 >= 7.0
+  - 必备扩展 ：curl,mysqlnd,pdo,opcache,mbstring,redis,ldap
   - php.ini   修改 upload_max_filesize = 8M
   - php.ini   修改 post_max_size = 8M
   - php.ini   修改 memory_limit = 128M  

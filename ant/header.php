@@ -40,7 +40,7 @@
                     <a  href="./milestone.php"><span>时间轴</span></a>
                 </li>
                 <li class="ant-menu-item  <? if($page=='donate') echo 'ant-menu-item-selected'; ?>" role="menuitem">
-                    <a  href="./donate.php"><span>捐 献</span></a>
+                    <a  href="./donate.php"><span>打 赏</span></a>
                 </li>
                 <li class="ant-menu-item  <? if($page=='about') echo 'ant-menu-item-selected'; ?>" role="menuitem"><a href="./about.php"><span>关于我们</span></a>
                 </li>

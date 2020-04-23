@@ -85,20 +85,18 @@
     }
     
     ```
-
  * 重启web服务器和php-fpm,访问你刚才设置的域名  http://www.yoursite.com/install ，安装图文提示进行安装
  
 
-
  * 配置 MasterlabSocket  
     MasterlabSocket 是Masterlab用于异步发送邮件以及定时计算数据的后台程序（该程序不运行masterlab也是可以登录使用的）
-    centos操作系统的 `masterlab_socket`已经编译好成直接运行的文件，位于 masterlab的bin 目录下，赋予权限运行即可，
+    下载地址 https://github.com/gopeak/masterlab_socket/releases/tag/v1.1 
+    放置于 masterlab 的 bin 目录下( 请勿覆盖cron.json文件)，赋予权限运行即可
  ```text
     chmod +x /data/www/masterlab/bin/masterlab_socket
     # 建议将masterlab_socket作为后台程序运行
-    ./masterlab_socket 
+    ./masterlab_socket start -d
 ```
-   其他Linux操作请访问 https://github.com/gopeak/masterlab_socket 查看安装文档  
 
  * 配置缓存
   安装好后，使用管理员登录系统，在“系统/缓存/修改”配置 是否启用redis缓存  
