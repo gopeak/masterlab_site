@@ -56,6 +56,13 @@
 
    
  Masterlab_socket.exe 是masterlab的异步和数据定时计算服务器。注: Masterlab_socket 不运行不会影响masterlab使用
+ 
+### 四、一键部署的问题反馈
+
+请反馈至于  
+https://www.bt.cn/bbs/thread-50486-1-1.html
+或加入QQ群 314155057
+
 
 
  

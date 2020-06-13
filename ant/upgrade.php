@@ -59,6 +59,8 @@ $versions = [
 
 $patches = [
 	'2.1.5-2.1.6'=>'http://download.888zb.com/v2.1.5-v2.1.6-upgrade.zip',
+    '2.1.3-2.1.6'=>'http://download.888zb.com/v2.1.3-v2.1.6-upgrade.zip',
+    '2.1.1-2.1.6'=>'http://download.888zb.com/v2.1.1-v2.1.6-upgrade.zip',
 	'2.1.3-2.1.5'=>'http://download.888zb.com/v2.1.3-v2.1.5-upgrade.zip',
 	'2.1.2-2.1.3'=>'http://download.888zb.com/v2.1.2-v2.1.3-upgrade.zip',
 	'2.1.1-2.1.3'=>'http://download.888zb.com/v2.1.1-v2.1.3-upgrade.zip',
