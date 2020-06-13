@@ -5,6 +5,9 @@
 如果在线升级失败，可以尝试进行手动操作
 ```text
 # 下载对应的补丁包
+v2.1.5 到 v2.1.6 补丁包：http://download.888zb.com/v2.1.5-v2.1.6-upgrade.zip
+v2.1.3 到 v2.1.6 补丁包：http://download.888zb.com/v2.1.3-v2.1.6-upgrade.zip
+v2.1.1 到 v2.1.6 补丁包：http://download.888zb.com/v2.1.1-v2.1.6-upgrade.zip
 v2.1.1 到 v2.1.2 补丁包： http://download.888zb.com/v2.1.1-v2.1.2-upgrade.zip
 v2.1 到 v2.1.2 补丁包：   http://download.888zb.com/v2.1-v2.1.2-upgrade.zip
 v2.0.2 到 v2.1.2 补丁包： http://download.888zb.com/v2.0.2-v2.1.2-upgrade.zip  
