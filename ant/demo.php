@@ -185,7 +185,7 @@ if (function_exists('date_default_timezone_set')) {
             <h2>Demo</h2>
             <span class="separator"></span>
             <div class="info-content">
-                <p class="main-info">以系统管理员身份登录，可以立即体验所有功能。体验账号:master 体验密码:testtest <a href="http://demo.masterlab.vip" target="_blank"> 立即体验 </a> </p>
+                <p class="main-info">以系统管理员身份登录，可以立即体验所有功能。体验账号:master体验密码:testtest<a href="http://demo.masterlab.vip/passport/login?demo_user=master&demo_pwd=testtest" target="_blank"> 立即体验 </a> </p>
             </div>
         </section>
 
