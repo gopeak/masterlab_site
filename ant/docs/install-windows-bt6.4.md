@@ -8,7 +8,7 @@
   
 ### 一、宝塔环境安装
 
-访问宝塔官方网站 https://www.bt.cn/ 下载最新的 Windows的`6.4`版本 
+访问宝塔官方网站 https://www.bt.cn/ 下载最新的 Windows系统的版本 
 下载好后根据提示进行安装 ，初始化设置，输入账号密码后进入面板，选择安装Apache套件（Apache2.4 Php7.1 Mysql5.7）      
   ![1cut-202003100003482814.png](http://pm.masterlab.vip/attachment/image/20200310/1cut-202003100003482814.png "选择Apache套件")
 
@@ -56,7 +56,8 @@
 
 ### 四、下载和运行 MasterlabSocket  
 
- * 运行 C:\wwwroot\masterlab\bin 目录下 
+下载文件 http://download.888zb.com/masterlab-socket-v1.1-windows.zip 解压到 Masterlab的 `bin` 目录下 
+
  ```text
  cd C:\wwwroot\masterlab\bin
  masterlab_socket.exe start -d
