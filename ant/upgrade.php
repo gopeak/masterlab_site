@@ -2,9 +2,9 @@
 header('Content-Type: application/json;charset=utf-8');
 
 $ipArr = [
-    //'47.244.62.11',
-    //'183.11.29.118',
-    //'183.11.30.3'
+    '47.244.62.11',
+    '183.11.29.118',
+    '183.11.29.140'
 ];
 if(!checkIpAddr($ipArr)){
     echoFailJson("升级不可用，IP地址受限!");
@@ -26,7 +26,7 @@ $release212 = <<<'EOT'
 EOT;
 
 $lastReleaseHtml = <<<'EOT'
-<p>v2.1.6版本更新内容：</p>
+<p>v2.1.7版本更新内容：</p>
 <ol>
 <li>修复在线升级的源地址的SSRF安全漏洞</li>
 <li>修复session配置无效的问题</li>
@@ -47,7 +47,7 @@ EOT;
 // 第一个元素为最新版本
 $versions = [
     //['version' => '3.0', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v3.0','html'],
-    ['version' => '2.1.6', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1.6', 'title'=>'2.1.6升级通知', 'release_html'=>$lastReleaseHtml],
+    ['version' => '2.1.7', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1.7', 'title'=>'2.1.7升级通知', 'release_html'=>$lastReleaseHtml],
     ['version' => '2.1.5', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1.5', 'title'=>'2.1.5升级通知', 'release_html'=>$lastReleaseHtml],
     ['version' => '2.1.3', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1.3', 'title'=>'2.1.3升级通知', 'release_html'=>$lastReleaseHtml],
     ['version' => '2.1.2', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1.2', 'title'=>'2.1.2升级通知', 'release_html'=>$lastReleaseHtml],
@@ -58,9 +58,9 @@ $versions = [
 ];
 
 $patches = [
-    '2.1.5-2.1.6'=>'http://download.888zb.com/v2.1.5-v2.1.6-upgrade.zip',
-    '2.1.3-2.1.6'=>'http://download.888zb.com/v2.1.3-v2.1.6-upgrade.zip',
-    '2.1.1-2.1.6'=>'http://download.888zb.com/v2.1.1-v2.1.6-upgrade.zip',
+    '2.1.5-2.1.7'=>'http://download.888zb.com/v2.1.5-v2.1.7-upgrade.zip',
+    '2.1.3-2.1.7'=>'http://download.888zb.com/v2.1.3-v2.1.7-upgrade.zip',
+    '2.1.1-2.1.7'=>'http://download.888zb.com/v2.1.1-v2.1.7-upgrade.zip',
     '2.1.3-2.1.5'=>'http://download.888zb.com/v2.1.3-v2.1.5-upgrade.zip',
     '2.1.2-2.1.3'=>'http://download.888zb.com/v2.1.2-v2.1.3-upgrade.zip',
     '2.1.1-2.1.3'=>'http://download.888zb.com/v2.1.1-v2.1.3-upgrade.zip',
