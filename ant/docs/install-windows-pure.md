@@ -11,7 +11,7 @@
 ### 1. 文件下载和安装  
   首先下载所需的文件. 
   如果你不想到一个个下载修改配置文件，我这里把配置好的文件打包成一个zip文件，下载解压后，直接跳转到步骤5“MySQL配置”。
-  打包文件下载地址：  http://download.888zb.com/phpenv2.zip
+  打包文件下载地址：  http://download.masterlab.vip/phpenv2.zip
   
     
   逐个下载方式（已经打包下载就免了）  
@@ -48,11 +48,11 @@
   ```
   #### Masterlab2.0
   ```text
-  官方直接下载地址： http://download.888zb.com/masterlab-last.zip
+  官方直接下载地址： http://download.masterlab.vip/masterlab-last.zip
   ```
    #### Redis-server3.0
    ```text
-   直接下载地址：http://download.888zb.com/Redis-x64-3.0.504.zip
+   直接下载地址：http://download.masterlab.vip/Redis-x64-3.0.504.zip
    ```
 
 

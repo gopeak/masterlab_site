@@ -230,7 +230,7 @@ if (isset($_GET['file'])) {
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Masterlab-v2.1.zip
-                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-last.zip" style="margin-left: 10px">http下载</a>
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.masterlab.vip/masterlab-last.zip" style="margin-left: 10px">http下载</a>
                             </h4>
                             <p>Masterlab主程序</p>
                         </div>
@@ -240,7 +240,7 @@ if (isset($_GET['file'])) {
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Masterlab-socket-windows.zip
-                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-socket-v1.1-windows.zip" style="margin-left: 10px">http下载</a>
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.masterlab.vip/masterlab-socket-v1.1-windows.zip" style="margin-left: 10px">http下载</a>
                             </h4>
                             <p>Masterlab-socket是Masterlab的辅助工具，用于异步计算和定时执行脚本，实时数据通信</p>
                         </div>
@@ -250,7 +250,7 @@ if (isset($_GET['file'])) {
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Masterlab-socket-centos.zip
-                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-socket-v1.1-centos.zip" style="margin-left: 10px">http下载</a>
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.masterlab.vip/masterlab-socket-v1.1-centos.zip" style="margin-left: 10px">http下载</a>
                             </h4>
                             <p>centos二进制版本</p>
                         </div>
@@ -259,7 +259,7 @@ if (isset($_GET['file'])) {
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Masterlab-socket-ubuntu.zip
-                                <a  style="margin-left: 10px;font-size: small" href="http://download.888zb.com/masterlab-socket-v1.1-ubuntu.zip" style="margin-left: 10px">http下载</a>
+                                <a  style="margin-left: 10px;font-size: small" href="http://download.masterlab.vip/masterlab-socket-v1.1-ubuntu.zip" style="margin-left: 10px">http下载</a>
                             </h4>
                             <p>ubuntu二进制版本</p>
                         </div>
@@ -269,7 +269,7 @@ if (isset($_GET['file'])) {
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Redis-x64-3.0.504.zip
-                                <a style="margin-left: 10px;font-size: small" href="http://download.888zb.com/Redis-x64-3.0.504.zip">http下载</a>
+                                <a style="margin-left: 10px;font-size: small" href="http://download.masterlab.vip/Redis-x64-3.0.504.zip">http下载</a>
                                 <a  style="margin-left: 10px;font-size: small" href="https://pan.baidu.com/s/1iT5abl6KjqOIcQwNm4BtRA">百度网盘</a>
                                 <span style="font-size: small">提取码：3p5t </span>
                             </h4> 5.7M

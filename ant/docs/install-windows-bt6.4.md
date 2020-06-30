@@ -15,7 +15,7 @@
 
 ### 二、下载Masterlab代码
 
-1. 下载masterlab的最新完整代码  http://download.888zb.com/masterlab-last.zip ，
+1. 下载masterlab的最新完整代码  http://download.masterlab.vip/masterlab-last.zip ，
  解压到 c 盘的 c:/wwwroot 目录下,解压后的目录结构如下:
 ```
     c:/wwwroot/masterlab            
@@ -56,7 +56,7 @@
 
 ### 四、下载和运行 MasterlabSocket  
 
-下载文件 http://download.888zb.com/masterlab-socket-v1.1-windows.zip 解压到 Masterlab的 `bin` 目录下 
+下载文件 http://download.masterlab.vip/masterlab-socket-v1.1-windows.zip 解压到 Masterlab的 `bin` 目录下 
 
  ```text
  cd C:\wwwroot\masterlab\bin

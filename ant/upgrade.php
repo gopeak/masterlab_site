@@ -58,19 +58,19 @@ $versions = [
 ];
 
 $patches = [
-    '2.1.5-2.1.7'=>'http://download.888zb.com/v2.1.5-v2.1.7-upgrade.zip',
-    '2.1.3-2.1.7'=>'http://download.888zb.com/v2.1.3-v2.1.7-upgrade.zip',
-    '2.1.1-2.1.7'=>'http://download.888zb.com/v2.1.1-v2.1.7-upgrade.zip',
-    '2.1.3-2.1.5'=>'http://download.888zb.com/v2.1.3-v2.1.5-upgrade.zip',
-    '2.1.2-2.1.3'=>'http://download.888zb.com/v2.1.2-v2.1.3-upgrade.zip',
-    '2.1.1-2.1.3'=>'http://download.888zb.com/v2.1.1-v2.1.3-upgrade.zip',
-    '2.1-2.1.3'=>'http://download.888zb.com/v2.1-v2.1.3-upgrade.zip',
-    '2.1-2.1.2'=>'http://download.888zb.com/v2.1-v2.1.2-upgrade.zip',
-    '2.1.1-2.1.2' => 'http://download.888zb.com/v2.1.1-v2.1.2-upgrade.zip',
-    '2.1-2.1.1' => 'http://download.888zb.com/v2.1-v2.1.1-upgrade.zip',
-    '2.0.2-2.1' => 'http://download.888zb.com/v2.0.2-v2.1-upgrade.zip',
-    '2.0.1-2.0.2' => 'http://download.888zb.com/v2.0.1-v2.0.2-upgrade.zip',
-    '2.0-2.0.1' => 'http://download.888zb.com/v2.0-v2.0.1-upgrade.zip'
+    '2.1.5-2.1.7'=>'http://download.masterlab.vip/v2.1.5-v2.1.7-upgrade.zip',
+    '2.1.3-2.1.7'=>'http://download.masterlab.vip/v2.1.3-v2.1.7-upgrade.zip',
+    '2.1.1-2.1.7'=>'http://download.masterlab.vip/v2.1.1-v2.1.7-upgrade.zip',
+    '2.1.3-2.1.5'=>'http://download.masterlab.vip/v2.1.3-v2.1.5-upgrade.zip',
+    '2.1.2-2.1.3'=>'http://download.masterlab.vip/v2.1.2-v2.1.3-upgrade.zip',
+    '2.1.1-2.1.3'=>'http://download.masterlab.vip/v2.1.1-v2.1.3-upgrade.zip',
+    '2.1-2.1.3'=>'http://download.masterlab.vip/v2.1-v2.1.3-upgrade.zip',
+    '2.1-2.1.2'=>'http://download.masterlab.vip/v2.1-v2.1.2-upgrade.zip',
+    '2.1.1-2.1.2' => 'http://download.masterlab.vip/v2.1.1-v2.1.2-upgrade.zip',
+    '2.1-2.1.1' => 'http://download.masterlab.vip/v2.1-v2.1.1-upgrade.zip',
+    '2.0.2-2.1' => 'http://download.masterlab.vip/v2.0.2-v2.1-upgrade.zip',
+    '2.0.1-2.0.2' => 'http://download.masterlab.vip/v2.0.1-v2.0.2-upgrade.zip',
+    '2.0-2.0.1' => 'http://download.masterlab.vip/v2.0-v2.0.1-upgrade.zip'
 ];
 
 /*

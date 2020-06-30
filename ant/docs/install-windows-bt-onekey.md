@@ -47,7 +47,7 @@
 
 ### 三、下载和运行 MasterlabSocket  
 
-下载文件 http://download.888zb.com/masterlab-socket-v1.1-windows.zip 解压到 Masterlab的 `bin` 目录下 
+下载文件 http://download.masterlab.vip/masterlab-socket-v1.1-windows.zip 解压到 Masterlab的 `bin` 目录下 
  ```text
  # 修改你实际的目录 
  cd D:/wwwroot/www.masterlab.bt/bin

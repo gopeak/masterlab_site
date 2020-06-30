@@ -28,7 +28,7 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
 
  
 
-### 1. 下载最新masterlab的完整代码  http://download.888zb.com/masterlab-last.zip ，
+### 1. 下载最新masterlab的完整代码  http://download.masterlab.vip/masterlab-last.zip ，
  解压到 /www/masterlab 目录下,解压后的目录结构如下:
 ```
     /www/masterlab            
@@ -69,6 +69,14 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
     }
 
 ```
+或者  
+```
+location / {
+	if (!-e $request_filename){
+		rewrite  ^(.*)$  /index.php?s=$1  last;   break;
+	}
+}
+```  
 
 对于Web服务器是Apache的： 
 ```

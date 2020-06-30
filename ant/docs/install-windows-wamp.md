@@ -39,7 +39,7 @@ extension=php_redis
 
 ### 二、下载Masterlab代码
 
-下载最新版本的完整代码  http://download.888zb.com/masterlab-last.zip ，
+下载最新版本的完整代码  http://download.masterlab.vip/masterlab-last.zip ，
  解压到 d 盘的 d:/www 目录下,解压后的目录结构如下:
 ```
     d:/www/masterlab            

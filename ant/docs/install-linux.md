@@ -17,7 +17,7 @@
     mkdir /data/
     mkdir /data/www/
     cd /data/www/
-    wget -c http://download.888zb.com/masterlab-last.zip  -O masterlab.zip
+    wget -c http://download.masterlab.vip/masterlab-last.zip  -O masterlab.zip
     unzip masterlab.zip -d ./masterlab
     cd masterlab
     ```

@@ -5,14 +5,14 @@
 如果在线升级失败，可以尝试进行手动操作
 ```text
 # 下载对应的补丁包
-v2.1.5 到 v2.1.7 补丁包：http://download.888zb.com/v2.1.5-v2.1.7-upgrade.zip
-v2.1.3 到 v2.1.7 补丁包：http://download.888zb.com/v2.1.3-v2.1.7-upgrade.zip
-v2.1.1 到 v2.1.7 补丁包：http://download.888zb.com/v2.1.1-v2.1.7-upgrade.zip
-v2.1.1 到 v2.1.2 补丁包： http://download.888zb.com/v2.1.1-v2.1.2-upgrade.zip
-v2.1 到 v2.1.2 补丁包：   http://download.888zb.com/v2.1-v2.1.2-upgrade.zip
-v2.0.2 到 v2.1.2 补丁包： http://download.888zb.com/v2.0.2-v2.1.2-upgrade.zip  
-v2.0.1 到 v2.1.2 补丁包： http://download.888zb.com/v2.0-v2.1.2-upgrade.zip
-v2.0 到 v2.1.2 补丁包：   http://download.888zb.com/v2.0-v2.1.2-upgrade.zip
+v2.1.5 到 v2.1.7 补丁包：http://download.masterlab.vip/v2.1.5-v2.1.7-upgrade.zip
+v2.1.3 到 v2.1.7 补丁包：http://download.masterlab.vip/v2.1.3-v2.1.7-upgrade.zip
+v2.1.1 到 v2.1.7 补丁包：http://download.masterlab.vip/v2.1.1-v2.1.7-upgrade.zip
+v2.1.1 到 v2.1.2 补丁包： http://download.masterlab.vip/v2.1.1-v2.1.2-upgrade.zip
+v2.1 到 v2.1.2 补丁包：   http://download.masterlab.vip/v2.1-v2.1.2-upgrade.zip
+v2.0.2 到 v2.1.2 补丁包： http://download.masterlab.vip/v2.0.2-v2.1.2-upgrade.zip  
+v2.0.1 到 v2.1.2 补丁包： http://download.masterlab.vip/v2.0-v2.1.2-upgrade.zip
+v2.0 到 v2.1.2 补丁包：   http://download.masterlab.vip/v2.0-v2.1.2-upgrade.zip
 
 # 1.将补丁包下载到masterlab/upgrade目录下,并解压缩
 # 2.将压缩包内的patch.zip文件和目录覆盖到masterlab原文件
@@ -23,11 +23,11 @@ v2.0 到 v2.1.2 补丁包：   http://download.888zb.com/v2.0-v2.1.2-upgrade.zip
 ```
 
 ### v2.0  至 v2.0.1 升级
-下载升级文件 http://download.888zb.com/v2.0-v2.0.1-upgrade.zip ,压缩包内文件覆盖到根目录即可
+下载升级文件 http://download.masterlab.vip/v2.0-v2.0.1-upgrade.zip ,压缩包内文件覆盖到根目录即可
 
 
 ### v1.2 至 v2.0.2 升级
-下载升级文件 http://download.888zb.com/v1.2-v2.0.2-upgrade.zip ,按照压缩包内的 readme.md 进行升级  
+下载升级文件 http://download.masterlab.vip/v1.2-v2.0.2-upgrade.zip ,按照压缩包内的 readme.md 进行升级  
 注：连接mysql的用户要求具备修改表结构的权限，升级期间请勿对masterlab进行操作
 
 
