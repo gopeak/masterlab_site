@@ -77,7 +77,9 @@
                 <span><a href="#" rel="noopener noreferrer" target="_blank">使用协议</a></span>
             </p>
             <p class="footer-copyright"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷智盛网络有限公司</span>
+                粤ICP备20055300号
             </p>
+
         </div>
     </div>
 </footer>
