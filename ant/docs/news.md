@@ -26,7 +26,6 @@
 <p><a href="http://www.masterlab.vip" target="_blank">http://www.masterlab.vip</a></p>
 
 <p>&nbsp;</p>
-
 <h2>截图</h2>
 
 <p><img alt="" height="393" src="http://www.masterlab.vip/fireshot/issue.png" width="800" /></p>
