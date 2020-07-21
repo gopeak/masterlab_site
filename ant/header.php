@@ -42,7 +42,7 @@
                 <li class="ant-menu-item  <? if($page=='donate') echo 'ant-menu-item-selected'; ?>" role="menuitem">
                     <a  href="./donate.php"><span>打 赏</span></a>
                 </li>
-                <li class="ant-menu-item  <? if($page=='about') echo 'ant-menu-item-selected'; ?>" role="menuitem"><a href="./about.php"><span>关于我们</span></a>
+                <li class="ant-menu-item  <? if($page=='about') echo 'ant-menu-item-selected'; ?>" role="menuitem"><a href="./about.php"><span>联系我们</span></a>
                 </li>
                 <li class="ant-menu-item " role="menuitem" >
                     <a  href="https://github.com/gopeak/masterlab"><span>Github</span></a>

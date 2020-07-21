@@ -199,7 +199,7 @@ $page = 'about';
             </div>
         </section>
 
-        <section class="description container text-center" style="display: none">
+        <section class="description container text-center" style="display: ">
             <h2 id="关于团队">团队成员</h2>
             <span class="separator"></span>
             <div class="info-content">
@@ -208,21 +208,21 @@ $page = 'about';
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Sven</h4>
-                            <p>自称IT狂人, 产品经理兼码农, 做事喜欢追求极限，业余爱好有攀登、穿越、摩旅</p>
+                            <p>产品经理兼码农, 爱好摩旅、徒步穿越、攀登</p>
                         </div>
                     </li>
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Lyman</h4>
-                            <p>江湖人称健哥, 技术大拿</p>
+                            <p>技术大拿，IT界的李健</p>
                         </div>
                     </li>
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
                             <h4>Mo</h4>
-                            <p>资深前端工程师, 美食家 吃货</p>
+                            <p>资深前端工程师&UI设计师, 美食家  </p>
                         </div>
                     </li>
                     <li>
@@ -235,55 +235,64 @@ $page = 'about';
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4>FangMin</h4>
-                            <p>全能战士</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./about_files/intro-landscape.svg" class="face">
-                        <div class="person">
-                            <h4>Sandy</h4>
-                            <p>资深UI设计师，美女</p>
+                            <h4>Jouney</h4>
+                            <p>擅长运营推广</p>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
+        <!--
+                <section class="description container text-center">
+                    <h2 id="">开发理念</h2>
+                    <span class="separator"></span>
+                    <div class="info-content">
+                        <ul  class="text-left info-items" >
+                            <li>简单 -因为迭代和渐进开发，不需要一次到位简单可读性</li>
+                            <li>勇气 -勇于承担任务，授权，完成任务，赢得尊重</li>
+                            <li>沟通 -文档完整规范清晰;团队氛围良好，及早沟通，自组织团队</li>
+                            <li>反馈 -沟通后需要再次反馈；快速将产品投入市场，收到反馈，再次迭代</li>
+                        </ul>
+                    </div>
+                </section>
 
-        <section class="description container text-center">
-            <h2 id="">开发理念</h2>
-            <span class="separator"></span>
-            <div class="info-content">
-                <ul  class="text-left info-items" >
-                    <li>简单 -因为迭代和渐进开发，不需要一次到位简单可读性</li>
-                    <li>勇气 -勇于承担任务，授权，完成任务，赢得尊重</li>
-                    <li>沟通 -文档完整规范清晰;团队氛围良好，及早沟通，自组织团队</li>
-                    <li>反馈 -沟通后需要再次反馈；快速将产品投入市场，收到反馈，再次迭代</li>
-                </ul>
-            </div>
-        </section>
+                <section class="description container text-center">
+                    <h2 id="">开发实践</h2>
+                    <span class="separator"></span>
+                    <div class="info-content">
+                        <ul  class="text-left info-items" >
+                            <li>单元测试  及时反馈极大降低回归测试成本极大减少调试时间部署起来信心十足</li>
+                            <li>持续集成  提早集成，自动化部署
+                            </li>
+                            <li>重构  收放自如 偿还技术债务</li>
+                            <li>代码规范  用代码进行沟通，清晰表达意图 动态评估取舍 保持简单</li>
+                        </ul>
+                    </div>
+                </section>
 
-        <section class="description container text-center">
-            <h2 id="">开发实践</h2>
-            <span class="separator"></span>
-            <div class="info-content">
-                <ul  class="text-left info-items" >
-                    <li>单元测试  及时反馈极大降低回归测试成本极大减少调试时间部署起来信心十足</li>
-                    <li>持续集成  提早集成，自动化部署
-                    </li>
-                    <li>重构  收放自如 偿还技术债务</li>
-                    <li>代码规范  用代码进行沟通，清晰表达意图 动态评估取舍 保持简单</li>
-                </ul>
-            </div>
-        </section>
+               <section class="join-us get-started description text-center ">
+                    <h2 id="">加入我们</h2>
+                    <span class="separator"></span>
+                    <div class="info-content">
+                        <p class="main-info">如果你对编程、
+                            数据分析、交互设计充满激情，无论你是工程师，还是设计师，请联系我们，期待你的加入。weichaoduo@163.com</p>
+                            <a href="mailto:weichaoduo@163.com" class="btn btn-round-link more-tutorial btn-primary btn-lg">立即加入</a>
+                    </div>
+                </section>-->
 
         <section class="join-us get-started description text-center">
-            <h2 id="">加入我们</h2>
+            <h2 id="">联系我们</h2>
             <span class="separator"></span>
             <div class="info-content">
-                <p class="main-info">我们一支富有激情充满活力的互联网产业团队， 我们也是一群有爱的人，在一起快乐做一件有意义的事情。如果你对编程、
-                    数据分析、交互设计充满激情，无论你是工程师，还是设计师，请联系我们，期待你的加入。weichaoduo@163.com</p>
-                    <a href="mailto:weichaoduo@163.com" class="btn btn-round-link more-tutorial btn-primary btn-lg">立即加入</a>
+                <ul  class="text-left info-items" >
+                <li  >地址：广东省深圳市罗湖区水贝二路特力大厦916室</li>
+                <li  >电话：0755-25118069</li>
+                <li >邮箱：weichaoduo@163.com</li>
+                <li ><a href="https://map.baidu.com/poi/%E7%89%B9%E5%8A%9B%E5%A4%A7%E5%8E%A6/@12705045.265,2564479.37,19z?uid=af1ae56b59966f124207c16f&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&querytype=detailConInfo&da_src=shareurl">
+                    <img src="Images/map_add.png">
+                        </a>
+                </li>
+                </ul>
             </div>
         </section>
 
