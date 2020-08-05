@@ -71,15 +71,22 @@
     </div>
     <div class="ant-row bottom-bar">
         <div class="ant-col-sm-24 ant-col-lg-4"></div>
-        <div class="ant-col-sm-24 ant-col-lg-20">
-            <p class="footer-link">
-                <span><a href="#" rel="noopener noreferrer"  target="_blank">隐私权政策</a></span>
-                <span><a href="#" rel="noopener noreferrer" target="_blank">使用协议</a></span>
-            </p>
-            <p class="footer-copyright"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷智盛网络有限公司</span>
-                <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备20055300号</a>
-            </p>
-
+        <div class="ant-col-sm-24 ant-col-lg-20 clearfix">
+            <div style="float: left">
+                <p class="footer-link">
+                    <span><a href="#" rel="noopener noreferrer"  target="_blank">隐私权政策</a></span>
+                    <span><a href="#" rel="noopener noreferrer" target="_blank">使用协议</a></span>
+                </p>
+                <p class="footer-copyright"><!-- react-text: 194 -->Copyright © <!-- /react-text --><span>深圳市敏捷智盛网络有限公司</span>
+                    <a target="_blank" href="http://www.beian.miit.gov.cn">粤ICP备20055300号</a>
+                </p>
+            </div>
+            <div style="width:300px;margin:0 auto; padding:0px 0; float: right">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030302001641"
+                   style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                    <img src="./Images/gonganbeian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备 44030302001641号</p>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
