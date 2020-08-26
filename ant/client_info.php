@@ -47,9 +47,9 @@ if(isset($_POST['company_info'])){
     $dbModel = new CustomerLogModel();
     list($ret, $msg) = $dbModel->insert($info);
     if(!$ret){
-        echo $msg;
+        //echo $msg;
     }else{
-        echo '200';
+        //echo '200';
     }
 
     unset($dbModel);
