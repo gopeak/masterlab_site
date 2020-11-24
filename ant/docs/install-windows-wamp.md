@@ -1,9 +1,9 @@
 
-## Windows Wampserver 安装示例
+ **Windows Wampserver 安装示例**
 
   注：该教程在win7 64位操作系统下测试通过,其他windows系统过程相似，只是要选对应的Wampserver版本
   
-### 一、环境安装和配置
+## 一、环境安装和配置
 
 1.下载Apache+PHP+Mysql集成包:Wampserver3:  
 ```text
@@ -37,7 +37,7 @@ extension=php_redis
 ```
 
 
-### 二、下载Masterlab代码
+## 二、下载Masterlab代码
 
 下载最新版本的完整代码  http://download.masterlab.vip/masterlab-last.zip ，
  解压到 d 盘的 d:/www 目录下,解压后的目录结构如下:
@@ -56,7 +56,7 @@ extension=php_redis
       |--   README.md
 ```
 
-### 三、Apache配置Masterlab的虚拟主机
+## 三、Apache配置Masterlab的虚拟主机
 1.修改 `Wampserver` 中的Apache配置文件
 
    + 打开 d:\wamp64\bin\apache\apache2.4.39\conf\httpd.conf文件,(注:如果找不到文件， apache的版本可能不一样请自行查找)  
@@ -101,7 +101,7 @@ extension=php_redis
 重启 Apache 服务器
 
 
-### 四、图文安装  
+## 四、图文安装  
 
 如果没有域名可修改hosts，在 C:\Windows\System32\drivers\etc\hosts 文件中加入
 ```text
@@ -123,14 +123,17 @@ extension=php_redis
 2.登录系统，进入"管理\系统\邮件配置"页面，配置邮件发送功能  
 
 
-### 五、下载和运行 MasterlabSocket  
+## 五、下载和运行 MasterlabSocket  
 
- * win7操作系统可直接运行 d:/www/masterlab/bin 目录下 masterlab_socket.exe,  
- * 其他windows系统请访问 https://github.com/gopeak/masterlab_socket 进行编译,编译成功后，将 masterlab_socket.exe 拷贝到 d:/www/masterlab/bin 目录下  
- 然后直接点击运行  
- 
- 
-### 六、启用缓存
+下载文件 http://download.masterlab.vip/masterlab-socket-v1.1-windows.zip 解压到 masterlab的 `bin` 目录下 
+
+ ```text
+ cd d:/www/masterlab/bin
+ masterlab_socket.exe start -d
+```
+
+ 注：masterlab_socket.exe 是masterlab的异步和数据定时计算服务器， masterlab_socket不运行不会影响masterlab使用
+
 
 
   
