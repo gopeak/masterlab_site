@@ -24,6 +24,7 @@
       |--   lib    
       |--   travis
       |--   vendor
+      |--   public   
       |--   composer.json
       |--   env.ini-example       
       |--   LICENSE
@@ -39,9 +40,9 @@
 
 ![1cut-202003100003452136.png](http://pm.masterlab.vip/attachment/image/20200310/1cut-202003100003452136.png "点击刚才的站点")
 
-![1cut-202003100003577715.png](http://pm.masterlab.vip/attachment/image/20200310/1cut-202003100003577715.png "打勾去掉")  
 
- 
+4. 网站目录设置为matserlab根目录，运行目录为“/public”
+
 
 ### 三、图文安装  
 

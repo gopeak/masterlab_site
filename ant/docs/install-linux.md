@@ -22,7 +22,7 @@
     cd masterlab
     ```
  
-* nginx 配置虚拟主机映射至 `/data/www/masterlab/app/public`
+* nginx 配置虚拟主机映射至 `/data/www/masterlab/public`
    在`/etc/nginx/conf.d/` 新增配置文件 masterlab.conf   
     
     ```text
@@ -32,7 +32,7 @@
         server_name www.yoursite.com;
     
         # 程序的安装路径
-        root /data/www/masterlab/app/public;
+        root /data/www/masterlab/public;
     
         index index.html index.htm index.php; 
         gzip on;
@@ -97,6 +97,11 @@
     # 建议将masterlab_socket作为后台程序运行
     ./masterlab_socket start -d
 ```
+ * 如果安装了php的swoole扩展， 可代替masterlab_socket：
+    ```text
+    # 进入 masterlab/bin 目录，执行
+    php swoole_server.php
+    ``` 
 
  * 配置缓存
   安装好后，使用管理员登录系统，在“系统/缓存/修改”配置 是否启用redis缓存  

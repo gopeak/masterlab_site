@@ -23,10 +23,8 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
 
 ```  
 
-
 根据提示进行安装，安装成功后会显示宝塔的web访问地址和账号密码，记下来并登录  
 
- 
 
 ### 1. 下载最新masterlab的完整代码  http://download.masterlab.vip/masterlab-last.zip ，
  解压到 /www/masterlab 目录下,解压后的目录结构如下:
@@ -37,6 +35,7 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
       |--   lib    
       |--   travis
       |--   vendor
+      |--   ...
       |--   composer.json
       |--   env.ini-example       
       |--   LICENSE
@@ -47,13 +46,11 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
 ### 2. 添加网站,点击宝塔“网站”面板创建网站
 
  同时把数据库创建了,后面安装会用上  
+![1cut-202011241811003464.png](http://pm.masterlab.vip/attachment/image/20201124/1cut-202011241811003464.png "添加站点")
 
-![1cut-202002071702172860.png](http://pm.masterlab.vip/attachment/image/20200207/1cut-202002071702172860.png "添加站点")
+### 3. 设置运行目录
  
-### 3. 去掉防跨站攻击
-![1cut-202002071702235444.png](http://pm.masterlab.vip/attachment/image/20200207/1cut-202002071702235444.png "去掉防跨站攻击(open_basedir)")
-
-
+![1cut-202011241811341801.png](http://pm.masterlab.vip/attachment/image/20201124/1cut-202011241811341801.png "设置运行目录")
  
 ### 4. 修改伪静态  
 
@@ -107,17 +104,22 @@ chmod +x ./masterlab_socket
 
 ```
 
+如果安装了php的swoole扩展， 可代替masterlab_socket：
 
+```text
+    # 进入 masterlab/bin 目录，执行
+    php ./swoole_server.php
+```
 
 
 ### 6. 访问 http://www.masterlab.ce/install/ 
 安装过程有些目录需要给 www 用户赋予写入权限  
 
 ```
-chown -R www:www /www/masterlab/app/public/install/
-chown -R www:www /www/masterlab/app/public/attachment/
-chown -R www:www /www/masterlab/app/storage/
-chown -R www:www /www/masterlab/app/config/deploy/
+chown -R www:www /www/masterlab/public/install/
+chown -R www:www /www/masterlab/public/attachment/
+chown -R www:www /www/masterlab/storage/
+chown -R www:www /www/masterlab/app/config/
 chown -R www:www /www/masterlab/bin/
 chown -R www:www /www/masterlab/upgrade/
 

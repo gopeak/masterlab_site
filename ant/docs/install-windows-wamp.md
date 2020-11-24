@@ -48,6 +48,7 @@ extension=php_redis
       |--   lib    
       |--   travis
       |--   vendor
+      |--   public  
       |--   composer.json
       |--   env.ini-example       
       |--   LICENSE
@@ -81,7 +82,7 @@ extension=php_redis
 
    ```apache
    <VirtualHost *:80>
-    DocumentRoot "d:/www/masterlab/app/public"
+    DocumentRoot "d:/www/masterlab/public"
     # 这里修改成你自己的域名
     ServerName  www.yoursite.com
     <Directory />    
@@ -89,7 +90,7 @@ extension=php_redis
         AllowOverride All      
         Allow from All     
     </Directory>    
-    <Directory "d:/www/masterlab/app/public">    
+    <Directory "d:/www/masterlab/public">    
         Options  Indexes FollowSymLinks    
         AllowOverride All    
         Order allow,deny    
@@ -108,9 +109,7 @@ extension=php_redis
 ```
 
 1.访问 http://www.yoursite.com/install/ 按照提示进行安装  
-  注：如果以后要修改域名，也要同时修改 app/config/deploy/app.cfg.php 中的ROOT_URL 
-
-![1cut-201907090007493572.png](http://pm.masterlab.vip/attachment/image/20190709/1cut-201907090007493572.png "截图-1cut-201907090007493572.png")  
+  注：如果以后要修改域名，也要同时修改 config.yml 中的 app_url  
 
 
 ![1cut-201907090007063115.png](http://pm.masterlab.vip/attachment/image/20190709/1cut-201907090007063115.png "截图-1cut-201907090007063115.png")  

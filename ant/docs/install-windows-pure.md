@@ -136,7 +136,7 @@ PHPIniDir "c:/phpenv/php-7.4"
   ```text
   # 默认80端口，可以更改
   <VirtualHost *:80>
-    DocumentRoot "c:/phpenv/www/masterlab/app/public"
+    DocumentRoot "c:/phpenv/www/masterlab/public"
     # 暂且用下面域名测试，以后正式使用修改掉就好
     ServerName  www.yoursite.com
     <Directory />
@@ -144,7 +144,7 @@ PHPIniDir "c:/phpenv/php-7.4"
         AllowOverride All
         #Allow from All
     </Directory>
-    <Directory "c:/phpenv/www/masterlab/app/public">
+    <Directory "c:/phpenv/www/masterlab/public">
         Options  Indexes FollowSymLinks
         AllowOverride All
         #Order allow,deny
