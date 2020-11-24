@@ -1,5 +1,5 @@
 
-## Linux 宝塔环境 安装示例
+ **Linux 宝塔环境 安装示例**
 
   注：该教程在centos7 64位操作系统下测试通过,其他Linux系统过程相似   
   这里仅仅是示例，如果示例安装成功，那么将你的域名和相应的路径值修改就可以  
@@ -7,7 +7,7 @@
   请在HOSTS文件中添加： 127.0.0.1 www.masterlab.ce    
   
 
-### 1.安装宝塔
+## 1.安装宝塔
 ```text
 # Centos安装脚本
 yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.sh && sh install.sh
@@ -26,7 +26,7 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
 根据提示进行安装，安装成功后会显示宝塔的web访问地址和账号密码，记下来并登录  
 
 
-### 1. 下载最新masterlab的完整代码  http://download.masterlab.vip/masterlab-last.zip ，
+## 1. 下载最新masterlab的完整代码  http://download.masterlab.vip/masterlab-last.zip ，
  解压到 /www/masterlab 目录下,解压后的目录结构如下:
 ```
     /www/masterlab            
@@ -43,16 +43,16 @@ wget -O install.sh http://download.bt.cn/install/install.sh && bash install.sh
       |--   README.md
 ```
 
-### 2. 添加网站,点击宝塔“网站”面板创建网站
+## 2. 添加网站,点击宝塔“网站”面板创建网站
 
  同时把数据库创建了,后面安装会用上  
 ![1cut-202011241811003464.png](http://pm.masterlab.vip/attachment/image/20201124/1cut-202011241811003464.png "添加站点")
 
-### 3. 设置运行目录
+## 3. 设置运行目录
  
 ![1cut-202011241811341801.png](http://pm.masterlab.vip/attachment/image/20201124/1cut-202011241811341801.png "设置运行目录")
  
-### 4. 修改伪静态  
+## 4. 修改伪静态  
 
 对于Web服务器是Nginx的： 
 ![1cut-202002071702442457.png](http://pm.masterlab.vip/attachment/image/20200207/1cut-202002071702442457.png "修改伪静态")  
@@ -89,7 +89,7 @@ location / {
 <br>
 
 
-### 5. 下载和运行 MasterlabSocket  
+## 5. 下载和运行 MasterlabSocket  
 
 Centos和Windows系统已经编译成二进制，可以直接使用，  
 https://github.com/gopeak/masterlab_socket/releases  
@@ -112,7 +112,7 @@ chmod +x ./masterlab_socket
 ```
 
 
-### 6. 访问 http://www.masterlab.ce/install/ 
+## 6. 访问 http://www.masterlab.ce/install/ 
 安装过程有些目录需要给 www 用户赋予写入权限  
 
 ```
