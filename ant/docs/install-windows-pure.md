@@ -9,7 +9,8 @@
 
 ## 1. 文件下载和安装  
   首先下载所需的文件. 
-  我们已经把所有文件打包到一个zip文件，下载解压后，直接跳转到步骤 “5. MySQL配置”。
+  我们已经把所有文件打包到一个zip文件，下载解压后，直接跳转到步骤-->  
+  [5. MySQL配置](/help.php?md=install-windows-pure#5.%20Mysql%20%E9%85%8D%E7%BD%AE)  
   打包文件下载地址：  http://download.masterlab.vip/phpenv.zip ,解压后目录结构：
    ```text
       C:/phpenv            
