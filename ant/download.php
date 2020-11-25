@@ -229,7 +229,7 @@ if (isset($_GET['file'])) {
                     <li>
                         <img src="./about_files/intro-landscape.svg" class="face">
                         <div class="person">
-                            <h4>Masterlab-v2.1.zip
+                            <h4>Masterlab-v3.0rc1zip
                                 <a  style="margin-left: 10px;font-size: small" href="http://download.masterlab.vip/masterlab-last.zip" style="margin-left: 10px">http下载</a>
                             </h4>
                             <p>Masterlab主程序</p>
