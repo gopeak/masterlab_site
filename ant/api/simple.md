@@ -398,3 +398,393 @@ due_date=2020-05-01                   // 结束时间
     "msg": "删除成功"
 }
 ```
+
+## 模块
+
+### 1、创建模块
+
+**请求方式：** POST  
+**请求地址：** [域名]/api/modules/v1/?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+module_name=模块A
+description=模块A描述  
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606395067,
+    "trace": [],
+    "data": {
+        "id": "22"
+    },
+    "msg": "操作成功"
+}
+```
+
+### 2、获取模块
+
+**请求方式：** GET  
+**请求地址：**  
+    - 获取列表: [域名]/api/modules/v1/?project=[项目ID]?access_token=[令牌]  
+    - 获取单个: [域名]/api/modules/v1/[模块ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606395342,
+    "trace": [],
+    "data": {
+        "1": {
+            "k": "1",
+            "id": "1",
+            "project_id": "1",
+            "name": "后端架构",
+            "description": "",
+            "lead": "0",
+            "default_assignee": "0",
+            "ctime": "1579249107",
+            "order_weight": "0",
+            "project_name": "示例项目23"
+        },
+        "2": {
+            "k": "2",
+            "id": "2",
+            "project_id": "1",
+            "name": "前端架构",
+            "description": "",
+            "lead": "0",
+            "default_assignee": "0",
+            "ctime": "1579249118",
+            "order_weight": "0",
+            "project_name": "示例项目23"
+        },
+        ......
+    },
+    "msg": "OK"
+}
+```
+
+### 3、更新模块
+
+**请求方式：** PATCH  
+**请求地址：**  
+    - [域名]/api/modules/v1/[模块ID]?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+module_name=模块A
+description=模块A描述
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606395578,
+    "trace": [],
+    "data": {
+        "name": "模块A",
+        "description": "模块A描述",
+        "id": 22
+    },
+    "msg": "修改成功"
+}
+```
+
+### 4、删除模块
+
+**请求方式：** DELETE  
+**请求地址：**  
+    - [域名]/api/modules/v1/[模块ID]?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606395701,
+    "trace": [],
+    "data": [],
+    "msg": "操作成功"
+}
+```
+
+## 迭代
+
+### 1、创建迭代
+
+**请求方式：** POST  
+**请求地址：** [域名]/api/sprints/v1/?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+sprint_name=迭代A
+description=迭代A-desc
+start_date=2020-08-09
+end_date=2020-10-10
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606396026,
+    "trace": [],
+    "data": {
+        "id": "18"
+    },
+    "msg": "操作成功"
+}
+```
+
+### 2、获取迭代
+
+**请求方式：** GET  
+**请求地址：**  
+    - 获取列表: [域名]/api/sprints/v1/?project=[项目ID]?access_token=[令牌]  
+    - 获取单个: [域名]/api/sprints/v1/[迭代ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606396385,
+    "trace": [],
+    "data": {
+        "1": {
+            "k": "1",
+            "id": "1",
+            "project_id": "1",
+            "name": "1.0迭代",
+            "description": "",
+            "active": "0",
+            "status": "1",
+            "order_weight": "0",
+            "start_date": "2020-01-17",
+            "end_date": "2020-07-01",
+            "target": "",
+            "inspect": "",
+            "review": "",
+            "project_name": "示例项目23"
+        },
+        ......
+    },
+    "msg": "OK"
+}
+```
+
+### 3、更新迭代
+
+**请求方式：** PATCH  
+**请求地址：**  
+    - [域名]/api/sprints/v1/[迭代ID]?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+sprint_name=迭代B
+description=迭代B描述
+start_date=2020-08-09
+end_date=2020-11-15
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606396701,
+    "trace": [],
+    "data": {
+        "name": "迭代B",
+        "description": "迭代B描述",
+        "start_date": "2020-08-09",
+        "id": 18
+    },
+    "msg": "修改成功"
+}
+```
+
+### 4、删除迭代
+
+**请求方式：** DELETE  
+**请求地址：**  
+    - [域名]/api/sprints/v1/[迭代ID]?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606396847,
+    "trace": [],
+    "data": [],
+    "msg": "操作成功"
+}
+```
+
+## 版本------------------todo
+
+### 1、创建版本
+
+**请求方式：** POST  
+**请求地址：** [域名]/api/versions/v1/?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+sprint_name=迭代A
+description=迭代A-desc
+start_date=2020-08-09
+end_date=2020-10-10
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606396026,
+    "trace": [],
+    "data": {
+        "id": "18"
+    },
+    "msg": "操作成功"
+}
+```
+
+### 2、获取版本
+
+**请求方式：** GET  
+**请求地址：**  
+    - 获取列表: [域名]/api/versions/v1/?project=[项目ID]?access_token=[令牌]  
+    - 获取单个: [域名]/api/versions/v1/[版本ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606396385,
+    "trace": [],
+    "data": {
+        "1": {
+            "k": "1",
+            "id": "1",
+            "project_id": "1",
+            "name": "1.0迭代",
+            "description": "",
+            "active": "0",
+            "status": "1",
+            "order_weight": "0",
+            "start_date": "2020-01-17",
+            "end_date": "2020-07-01",
+            "target": "",
+            "inspect": "",
+            "review": "",
+            "project_name": "示例项目23"
+        },
+        ......
+    },
+    "msg": "OK"
+}
+```
+
+### 3、更新版本
+
+**请求方式：** PATCH  
+**请求地址：**  
+    - [域名]/api/versions/v1/[版本ID]?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+sprint_name=迭代B
+description=迭代B描述
+start_date=2020-08-09
+end_date=2020-11-15
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606396701,
+    "trace": [],
+    "data": {
+        "name": "迭代B",
+        "description": "迭代B描述",
+        "start_date": "2020-08-09",
+        "id": 18
+    },
+    "msg": "修改成功"
+}
+```
+
+### 4、删除版本
+
+**请求方式：** DELETE  
+**请求地址：**  
+    - [域名]/api/versions/v1/[版本ID]?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606396847,
+    "trace": [],
+    "data": [],
+    "msg": "操作成功"
+}
+```
