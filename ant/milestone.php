@@ -46,6 +46,19 @@ $page = 'milestone';
         <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-19">
             <article class="markdown">
                 <h1><!-- react-text: 7590 -->更新log<!-- /react-text --></h1>
+                <h2>v3.0RC1 更新</h2>
+                <p>2020-11-26，更新内容：</p>
+                <ol>
+                    <li>增加插件功能 </li>
+                    <li>增加项目文档功能 </li>
+                    <li>增加webhhok功能 </li>
+                    <li>增加项目模板功能  </li>
+                    <li>开放Api  </li>
+                    <li>重构服务器的数据库操作类  </li>
+                    <li>重构前端代码，移除大量无效代码  </li>
+                    <li>大量优化改进  </li>
+                    <li>APP支持（安卓系统）  </li>
+                </ol>
                 <h2>v2.1 更新</h2>
                 <p>2020-3-27，更新内容：</p>
                 <ol>
