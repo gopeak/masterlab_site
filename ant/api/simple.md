@@ -61,7 +61,9 @@ project_tpl_id=1        // 项目模板ID
 ### 2、获取项目
 
 **请求方式：** GET  
-**请求地址：** [域名]/api/projects/v1/[项目ID]/?access_token=[令牌]  
+**请求地址：**  
+    - [域名]/api/projects/v1/[项目ID]?access_token=[令牌]  
+    - [域名]/api/projects/v1/?access_token=[令牌]  
 **请求参数：**  
 
 ```text
@@ -126,4 +128,273 @@ project_tpl_id=1        // 项目模板ID
 }
 ```
 
+### 3、更新项目名称和描述信息
 
+**请求方式：** PATCH  
+**请求地址：**  
+    - [域名]/api/projects/v1/[项目ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+name=MASTERLAB          // 项目名
+description=MASTERLAB           // 项目描述
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606305744,
+    "trace": [],
+    "data": [],
+    "msg": "更新项目成功"
+}
+```
+
+### 4、删除项目
+
+**请求方式：** DELETE  
+**请求地址：**  
+    - [域名]/api/projects/v1/[项目ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606305952,
+    "trace": [],
+    "data": [],
+    "msg": "操作成功"
+}
+```
+
+## 事项
+
+### 1、创建事项
+
+**请求方式：** POST  
+**请求地址：** [域名]/api/issue/issues/v1/?access_token=[令牌]  
+**请求参数：**  
+
+```text
+summary=MASTERLAB          // 标题
+issue_type=1                // 事项类型
+project_id=1           // 项目ID
+priority=1                  // 优先级
+description=MASTERLAB       // 内容
+module=1                     // 模块ID
+creator=1                    // 创建人ID
+reporter=1                   // 报告人ID
+status=1                     // 状态ID
+assignee=1                   // 负责人ID
+sprint=1                     // 迭代ID
+weight=20                     // 权重
+start_date=2020-03-01                 // 开始时间
+due_date=2020-05-01                   // 结束时间
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606307852,
+    "trace": [],
+    "data": {
+        "id": "251"
+    },
+    "msg": "添加成功"
+}
+```
+
+### 2、获取事项
+
+**请求方式：** GET  
+**请求地址：**  
+    - 获取列表: [域名]/api/issue/issues/v1/?project=[项目ID]?access_token=[令牌]  
+    - 获取单个: [域名]/api/issue/issues/v1/[事项ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606310436,
+    "trace": [],
+    "data": {
+        "data": {
+            "issues": [
+                {
+                    "id": "251",
+                    "pkey": "example",
+                    "issue_num": "251",
+                    "project_id": "1",
+                    "issue_type": "1",
+                    "creator": "1",
+                    "modifier": "0",
+                    "reporter": "1",
+                    "assignee": "1",
+                    "summary": "MASTERLAB",
+                    "description": "1",
+                    "environment": "",
+                    "priority": "1",
+                    "resolve": "2",
+                    "status": "1",
+                    "created": "1606307852",
+                    "updated": "1606307852",
+                    "start_date": "2020-07-08",
+                    "due_date": "2020-09-08",
+                    "duration": "45",
+                    "resolve_date": null,
+                    "module": "1",
+                    "milestone": null,
+                    "sprint": "1",
+                    "weight": "1",
+                    "backlog_weight": "0",
+                    "sprint_weight": "0",
+                    "assistants": "",
+                    "level": "0",
+                    "master_id": "0",
+                    "have_children": "0",
+                    "followed_count": "0",
+                    "comment_count": "0",
+                    "progress": "0",
+                    "depends": "",
+                    "gant_sprint_weight": "499050000",
+                    "gant_hide": "0",
+                    "is_start_milestone": "0",
+                    "is_end_milestone": "0",
+                    "warning_delay": 0,
+                    "postponed": 1,
+                    "created_text": "2020-11-25 20:37:32",
+                    "created_full": "2020-11-25 20:37:32",
+                    "updated_text": "2020-11-25 20:37:32",
+                    "updated_full": "2020-11-25 20:37:32",
+                    "assistants_arr": []
+                },
+                ......
+            ]
+        },
+        "total": "45",
+        "page": 1,
+        "page_size": 20
+    },
+    "msg": "OK"
+}
+```
+
+### 3、更新事项
+
+**请求方式：** PATCH  
+**请求地址：**  
+    - [域名]/api/issue/issues/v1/[事项ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+summary=MASTERLAB          // 标题
+issue_type=1                // 事项类型
+priority=1                  // 优先级
+description=MASTERLAB       // 内容
+module=1                     // 模块ID
+creator=1                    // 创建人ID
+reporter=1                   // 报告人ID
+status=1                     // 状态ID
+assignee=1                   // 负责人ID
+sprint=1                     // 迭代ID
+weight=20                     // 权重
+start_date=2020-03-01                 // 开始时间
+due_date=2020-05-01                   // 结束时间
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606311293,
+    "trace": [],
+    "data": {
+        "id": 251,
+        "pkey": "example",
+        "issue_num": "251",
+        "project_id": "1",
+        "issue_type": "0",
+        "creator": "1",
+        "modifier": "1",
+        "reporter": "1",
+        "assignee": "1",
+        "summary": "MASTERLAB",
+        "description": "MASTERLAB",
+        "environment": "",
+        "priority": "1",
+        "resolve": "2",
+        "status": "1",
+        "created": "1606307852",
+        "updated": "1606307852",
+        "start_date": "0000-00-00",
+        "due_date": "0000-00-00",
+        "duration": "0",
+        "resolve_date": null,
+        "module": "0",
+        "milestone": null,
+        "sprint": "0",
+        "weight": "0",
+        "backlog_weight": "0",
+        "sprint_weight": "0",
+        "assistants": "",
+        "level": "0",
+        "master_id": "0",
+        "have_children": "0",
+        "followed_count": "0",
+        "comment_count": "0",
+        "progress": "0",
+        "depends": "",
+        "gant_sprint_weight": "499050000",
+        "gant_hide": "0",
+        "is_start_milestone": "0",
+        "is_end_milestone": "0"
+    },
+    "msg": "更新成功"
+}
+```
+
+### 4、删除事项
+
+**请求方式：** DELETE  
+**请求地址：**  
+    - [域名]/api/issue/issues/v1/[事项ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606311462,
+    "trace": [],
+    "data": [],
+    "msg": "删除成功"
+}
+```
