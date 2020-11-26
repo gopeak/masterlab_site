@@ -2,7 +2,9 @@
 header('Content-Type: application/json;charset=utf-8');
 
 $ipArr = [
-//	'113.104.245.25',
+    //'127.0.0.1',
+    //'113.104.244.6',
+    //'139.9.49.224',
 //	'139.9.49.224',
     //'47.244.62.11',
     //'183.11.29.118',
@@ -40,10 +42,38 @@ $lastReleaseHtml = <<<'EOT'
 EOT;
 
 
+$lastReleaseHtml3rc3 = <<<'EOT'
+<p>v3.0.0RC3版本更新内容：</p>
+<ol>
+<li>修复更新语句执行的BUG</li>
+<li>其他bug</li>
+
+</ol>
+<a href="#" onclick="$('#menu-upgrade').click();">进入升级界面</a>
+EOT;
+
+$lastReleaseHtml3 = <<<'EOT'
+<p>v3.0.0RC3版本更新内容：</p>
+<ol>
+<li>增加插件功能</li>
+<li>增加项目文档功能</li>
+<li>增加webhhok功能</li>
+<li>增加项目模板功能</li>
+<li>开放Api</li>
+<li>重构服务器的数据库操作类</li>
+<li>重构前端代码，移除大量无效代码</li>
+<li>大量优化改进</li>
+
+</ol>
+<a href="#" onclick="$('#menu-upgrade').click();">进入升级界面</a>
+EOT;
+
 
 // 第一个元素为最新版本
 $versions = [
     //['version' => '3.0', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v3.0','html'],
+    ['version' => '3.0.0RC3', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v3.0.0RC3', 'title'=>'3.0.0RC3升级通知', 'release_html'=>$lastReleaseHtml3rc3],
+    ['version' => '3.0.0RC2', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v3.0.0RC2', 'title'=>'3.0.0RC3升级通知', 'release_html'=>$lastReleaseHtml3],
     ['version' => '2.1.9', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1.9', 'title'=>'2.1.9升级通知', 'release_html'=>$lastReleaseHtml],
     ['version' => '2.1.8', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1.8', 'title'=>'2.1.8升级通知', 'release_html'=>$lastReleaseHtml],
     ['version' => '2.1.7', 'release_url' => 'https://github.com/gopeak/masterlab/releases/tag/v2.1.7', 'title'=>'2.1.7升级通知', 'release_html'=>$lastReleaseHtml],
@@ -57,6 +87,10 @@ $versions = [
 ];
 
 $patches = [
+    '3.0rc2-3.0.0RC3'=>'http://download.masterlab.vip/3.0.0RC2-3.0.0RC3-upgrade.zip',
+    '3.0rc1-3.0.0RC3'=>'http://download.masterlab.vip/3.0.0RC2-3.0.0RC3-upgrade.zip',
+    '3.0.0RC1-3.0.0RC3'=>'http://download.masterlab.vip/3.0.0RC1-3.0.0RC3-upgrade.zip',
+    '3.0-3.0.0RC3'=>'http://download.masterlab.vip/3.0.0RC1-3.0.0RC3-upgrade.zip',
     '2.1.8-2.1.9'=>'http://download.masterlab.vip/v2.1.8-v2.1.9-upgrade.zip',
     '2.1.7-2.1.9'=>'http://download.masterlab.vip/v2.1.7-v2.1.9-upgrade.zip',
     '2.1.5-2.1.9'=>'http://download.masterlab.vip/v2.1.5-v2.1.9-upgrade.zip',
@@ -103,6 +137,7 @@ function checkIpAddr($ipArr)
         return true;
     }
     $clientIp = $_SERVER['REMOTE_ADDR'];
+
     if(!in_array($clientIp, $ipArr)){
         return false;
     }
@@ -114,6 +149,7 @@ function get_patch_info()
     global $patches, $versions;
     $currentVersion = isset($_GET['current_version']) ? trim($_GET['current_version']) : '';
     $lastVersionArr = current($versions);
+    //print_r($lastVersionArr);
     $lastVersion = $lastVersionArr['version'];
     if($currentVersion==$lastVersion){
         echoFailJson( '已经是最新版本,无需升级!');
