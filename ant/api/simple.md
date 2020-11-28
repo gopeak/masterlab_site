@@ -660,7 +660,7 @@ end_date=2020-11-15
 }
 ```
 
-## 版本------------------todo
+## 版本
 
 ### 1、创建版本
 
@@ -763,6 +763,123 @@ description=v3.2-desc
 **请求方式：** DELETE  
 **请求地址：**  
     - [域名]/api/versions/v1/[版本ID]?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606549841,
+    "trace": [],
+    "data": [],
+    "msg": "操作成功"
+}
+```
+
+## 标签
+
+### 1、创建标签
+
+**请求方式：** POST  
+**请求地址：** [域名]/api/labels/v1/?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+label_name=运维
+description=运维
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606549269,
+    "trace": [],
+    "data": {
+        "id": "3"
+    },
+    "msg": "操作成功"
+}
+```
+
+### 2、获取标签
+
+**请求方式：** GET  
+**请求地址：**  
+    - 获取列表: [域名]/api/labels/v1/?project=[项目ID]?access_token=[令牌]  
+    - 获取单个: [域名]/api/labels/v1/[标签ID]?access_token=[令牌]  
+**请求参数：**  
+
+```text
+无
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606550405,
+    "trace": [],
+    "data": {
+        "1": {
+            "id": "1",
+            "project_id": "1",
+            "title": "产 品",
+            "color": "#FFFFFF",
+            "bg_color": "#428BCA",
+            "description": "",
+            "project_name": "示例项目23"
+        },
+        ......
+    },
+    "msg": "OK"
+}
+```
+
+### 3、更新标签
+
+**请求方式：** PATCH  
+**请求地址：**  
+    - [域名]/api/labels/v1/[标签ID]?project_id=[项目ID]&access_token=[令牌]  
+**请求参数：**  
+
+```text
+label_name=设计
+description=设计
+```
+
+**返回结果：**
+
+```text
+{
+    "ret": "20000",
+    "debug": {},
+    "time": 1606550660,
+    "trace": [],
+    "data": {
+        "title": "设计",
+        "description": "设计",
+        "id": 2
+    },
+    "msg": "修改成功"
+}
+```
+
+### 4、删除标签
+
+**请求方式：** DELETE  
+**请求地址：**  
+    - [域名]/api/labels/v1/[标签ID]?project_id=[项目ID]&access_token=[令牌]  
 **请求参数：**  
 
 ```text
