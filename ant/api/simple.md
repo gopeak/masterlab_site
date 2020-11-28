@@ -669,10 +669,8 @@ end_date=2020-11-15
 **请求参数：**  
 
 ```text
-sprint_name=迭代A
-description=迭代A-desc
-start_date=2020-08-09
-end_date=2020-10-10
+version_name=v3.1
+description=v3.1-desc
 ```
 
 **返回结果：**
@@ -681,10 +679,10 @@ end_date=2020-10-10
 {
     "ret": "20000",
     "debug": {},
-    "time": 1606396026,
+    "time": 1606549269,
     "trace": [],
     "data": {
-        "id": "18"
+        "id": "3"
     },
     "msg": "操作成功"
 }
@@ -708,23 +706,21 @@ end_date=2020-10-10
 {
     "ret": "20000",
     "debug": {},
-    "time": 1606396385,
+    "time": 1606549317,
     "trace": [],
     "data": {
         "1": {
             "k": "1",
             "id": "1",
             "project_id": "1",
-            "name": "1.0迭代",
+            "name": "v1.0",
             "description": "",
-            "active": "0",
-            "status": "1",
-            "order_weight": "0",
-            "start_date": "2020-01-17",
-            "end_date": "2020-07-01",
-            "target": "",
-            "inspect": "",
-            "review": "",
+            "sequence": "0",
+            "released": "1",
+            "archived": null,
+            "url": "",
+            "start_date": "1595520000",
+            "release_date": "1596124800",
             "project_name": "示例项目23"
         },
         ......
@@ -741,10 +737,8 @@ end_date=2020-10-10
 **请求参数：**  
 
 ```text
-sprint_name=迭代B
-description=迭代B描述
-start_date=2020-08-09
-end_date=2020-11-15
+version_name=v3.2
+description=v3.2-desc
 ```
 
 **返回结果：**
@@ -753,13 +747,12 @@ end_date=2020-11-15
 {
     "ret": "20000",
     "debug": {},
-    "time": 1606396701,
+    "time": 1606549534,
     "trace": [],
     "data": {
-        "name": "迭代B",
-        "description": "迭代B描述",
-        "start_date": "2020-08-09",
-        "id": 18
+        "name": "v3.2",
+        "description": "v3.2-desc",
+        "id": 3
     },
     "msg": "修改成功"
 }
@@ -782,7 +775,7 @@ end_date=2020-11-15
 {
     "ret": "20000",
     "debug": {},
-    "time": 1606396847,
+    "time": 1606549841,
     "trace": [],
     "data": [],
     "msg": "操作成功"
